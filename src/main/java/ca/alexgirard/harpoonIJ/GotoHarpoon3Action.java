@@ -1,4 +1,4 @@
-package ca.alexgirard.harpoon;
+package ca.alexgirard.harpoonIJ;
 
 public class GotoHarpoon3Action extends GoToHarpoonActionBase {
     @Override

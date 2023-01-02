@@ -1,4 +1,4 @@
-package ca.alexgirard.harpoon;
+package ca.alexgirard.harpoonIJ;
 
 public class SetHarpoonFileAction2 extends SetHarpoonFileActionBase {
 

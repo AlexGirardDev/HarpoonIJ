@@ -1,4 +1,4 @@
-package ca.alexgirard.harpoon;
+package ca.alexgirard.harpoonIJ;
 
 import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.ui.EditorTextField;

@@ -26,62 +26,62 @@
     <extensions defaultExtensionNs="com.intellij"/>
 
     <actions>
-        <group id="ca.alexgirard.harpoon.mainGroup"
+        <group id="ca.alexgirard.harpoonIJ.mainGroup"
                text="Harpoon" description="Harpoon"
                popup="true">
             <add-to-group group-id="ToolsMenu"/>
         </group>
-        <action id="ShowHarpoon" class="ca.alexgirard.harpoon.ShowHarpoon" popup="true"
-                text="ShowHarpoon"
+        <action id="ShowHarpoon" class="ca.alexgirard.harpoonIJ.ShowHarpoon" popup="true"
+                text="Show Harpoon Window"
                 description="Show harpoon current jump list" icon="AllIcons.Actions.BuildLoadChanges">
-            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
+            <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
         </action>
 
 
-        <action id="GotoHarpoon1" class="ca.alexgirard.harpoon.GotoHarpoon1Action"
+        <action id="GotoHarpoon1" class="ca.alexgirard.harpoonIJ.GotoHarpoon1Action"
                 text="Goto Harpoon File 1">
-            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
+            <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
         </action>
-        <action id="GotoHarpoon2" class="ca.alexgirard.harpoon.GotoHarpoon2Action"
+        <action id="GotoHarpoon2" class="ca.alexgirard.harpoonIJ.GotoHarpoon2Action"
                 text="Goto Harpoon File 2">
-            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
+            <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
         </action>
-        <action id="GotoHarpoon3" class="ca.alexgirard.harpoon.GotoHarpoon3Action"
+        <action id="GotoHarpoon3" class="ca.alexgirard.harpoonIJ.GotoHarpoon3Action"
                 text="Goto Harpoon File 3">
-            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
+            <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
         </action>
-        <action id="GotoHarpoon4" class="ca.alexgirard.harpoon.GotoHarpoon4Action"
+        <action id="GotoHarpoon4" class="ca.alexgirard.harpoonIJ.GotoHarpoon4Action"
                 text="Goto Harpoon File 4">
-            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
+            <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
         </action>
-        <action id="GotoHarpoon5" class="ca.alexgirard.harpoon.GotoHarpoon5Action"
+        <action id="GotoHarpoon5" class="ca.alexgirard.harpoonIJ.GotoHarpoon5Action"
                 text="Goto Harpoon File 5">
-            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
+            <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
         </action>
 
-        <action id="SetHarpoon1" class="ca.alexgirard.harpoon.SetHarpoonFileAction1"
+        <action id="SetHarpoon1" class="ca.alexgirard.harpoonIJ.SetHarpoonFileAction1"
                 text="Set Harpoon File 1">
-            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
+            <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
         </action>
-        <action id="SetHarpoon2" class="ca.alexgirard.harpoon.SetHarpoonFileAction2"
+        <action id="SetHarpoon2" class="ca.alexgirard.harpoonIJ.SetHarpoonFileAction2"
                 text="Set Harpoon File 2">
-            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
+            <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
         </action>
-        <action id="SetHarpoon3" class="ca.alexgirard.harpoon.SetHarpoonFileAction3"
+        <action id="SetHarpoon3" class="ca.alexgirard.harpoonIJ.SetHarpoonFileAction3"
                 text="Set Harpoon File 3">
-            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
+            <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
         </action>
-        <action id="SetHarpoon4" class="ca.alexgirard.harpoon.SetHarpoonFileAction4"
+        <action id="SetHarpoon4" class="ca.alexgirard.harpoonIJ.SetHarpoonFileAction4"
                 text="Set Harpoon File 4">
-            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
+            <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
         </action>
-        <action id="SetHarpoon5" class="ca.alexgirard.harpoon.SetHarpoonFileAction5"
+        <action id="SetHarpoon5" class="ca.alexgirard.harpoonIJ.SetHarpoonFileAction5"
                 text="Set Harpoon File 5">
-            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
+            <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
         </action>
-        <action id="AddToHarpoon" class="ca.alexgirard.harpoon.AddToHarpoonAction"
+        <action id="AddToHarpoon" class="ca.alexgirard.harpoonIJ.AddToHarpoonAction"
                 text="Add File to an Empty Harpoon Slot">
-            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
+            <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
         </action>
     </actions>
 </idea-plugin>
