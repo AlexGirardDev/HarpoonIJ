@@ -21,9 +21,57 @@
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
 
-    <!-- Extension points defined by the plugin.
+    <!-- Extension points definedby the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
-    <extensions defaultExtensionNs="com.intellij">
+    <extensions defaultExtensionNs="com.intellij"/>
 
-    </extensions>
+    <actions>/
+        <action id="ca.alexgirard.harpoon.ShowHarpoon" class="ca.alexgirard.harpoon.ShowHarpoon" popup="true" text="ShowHarpoon"
+                description="Show harpoon current jump list" icon="AllIcons.Actions.BuildLoadChanges">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl U"/>
+        </action>
+
+
+        <action id="ca.alexgirard.harpoon.GotoHarpoon0" class="ca.alexgirard.harpoon.GotoHarpoon0"
+                text="Goto Harpoon File 0">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl D"/>
+        </action>
+        <action id="ca.alexgirard.harpoon.GotoHarpoon1" class="ca.alexgirard.harpoon.GotoHarpoon1"
+                text="Goto Harpoon File 1">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl H"/>
+        </action>
+        <action id="ca.alexgirard.harpoon.GotoHarpoon2" class="ca.alexgirard.harpoon.GotoHarpoon2"
+                text="Goto Harpoon File 2">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl T"/>
+        </action>
+        <action id="ca.alexgirard.harpoon.GotoHarpoon3" class="ca.alexgirard.harpoon.GotoHarpoon3"
+                text="Goto Harpoon File 3">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl N"/>
+        </action>
+        <action id="ca.alexgirard.harpoon.GotoHarpoon4" class="ca.alexgirard.harpoon.GotoHarpoon4"
+                text="Goto Harpoon File 4">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl S"/>
+        </action>
+
+        <action id="ca.alexgirard.harpoon.AddToHarpoon0" class="ca.alexgirard.harpoon.AddToHarpoon0"
+                text="Set Harpoon File 0">
+            <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl D"/>
+        </action>
+        <action id="ca.alexgirard.harpoon.AddToHarpoon1" class="ca.alexgirard.harpoon.AddToHarpoon1"
+                text="Set Harpoon File 1">
+            <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl H"/>
+        </action>
+        <action id="ca.alexgirard.harpoon1AddToHarpoon2" class="ca.alexgirard.harpoon.AddToHarpoon2"
+                text="Set Harpoon File 2">
+            <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl T"/>
+        </action>
+        <action id="ca.alexgirard.harpoon1AddToHarpoon3" class="ca.alexgirard.harpoon.AddToHarpoon3"
+                text="Set Harpoon File 3">
+            <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl T"/>
+        </action>
+        <action id="ca.alexgirard.harpoon.AddToHarpoon3" class="ca.alexgirard.harpoon.AddToHarpoon4"
+                text="Set Harpoon File 4">
+            <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl N"/>
+        </action>
+    </actions>
 </idea-plugin>
