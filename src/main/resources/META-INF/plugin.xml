@@ -25,53 +25,75 @@
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij"/>
 
-    <actions>/
-        <action id="ca.alexgirard.harpoon.ShowHarpoon" class="ca.alexgirard.harpoon.ShowHarpoon" popup="true" text="ShowHarpoon"
+    <actions>
+        <group id="ca.alexgirard.harpoon.mainGroup"
+               text="Harpoon" description="Harpoon"
+               popup="true">
+            <add-to-group group-id="ToolsMenu"/>
+        </group>
+        <action id="ca.alexgirard.harpoon.ShowHarpoon" class="ca.alexgirard.harpoon.ShowHarpoon" popup="true"
+                text="ShowHarpoon"
                 description="Show harpoon current jump list" icon="AllIcons.Actions.BuildLoadChanges">
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl U"/>
+            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
         </action>
 
 
-        <action id="ca.alexgirard.harpoon.GotoHarpoon0" class="ca.alexgirard.harpoon.GotoHarpoon0"
+        <action id="ca.alexgirard.harpoon.GotoHarpoon0Action" class="ca.alexgirard.harpoon.GotoHarpoon0Action"
                 text="Goto Harpoon File 0">
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl D"/>
+            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
         </action>
-        <action id="ca.alexgirard.harpoon.GotoHarpoon1" class="ca.alexgirard.harpoon.GotoHarpoon1"
+        <action id="ca.alexgirard.harpoon.GotoHarpoon1Action" class="ca.alexgirard.harpoon.GotoHarpoon1Action"
                 text="Goto Harpoon File 1">
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl H"/>
+            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
         </action>
-        <action id="ca.alexgirard.harpoon.GotoHarpoon2" class="ca.alexgirard.harpoon.GotoHarpoon2"
+        <action id="ca.alexgirard.harpoon.GotoHarpoon2Action" class="ca.alexgirard.harpoon.GotoHarpoon2Action"
                 text="Goto Harpoon File 2">
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl T"/>
+            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
         </action>
-        <action id="ca.alexgirard.harpoon.GotoHarpoon3" class="ca.alexgirard.harpoon.GotoHarpoon3"
+        <action id="ca.alexgirard.harpoon.GotoHarpoon3Action" class="ca.alexgirard.harpoon.GotoHarpoon3Action"
                 text="Goto Harpoon File 3">
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl N"/>
+            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
         </action>
-        <action id="ca.alexgirard.harpoon.GotoHarpoon4" class="ca.alexgirard.harpoon.GotoHarpoon4"
+        <action id="ca.alexgirard.harpoon.GotoHarpoon4Action" class="ca.alexgirard.harpoon.GotoHarpoon4Action"
                 text="Goto Harpoon File 4">
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl S"/>
+            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
         </action>
 
-        <action id="ca.alexgirard.harpoon.AddToHarpoon0" class="ca.alexgirard.harpoon.AddToHarpoon0"
+        <action id="ca.alexgirard.harpoon.SetHarpoonFileAction0" class="ca.alexgirard.harpoon.SetHarpoonFileAction0"
                 text="Set Harpoon File 0">
             <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl D"/>
+            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
         </action>
-        <action id="ca.alexgirard.harpoon.AddToHarpoon1" class="ca.alexgirard.harpoon.AddToHarpoon1"
+        <action id="ca.alexgirard.harpoon.SetHarpoonFileAction1" class="ca.alexgirard.harpoon.SetHarpoonFileAction1"
                 text="Set Harpoon File 1">
             <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl H"/>
+            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
         </action>
-        <action id="ca.alexgirard.harpoon1AddToHarpoon2" class="ca.alexgirard.harpoon.AddToHarpoon2"
+        <action id="ca.alexgirard.harpoon1AddToHarpoon2" class="ca.alexgirard.harpoon.SetHarpoonFileAction2"
                 text="Set Harpoon File 2">
             <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl T"/>
+            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
         </action>
-        <action id="ca.alexgirard.harpoon1AddToHarpoon3" class="ca.alexgirard.harpoon.AddToHarpoon3"
+        <action id="ca.alexgirard.harpoon1AddToHarpoon3" class="ca.alexgirard.harpoon.SetHarpoonFileAction3"
                 text="Set Harpoon File 3">
             <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl T"/>
+            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
         </action>
-        <action id="ca.alexgirard.harpoon.AddToHarpoon3" class="ca.alexgirard.harpoon.AddToHarpoon4"
+        <action id="ca.alexgirard.harpoon.SetHarpoonFileAction3" class="ca.alexgirard.harpoon.SetHarpoonFileAction4"
                 text="Set Harpoon File 4">
             <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl N"/>
+            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
+        </action>
+        <action id="ca.alexgirard.harpoon.AddToHarpoonAction" class="ca.alexgirard.harpoon.AddToHarpoonAction"
+                text="Add File to an Empty Harpoon Slot">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl J"/>
+            <add-to-group group-id="ca.alexgirard.harpoon.mainGroup"/>
         </action>
     </actions>
 </idea-plugin>

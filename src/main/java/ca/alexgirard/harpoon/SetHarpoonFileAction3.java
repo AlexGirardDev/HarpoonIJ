@@ -1,6 +1,6 @@
 package ca.alexgirard.harpoon;
 
-public class AddToHarpoon3 extends AddToHarpoonBase {
+public class SetHarpoonFileAction3 extends SetHarpoonFileActionBase {
 
     @Override
     public int getIndex() {

@@ -1,6 +1,7 @@
 package ca.alexgirard.harpoon;
 
-public class GotoHarpoon4 extends  GoToHarpoonBase{
+public class SetHarpoonFileAction4 extends SetHarpoonFileActionBase {
+
     @Override
     public int getIndex() {
         return 4;

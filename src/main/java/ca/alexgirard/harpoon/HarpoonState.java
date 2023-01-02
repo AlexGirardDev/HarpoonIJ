@@ -4,9 +4,9 @@ import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.LocalFileSystem;
 import com.intellij.openapi.vfs.VirtualFile;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 public class HarpoonState {
@@ -26,7 +26,7 @@ public class HarpoonState {
         if (index >= Files.size()) {
             for (int i = FileStrings.size();  index >= i; i++) {
                 Files.add(null);
-                FileStrings.add(null);
+                FileStrings.add("");
             }
         }
         Files.set(index, file);
@@ -58,18 +58,27 @@ public class HarpoonState {
         FileStrings = list;
     }
 
-    public static List<String> GetStrings(Project project) {
-        if (Files == null) {
-            FillLists(project);
-        }
-        return FileStrings;
-
-    }
     public static List<VirtualFile> GetFiles(Project project) {
         if (Files == null) {
             FillLists(project);
         }
         return Files;
 
+    }
+
+    public static void SetFiles(List<String> list){
+        var LFS = LocalFileSystem.getInstance();
+        List<VirtualFile> result = new ArrayList<>();
+        for (String s : list) {
+            if(s == null || s.isBlank())
+                result.add(null);
+            else
+            {
+                VirtualFile fileByPath = LFS.findFileByPath(s);
+                result.add(fileByPath);
+            }
+        }
+        Files = result;
+        FileStrings = list;
     }
 }
