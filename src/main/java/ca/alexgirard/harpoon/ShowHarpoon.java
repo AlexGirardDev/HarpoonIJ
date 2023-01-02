@@ -13,23 +13,30 @@ public class ShowHarpoon extends AnAction {
 
         var stringBuilder = new StringBuilder();
         var fileStrings = HarpoonState.GetFiles(e.getProject());
-        for (var vFile : fileStrings)
-            stringBuilder.append(vFile == null ? "" : vFile.getCanonicalPath()).append("\n");
+        var project = e.getProject();
+        var projectPath = project == null ? "" : project.getBasePath();
+         projectPath = projectPath == null ? "" : projectPath;
+
+        for (var vFile : fileStrings) {
+            var path = vFile == null ? "" : vFile.getCanonicalPath();
+            path = path == null ? "" : path;
+            stringBuilder.append(path.replace(projectPath, "...")).append("\n");
+        }
+
+
         var text = stringBuilder.toString().trim();
 
         var dialog = new HarpoonDialog(text);
-        var response = dialog.showAndGet();
-        if (response) {
-            String newText = dialog.editorTextField.getText().trim();
-            if (text.equals(newText)) return;
+        dialog.showAndGet();
+        String newText = dialog.editorTextField.getText().trim().replace("...",projectPath);
+        if (text.equals(newText)) return;
 
-            String[] lines = newText.split("\n");
-            var outputList = new ArrayList<String>();
-            for (String line :lines) {
-                outputList.add(line.trim());
-            }
-            HarpoonState.SetFiles(outputList);
+        String[] lines = newText.split("\n");
+        var outputList = new ArrayList<String>();
+        for (String line : lines) {
+            outputList.add(line.trim());
         }
+        HarpoonState.SetFiles(outputList);
     }
 }
 

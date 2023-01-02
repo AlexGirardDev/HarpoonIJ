@@ -29,10 +29,15 @@ public class HarpoonDialog extends DialogWrapper {
         editorTextField = new EditorTextField(text);
         editorTextField.setOneLineMode(false);
         editorTextField.addSettingsProvider(editor -> {
-            editor.setFontSize(15);
+            editor.setFontSize(18);
+            editor.setInsertMode(true);
             var settings = editor.getSettings();
             settings.setLineNumbersShown(true);
         });
         return editorTextField;
+    }
+    @Override
+    protected JComponent createSouthPanel() {
+        return null;
     }
 }

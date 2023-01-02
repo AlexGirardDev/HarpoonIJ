@@ -4,7 +4,7 @@ public class SetHarpoonFileAction1 extends SetHarpoonFileActionBase {
 
     @Override
     public int getIndex() {
-        return 1;
+        return 0;
     }
 }
 
