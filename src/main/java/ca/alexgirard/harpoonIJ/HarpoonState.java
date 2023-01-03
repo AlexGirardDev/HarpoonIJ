@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class HarpoonState {
     private static List<VirtualFile> Files;
     private static List<String> FileStrings;
-    private static final String ListPersistanceKey = "HarpoonJumpList";
+    private static final String ListPersistenceKey = "HarpoonJumpList";
 
     public static void SetItem(VirtualFile file, int index, Project project) {
         if (Files == null) {
@@ -34,7 +34,7 @@ public class HarpoonState {
         FileStrings.set(index, filePath);
 
         var propsComp = PropertiesComponent.getInstance(project);
-        propsComp.setList(ListPersistanceKey, FileStrings);
+        propsComp.setList(ListPersistenceKey, FileStrings);
 
     }
 
@@ -51,7 +51,7 @@ public class HarpoonState {
     public static void FillLists(Project project)
     {
         var propsComp = PropertiesComponent.getInstance(project);
-        var list = propsComp.getList(ListPersistanceKey);
+        var list = propsComp.getList(ListPersistenceKey);
         list = (list == null) ? new ArrayList<>() : list;
         var LFS = LocalFileSystem.getInstance();
         Files = list.stream().map(LFS::findFileByPath).collect(Collectors.toList());
