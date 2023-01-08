@@ -36,7 +36,7 @@ public class ShowHarpoon extends AnAction {
         for (String line : lines) {
             outputList.add(line.trim());
         }
-        HarpoonState.SetFiles(outputList);
+        HarpoonState.SetFiles(outputList, e.getProject());
     }
 }
 
