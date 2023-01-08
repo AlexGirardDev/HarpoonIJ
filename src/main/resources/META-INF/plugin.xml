@@ -8,13 +8,15 @@
     <name>HarpoonIJ</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor email="harpoon@alexgirard.ca" url="https://alexgirard.ca">AlexGirard</vendor>
+    <vendor email="harpoonij@alexgirard.ca" url="https://github.com/AlexGirardDev/HarpoonIJ">AlexGirard</vendor>
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-    Port of the Vim plugin Harpoon developed by ThePrimeagen
+    HarpoonIj is a navigation plugin which allows you to bookmark files easily and navigate to specific bookmarks with dedicated hotkeys
+
+    This a plugin inispride by Harpoon for NeoVim created by ThePrimeagen
   ]]></description>
 
     <!-- Product and plugin compatibility requirements.
