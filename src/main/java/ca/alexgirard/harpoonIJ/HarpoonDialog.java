@@ -29,7 +29,7 @@ public class HarpoonDialog extends DialogWrapper {
         editorTextField = new EditorTextField(text);
         editorTextField.setOneLineMode(false);
         editorTextField.addSettingsProvider(editor -> {
-            editor.setFontSize(18);
+            editor.setFontSize(20);
             editor.setInsertMode(true);
             var settings = editor.getSettings();
             settings.setLineNumbersShown(true);
