@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "ca.alexgirard"
-version = "1.0-SNAPSHOT"
+version = "0.1.2"
 
 repositories {
     mavenCentral()

@@ -46,3 +46,6 @@ nmap <C-s> :action GotoHarpoon4<cr>
 nmap <C-e> :action ShowHarpoon<cr>
 nmap <C-a> :action AddToHarpoon<cr>
 ```
+
+
+Project icon from [http://game-icons.net](https://game-icons.net)
