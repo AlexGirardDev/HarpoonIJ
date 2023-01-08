@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "ca.alexgirard"
-version = "0.1.2"
+version = "0.1.0"
 
 repositories {
     mavenCentral()
@@ -28,7 +28,6 @@ tasks {
 
     patchPluginXml {
         sinceBuild.set("221")
-        untilBuild.set("231.*")
     }
     buildSearchableOptions {
         enabled = false
