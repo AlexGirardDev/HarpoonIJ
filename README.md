@@ -1,6 +1,8 @@
 <div align="center">
 
 # HarpoonIJ
+[![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/v/20782-harpoonij.svg)](https://plugins.jetbrains.com/plugin/20782-harpoonij)[![Downloads](https://img.shields.io/jetbrains/plugin/d/20782-harpoonij.svg)](https://plugins.jetbrains.com/plugin/20782-harpoonij)
+
 
 HarpoonIJ is a port of the NeoVim Extension [Harpoon](https://github.com/ThePrimeagen/harpoon) created by [ThePrimeagen](https://twitter.com/ThePrimeagen)
 </div>
