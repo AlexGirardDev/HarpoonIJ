@@ -28,7 +28,7 @@ public class HarpoonState {
             return;
         }
         if (index >= Files.size()) {
-            for (int i = FileStrings.size(); index >= i; i++) {
+            for (int i = FileStrings.size(); index >= i; i++) { 
                 Files.add(null);
                 FileStrings.add("");
             }

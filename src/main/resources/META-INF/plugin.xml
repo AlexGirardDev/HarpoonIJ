@@ -19,13 +19,23 @@
     This a plugin inispride by Harpoon for NeoVim created by ThePrimeagen
   ]]></description>
 
+    <change-notes>
+        Added Settings to adjust the harpoon dialog's width, height, and font size.
+    </change-notes>
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
 
     <!-- Extension points definedby the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
-    <extensions defaultExtensionNs="com.intellij"/>
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationConfigurable
+                parentId="tools"
+                instance="ca.alexgirard.harpoonIJ.AppSettingsConfigurable"
+                id="ca.alexgirard.harpoonIJ.AppSettingsConfigurable"
+                displayName="HarpoonIJ Settings"/>
+        <applicationService serviceImplementation="ca.alexgirard.harpoonIJ.AppSettingsState"/>
+    </extensions>
 
     <actions>
         <group id="ca.alexgirard.harpoonIJ.mainGroup"
@@ -35,7 +45,7 @@
         </group>
         <action id="ShowHarpoon" class="ca.alexgirard.harpoonIJ.ShowHarpoon" popup="true"
                 text="Show Harpoon Window"
-                description="Show harpoon current jump list" icon="AllIcons.Actions.BuildLoadChanges">
+                description="Show harpoon current jump list">
             <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
         </action>
 

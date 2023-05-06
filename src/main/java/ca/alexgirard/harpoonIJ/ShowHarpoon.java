@@ -15,7 +15,7 @@ public class ShowHarpoon extends AnAction {
         var fileStrings = HarpoonState.GetFiles(e.getProject());
         var project = e.getProject();
         var projectPath = project == null ? "" : project.getBasePath();
-         projectPath = projectPath == null ? "" : projectPath;
+        projectPath = projectPath == null ? "" : projectPath;
 
         for (var vFile : fileStrings) {
             var path = vFile == null ? "" : vFile.getCanonicalPath();
@@ -28,7 +28,7 @@ public class ShowHarpoon extends AnAction {
 
         var dialog = new HarpoonDialog(text);
         dialog.showAndGet();
-        String newText = dialog.editorTextField.getText().trim().replace("...",projectPath);
+        String newText = dialog.editorTextField.getText().trim().replace("...", projectPath);
         if (text.equals(newText)) return;
 
         String[] lines = newText.split("\n");

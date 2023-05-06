@@ -12,9 +12,12 @@ public class AddToHarpoonAction extends AnAction {
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
 
-        var numOfFiles = HarpoonState.GetFiles(e.getProject()).size();
+        var files = HarpoonState.GetFiles(e.getProject());
+        var numOfFiles = files.size();
         var insertIndex = numOfFiles;
         VirtualFile vFile = e.getData(PlatformDataKeys.VIRTUAL_FILE);
+        if(files.stream().anyMatch(x->x!= null && x.getPath().equals(vFile != null ? vFile.getPath() : null)))
+            return;
         for (int i = 0; i <numOfFiles ; i++) {
             if (HarpoonState.GetItem(i, e.getProject()) == null) {
                 insertIndex = i;

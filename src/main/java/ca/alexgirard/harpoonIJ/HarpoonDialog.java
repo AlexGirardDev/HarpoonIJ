@@ -13,7 +13,8 @@ public class HarpoonDialog extends DialogWrapper {
 
     protected HarpoonDialog(String inputText) {
         super(true);
-        setSize(800,400);
+        AppSettingsState settings = AppSettingsState.getInstance();
+        setSize(settings.dialogWidth, settings.dialogHeight);
         setTitle("Harpoon");
         text = inputText;
         init();
@@ -26,10 +27,11 @@ public class HarpoonDialog extends DialogWrapper {
 
     @Override
     protected @Nullable JComponent createCenterPanel() {
+        AppSettingsState appSettings = AppSettingsState.getInstance();
         editorTextField = new EditorTextField(text);
         editorTextField.setOneLineMode(false);
         editorTextField.addSettingsProvider(editor -> {
-            editor.setFontSize(20);
+            editor.setFontSize(appSettings.dialogFontSize);
             editor.setInsertMode(true);
             var settings = editor.getSettings();
             settings.setLineNumbersShown(true);
