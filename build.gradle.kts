@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("org.jetbrains.kotlin.jvm") version "1.6.10"
     id("org.jetbrains.intellij") version "1.10.1"
 }
 
@@ -13,7 +14,7 @@ repositories {
 // Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
-    version.set("2022.3")
+    version.set("2023.1")
     type.set("IC") // Target IDE Platform
     updateSinceUntilBuild.set(false)
     plugins.set(listOf("IdeaVIM:2.0.0"))
@@ -22,12 +23,14 @@ intellij {
 tasks {
     // Set the JVM compatibility versions
     withType<JavaCompile> {
-        sourceCompatibility = "11"
-        targetCompatibility = "11"
+        sourceCompatibility = "17"
+        targetCompatibility = "17"
     }
 
+
+
     patchPluginXml {
-        sinceBuild.set("221")
+        sinceBuild.set("223")
     }
     buildSearchableOptions {
         enabled = false
