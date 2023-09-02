@@ -5,19 +5,24 @@ plugins {
 }
 
 group = "ca.alexgirard"
-version = "0.1.7"
+version = "0.2.0"
 
 repositories {
     mavenCentral()
 }
 
+dependencies {
+    compileOnly("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+}
+
+
 // Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
-    version.set("2023.1")
+    version.set("2022.3.1")
     type.set("IC") // Target IDE Platform
     updateSinceUntilBuild.set(false)
-    plugins.set(listOf("IdeaVIM:2.4.0"))
+    plugins.set(listOf("IdeaVIM:2.1.0"))
 }
 
 tasks {
@@ -39,6 +44,7 @@ tasks {
         privateKey.set(System.getenv("PRIVATE_KEY"))
         password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
     }
+    
 
     publishPlugin {
         token.set(System.getenv("PUBLISH_TOKEN"))
