@@ -1,0 +1,7 @@
+<keymap version="1" name="Windows copy" parent="$default">
+  <action id="FileChooser.TogglePathBar" />
+  <action id="ParameterInfo" />
+  <action id="ca.alexgirard.harpoon.AddToHarpoonGroup">
+    <keyboard-shortcut first-keystroke="ctrl p" />
+  </action>
+</keymap>

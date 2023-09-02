@@ -1,0 +1,848 @@
+<html>
+  <head>
+    <title>Indexing diagnostics of 'HarpoonIJ'</title>
+    <style>body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  width: 80%;
+}
+
+table.two-columns td {
+  width: 50%;
+}
+
+th, td {
+  padding: 3px;
+}
+
+th {
+  background: lightgrey;
+}
+
+td {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+        
+.stats-content {
+  margin-left: 20%;
+}
+
+.aggregate-report-content {
+  margin-left: 10%;
+}
+
+.navigation-bar {
+  width: 15%;
+  background-color: lightgrey;
+  position: fixed;
+  height: 100%;
+}
+
+div.navigation-bar ul {
+  list-style-type: none;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+}
+
+div.navigation-bar ul li a, label {
+  display: block;
+  color: #000;
+  padding: 8px 20px;
+  text-decoration: none;
+}
+
+label input {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+div.navigation-bar ul li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.minor-data {}
+
+.invisible {
+  display: none;
+}
+
+.jetbrains-logo {
+  width: 50%;
+  bottom: 5%;
+  position: absolute;
+  left: 20%;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.linkable-table-row:hover {
+  background: #f2f3ff;
+  outline: none;
+  cursor: pointer;
+}</style>
+    <script>document.addEventListener("DOMContentLoaded", () => {
+  const rows = document.getElementsByClassName("linkable-table-row")
+  for (const row of rows) {
+    const href = row.getAttribute("href")
+    row.addEventListener("click", () => {
+      window.open(href, "_blank");
+    });
+  }
+});</script>
+  </head>
+  <body>
+    <div class="aggregate-report-content">
+      <h1 class="Project name"></h1>
+HarpoonIJ
+      <div>
+        <h1 class="Indexing history"></h1>
+        <table class="centered-text"><caption style="caption-side: bottom; text-align: right; font-size: 14px">Hover for details</caption>
+          <thead>
+            <tr>
+              <th colspan="7">Time</th>
+              <th colspan="6">Files</th>
+              <th rowspan="2">IDE</th>
+              <th rowspan="2">Type</th>
+            </tr>
+            <tr>
+              <th>Started</th>
+              <th>Total</th>
+              <th>Creating iterators</th>
+              <th>Scanning</th>
+              <th>Indexing</th>
+              <th>Content loading</th>
+              <th>Finished</th>
+              <th>Providers</th>
+              <th>Scanned</th>
+              <th>Shared indexes (w/o content loading)</th>
+              <th>Scheduled for indexing</th>
+              <th>Shared indexes (content loaded)</th>
+              <th>Total indexed (shared indexes included)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="linkable-table-row" href="diagnostic-2023-09-01-15-08-22.478.html">
+              <td><strong class="On project open"></strong><br>15:08:14 01 Sep</td>
+              <td>8 s 121 ms</td>
+              <td>160 ms</td>
+              <td>7 s 821 ms</td>
+              <td>0</td>
+              <td>0</td>
+              <td>15:08:22 01 Sep</td>
+              <td>10</td>
+              <td>241207</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-09-01-14-44-54.165.html">
+              <td><strong class="On project open"></strong><br>14:43:45 01 Sep</td>
+              <td>1 m 8 s 406 ms</td>
+              <td>460 ms</td>
+              <td>8 s 615 ms</td>
+              <td>59 s 200 ms</td>
+              <td>1 s 115 ms</td>
+              <td>14:44:54 01 Sep</td>
+              <td>10</td>
+              <td>241207</td>
+              <td>0</td>
+              <td>230072</td>
+              <td>0</td>
+              <td>230072</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-09-01-14-35-56.147.html">
+              <td><strong class="On project open"></strong><br>14:35:47 01 Sep</td>
+              <td>9 s 140 ms</td>
+              <td>235 ms</td>
+              <td>8 s 783 ms</td>
+              <td>0</td>
+              <td>0</td>
+              <td>14:35:56 01 Sep</td>
+              <td>12</td>
+              <td>408510</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-09-01-14-33-56.480.html">
+              <td><strong class="Merged On updated roots of library 'Kotlin Script dependencies' with On updated roots of library 'Kotlin Script SDK dependencies'"></strong><br>14:33:19 01 Sep</td>
+              <td>36 s 553 ms</td>
+              <td>0</td>
+              <td>6 s 726 ms</td>
+              <td>29 s 826 ms</td>
+              <td>790 ms</td>
+              <td>14:33:56 01 Sep</td>
+              <td>2</td>
+              <td>167303</td>
+              <td>0</td>
+              <td>165801</td>
+              <td>0</td>
+              <td>165801</td>
+              <td>IC-223.7571.182</td>
+              <td>partial</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-09-01-14-33-19.921.html">
+              <td><strong class="On project open"></strong><br>14:32:05 01 Sep</td>
+              <td>1 m 14 s 435 ms</td>
+              <td>274 ms</td>
+              <td>13 s 742 ms</td>
+              <td>54 s 519 ms</td>
+              <td>2 s 343 ms</td>
+              <td>14:33:19 01 Sep</td>
+              <td>10</td>
+              <td>241207</td>
+              <td>0</td>
+              <td>232347</td>
+              <td>0</td>
+              <td>232347</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-09-01-14-13-31.171.html">
+              <td><strong class="On project open"></strong><br>14:12:44 01 Sep</td>
+              <td>47 s 151 ms</td>
+              <td>301 ms</td>
+              <td>13 s 967 ms</td>
+              <td>32 s 775 ms</td>
+              <td>1 s 3 ms</td>
+              <td>14:13:31 01 Sep</td>
+              <td>12</td>
+              <td>408509</td>
+              <td>0</td>
+              <td>168048</td>
+              <td>0</td>
+              <td>168048</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-09-01-14-09-43.533.html">
+              <td><strong class="On project open"></strong><br>14:09:22 01 Sep</td>
+              <td>21 s 369 ms</td>
+              <td>260 ms</td>
+              <td>8 s 174 ms</td>
+              <td>0</td>
+              <td>0</td>
+              <td>14:09:43 01 Sep</td>
+              <td>10</td>
+              <td>241206</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-08-11-19-50-01.728.html">
+              <td><strong class="On project open"></strong><br>19:49:47 11 Aug</td>
+              <td>13 s 971 ms</td>
+              <td>530 ms</td>
+              <td>7 s 99 ms</td>
+              <td>0</td>
+              <td>0</td>
+              <td>19:50:01 11 Aug</td>
+              <td>10</td>
+              <td>241206</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-05-06-14-06-27.170.html">
+              <td><strong class="On project open"></strong><br>14:06:18 06 May</td>
+              <td>8 s 182 ms</td>
+              <td>85 ms</td>
+              <td>7 s 915 ms</td>
+              <td>0</td>
+              <td>0</td>
+              <td>14:06:27 06 May</td>
+              <td>10</td>
+              <td>241206</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-05-06-13-59-30.675.html">
+              <td><strong class="On project open"></strong><br>13:58:34 06 May</td>
+              <td>55 s 782 ms</td>
+              <td>570 ms</td>
+              <td>6 s 514 ms</td>
+              <td>48 s 529 ms</td>
+              <td>1 s 674 ms</td>
+              <td>13:59:30 06 May</td>
+              <td>10</td>
+              <td>241206</td>
+              <td>0</td>
+              <td>166101</td>
+              <td>0</td>
+              <td>166101</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-05-06-13-57-20.767.html">
+              <td><strong class="On project open"></strong><br>13:56:15 06 May</td>
+              <td>1 m 5 s 525 ms</td>
+              <td>609 ms</td>
+              <td>16 s 216 ms</td>
+              <td>48 s 500 ms</td>
+              <td>1 s 346 ms</td>
+              <td>13:57:20 06 May</td>
+              <td>10</td>
+              <td>241208</td>
+              <td>0</td>
+              <td>232348</td>
+              <td>0</td>
+              <td>232348</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-05-06-13-47-42.540.html">
+              <td><strong class="On project open"></strong><br>13:46:33 06 May</td>
+              <td>1 m 9 s 76 ms</td>
+              <td>762 ms</td>
+              <td>15 s 762 ms</td>
+              <td>52 s 356 ms</td>
+              <td>616 ms</td>
+              <td>13:47:42 06 May</td>
+              <td>10</td>
+              <td>241206</td>
+              <td>0</td>
+              <td>232346</td>
+              <td>0</td>
+              <td>232346</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-05-06-13-45-23.208.html">
+              <td><strong class="On project open"></strong><br>13:44:38 06 May</td>
+              <td>44 s 366 ms</td>
+              <td>477 ms</td>
+              <td>9 s 399 ms</td>
+              <td>34 s 326 ms</td>
+              <td>1 s 241 ms</td>
+              <td>13:45:23 06 May</td>
+              <td>10</td>
+              <td>241206</td>
+              <td>0</td>
+              <td>109189</td>
+              <td>0</td>
+              <td>109189</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-05-06-12-59-51.237.html">
+              <td><strong class="On project open"></strong><br>12:58:50 06 May</td>
+              <td>1 m 0 s 767 ms</td>
+              <td>391 ms</td>
+              <td>13 s 449 ms</td>
+              <td>46 s 781 ms</td>
+              <td>958 ms</td>
+              <td>12:59:51 06 May</td>
+              <td>10</td>
+              <td>241206</td>
+              <td>0</td>
+              <td>232346</td>
+              <td>0</td>
+              <td>232346</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-05-06-12-57-03.654.html">
+              <td><strong class="On project open"></strong><br>12:55:59 06 May</td>
+              <td>1 m 4 s 401 ms</td>
+              <td>311 ms</td>
+              <td>13 s 696 ms</td>
+              <td>50 s 248 ms</td>
+              <td>710 ms</td>
+              <td>12:57:03 06 May</td>
+              <td>10</td>
+              <td>241206</td>
+              <td>0</td>
+              <td>232346</td>
+              <td>0</td>
+              <td>232346</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-05-06-12-41-04.175.html">
+              <td><strong class="Merged changes in: &quot;Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)&quot; with changes in: &quot;Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)&quot;"></strong><br>12:41:02 06 May</td>
+              <td>2 s 30 ms</td>
+              <td>0</td>
+              <td>2 s 23 ms</td>
+              <td>0</td>
+              <td>0</td>
+              <td>12:41:04 06 May</td>
+              <td>1</td>
+              <td>196733</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>IC-223.7571.182</td>
+              <td>partial</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-05-06-12-41-02.141.html">
+              <td><strong class="On project open"></strong><br>12:40:41 06 May</td>
+              <td>20 s 520 ms</td>
+              <td>241 ms</td>
+              <td>7 s 75 ms</td>
+              <td>61 ms</td>
+              <td>2 ms</td>
+              <td>12:41:02 06 May</td>
+              <td>12</td>
+              <td>408506</td>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+              <td>1</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-11-14-44-17.239.html">
+              <td><strong class="Merged On updated roots of library 'Kotlin Script dependencies' with On updated roots of library 'Kotlin Script SDK dependencies'"></strong><br>14:43:34 11 Jan</td>
+              <td>42 s 630 ms</td>
+              <td>0</td>
+              <td>7 s 277 ms</td>
+              <td>35 s 348 ms</td>
+              <td>6 s 94 ms</td>
+              <td>14:44:17 11 Jan</td>
+              <td>2</td>
+              <td>167303</td>
+              <td>0</td>
+              <td>165801</td>
+              <td>0</td>
+              <td>165801</td>
+              <td>IC-223.7571.182</td>
+              <td>partial</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-11-14-43-34.567.html">
+              <td><strong class="On project open"></strong><br>14:43:12 11 Jan</td>
+              <td>21 s 793 ms</td>
+              <td>190 ms</td>
+              <td>7 s 565 ms</td>
+              <td>67 ms</td>
+              <td>2 ms</td>
+              <td>14:43:34 11 Jan</td>
+              <td>10</td>
+              <td>241203</td>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+              <td>1</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-08-13-08-10.780.html">
+              <td><strong class="On project open"></strong><br>13:08:03 08 Jan</td>
+              <td>7 s 481 ms</td>
+              <td>40 ms</td>
+              <td>7 s 294 ms</td>
+              <td>0</td>
+              <td>0</td>
+              <td>13:08:10 08 Jan</td>
+              <td>10</td>
+              <td>241203</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-08-13-06-55.617.html">
+              <td><strong class="On project open"></strong><br>13:06:48 08 Jan</td>
+              <td>6 s 634 ms</td>
+              <td>54 ms</td>
+              <td>6 s 475 ms</td>
+              <td>0</td>
+              <td>0</td>
+              <td>13:06:55 08 Jan</td>
+              <td>10</td>
+              <td>241203</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-08-13-04-00.034.html">
+              <td><strong class="On project open"></strong><br>13:03:02 08 Jan</td>
+              <td>57 s 438 ms</td>
+              <td>327 ms</td>
+              <td>13 s 837 ms</td>
+              <td>43 s 150 ms</td>
+              <td>871 ms</td>
+              <td>13:04:00 08 Jan</td>
+              <td>10</td>
+              <td>241203</td>
+              <td>0</td>
+              <td>232343</td>
+              <td>0</td>
+              <td>232343</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-08-12-28-37.379.html">
+              <td><strong class="On project open"></strong><br>12:27:37 08 Jan</td>
+              <td>59 s 711 ms</td>
+              <td>407 ms</td>
+              <td>13 s 232 ms</td>
+              <td>45 s 916 ms</td>
+              <td>978 ms</td>
+              <td>12:28:37 08 Jan</td>
+              <td>10</td>
+              <td>241204</td>
+              <td>0</td>
+              <td>232344</td>
+              <td>0</td>
+              <td>232344</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-08-12-25-15.319.html">
+              <td><strong class="On project open"></strong><br>12:24:07 08 Jan</td>
+              <td>1 m 8 s 123 ms</td>
+              <td>356 ms</td>
+              <td>14 s 875 ms</td>
+              <td>52 s 729 ms</td>
+              <td>1 s 14 ms</td>
+              <td>12:25:15 08 Jan</td>
+              <td>10</td>
+              <td>241204</td>
+              <td>0</td>
+              <td>232344</td>
+              <td>0</td>
+              <td>232344</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-08-12-22-46.573.html">
+              <td><strong class="On project open"></strong><br>12:21:39 08 Jan</td>
+              <td>1 m 7 s 522 ms</td>
+              <td>499 ms</td>
+              <td>13 s 695 ms</td>
+              <td>53 s 167 ms</td>
+              <td>951 ms</td>
+              <td>12:22:46 08 Jan</td>
+              <td>10</td>
+              <td>241204</td>
+              <td>0</td>
+              <td>232344</td>
+              <td>0</td>
+              <td>232344</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-08-12-02-58.184.html">
+              <td><strong class="On project open"></strong><br>12:01:47 08 Jan</td>
+              <td>1 m 10 s 823 ms</td>
+              <td>155 ms</td>
+              <td>7 s 138 ms</td>
+              <td>1 m 3 s 369 ms</td>
+              <td>1 s 912 ms</td>
+              <td>12:02:58 08 Jan</td>
+              <td>10</td>
+              <td>241204</td>
+              <td>0</td>
+              <td>226495</td>
+              <td>0</td>
+              <td>226495</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-04-09-54-29.895.html">
+              <td><strong class="On project open"></strong><br>09:53:43 04 Jan</td>
+              <td>46 s 552 ms</td>
+              <td>92 ms</td>
+              <td>6 s 838 ms</td>
+              <td>39 s 456 ms</td>
+              <td>631 ms</td>
+              <td>09:54:29 04 Jan</td>
+              <td>10</td>
+              <td>241204</td>
+              <td>0</td>
+              <td>172166</td>
+              <td>0</td>
+              <td>172166</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-04-09-42-33.005.html">
+              <td><strong class="On project open"></strong><br>09:41:33 04 Jan</td>
+              <td>59 s 957 ms</td>
+              <td>522 ms</td>
+              <td>13 s 97 ms</td>
+              <td>46 s 232 ms</td>
+              <td>891 ms</td>
+              <td>09:42:33 04 Jan</td>
+              <td>10</td>
+              <td>241204</td>
+              <td>0</td>
+              <td>232344</td>
+              <td>0</td>
+              <td>232344</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-02-20-03-55.783.html">
+              <td><strong class="On refresh of 21 files"></strong><br>20:03:55 02 Jan</td>
+              <td>2 ms</td>
+              <td>0</td>
+              <td>&lt; 1 ms</td>
+              <td>1 ms</td>
+              <td>&lt; 1 ms</td>
+              <td>20:03:55 02 Jan</td>
+              <td>1</td>
+              <td>21</td>
+              <td>0</td>
+              <td>21</td>
+              <td>0</td>
+              <td>21</td>
+              <td>IC-223.7571.182</td>
+              <td>refresh</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-02-19-57-19.441.html">
+              <td><strong class="On refresh of 37 files"></strong><br>19:57:19 02 Jan</td>
+              <td>1 ms</td>
+              <td>0</td>
+              <td>&lt; 1 ms</td>
+              <td>1 ms</td>
+              <td>&lt; 1 ms</td>
+              <td>19:57:19 02 Jan</td>
+              <td>1</td>
+              <td>37</td>
+              <td>0</td>
+              <td>37</td>
+              <td>0</td>
+              <td>37</td>
+              <td>IC-223.7571.182</td>
+              <td>refresh</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-02-19-56-45.361.html">
+              <td><strong class="On refresh of 44 files"></strong><br>19:56:45 02 Jan</td>
+              <td>3 ms</td>
+              <td>0</td>
+              <td>&lt; 1 ms</td>
+              <td>4 ms</td>
+              <td>&lt; 1 ms</td>
+              <td>19:56:45 02 Jan</td>
+              <td>1</td>
+              <td>44</td>
+              <td>0</td>
+              <td>44</td>
+              <td>0</td>
+              <td>44</td>
+              <td>IC-223.7571.182</td>
+              <td>refresh</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-02-19-55-38.427.html">
+              <td><strong class="On refresh of 23 files"></strong><br>19:55:38 02 Jan</td>
+              <td>28 ms</td>
+              <td>0</td>
+              <td>&lt; 1 ms</td>
+              <td>27 ms</td>
+              <td>2 ms</td>
+              <td>19:55:38 02 Jan</td>
+              <td>1</td>
+              <td>23</td>
+              <td>0</td>
+              <td>23</td>
+              <td>0</td>
+              <td>23</td>
+              <td>IC-223.7571.182</td>
+              <td>refresh</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-02-19-49-23.887.html">
+              <td><strong class="On refresh of 26 files"></strong><br>19:49:23 02 Jan</td>
+              <td>1 ms</td>
+              <td>0</td>
+              <td>&lt; 1 ms</td>
+              <td>1 ms</td>
+              <td>&lt; 1 ms</td>
+              <td>19:49:23 02 Jan</td>
+              <td>1</td>
+              <td>26</td>
+              <td>0</td>
+              <td>26</td>
+              <td>0</td>
+              <td>26</td>
+              <td>IC-223.7571.182</td>
+              <td>refresh</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-02-19-48-57.260.html">
+              <td><strong class="On refresh of 688 files"></strong><br>19:48:57 02 Jan</td>
+              <td>13 ms</td>
+              <td>0</td>
+              <td>&lt; 1 ms</td>
+              <td>13 ms</td>
+              <td>&lt; 1 ms</td>
+              <td>19:48:57 02 Jan</td>
+              <td>1</td>
+              <td>688</td>
+              <td>0</td>
+              <td>688</td>
+              <td>0</td>
+              <td>688</td>
+              <td>IC-223.7571.182</td>
+              <td>refresh</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-02-19-48-21.646.html">
+              <td><strong class="On refresh of 27 files"></strong><br>19:48:21 02 Jan</td>
+              <td>6 ms</td>
+              <td>0</td>
+              <td>&lt; 1 ms</td>
+              <td>5 ms</td>
+              <td>3 ms</td>
+              <td>19:48:21 02 Jan</td>
+              <td>1</td>
+              <td>27</td>
+              <td>0</td>
+              <td>27</td>
+              <td>0</td>
+              <td>27</td>
+              <td>IC-223.7571.182</td>
+              <td>refresh</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-02-19-48-21.630.html">
+              <td><strong class="Merged On updated roots of library 'Kotlin Script dependencies' with On updated roots of library 'Kotlin Script SDK dependencies'"></strong><br>19:47:41 02 Jan</td>
+              <td>40 s 513 ms</td>
+              <td>0</td>
+              <td>6 s 287 ms</td>
+              <td>34 s 223 ms</td>
+              <td>6 s 692 ms</td>
+              <td>19:48:21 02 Jan</td>
+              <td>2</td>
+              <td>167303</td>
+              <td>0</td>
+              <td>165801</td>
+              <td>0</td>
+              <td>165801</td>
+              <td>IC-223.7571.182</td>
+              <td>partial</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-02-19-47-41.101.html">
+              <td><strong class="Merged changes in: &quot;Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)&quot; with changes in: &quot;Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)&quot; with changes in: &quot;Module 'HarpoonIJ' (HarpoonIJ)&quot;, &quot;Module 'HarpoonIJ.main' (main)&quot;, &quot;JDK openjdk-19 C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.zipfs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.zipfs&quot;, &quot;Library Gradle: org.jetbrains:annotations:23.0.0 (#1 class roots, #1 source roots)&quot;, &quot;Library Gradle: unzipped.com.jetbrains.plugins:IdeaVIM:unzipped.com.jetbrains.plugins:2.0.0 (#4 class roots, #1 source roots)&quot;, &quot;Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)&quot; with changes in: &quot;JDK openjdk-19 C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.zipfs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.zipfs&quot;"></strong><br>19:46:40 02 Jan</td>
+              <td>1 m 0 s 794 ms</td>
+              <td>0</td>
+              <td>12 s 310 ms</td>
+              <td>48 s 481 ms</td>
+              <td>3 s 590 ms</td>
+              <td>19:47:41 02 Jan</td>
+              <td>6</td>
+              <td>241192</td>
+              <td>0</td>
+              <td>232106</td>
+              <td>0</td>
+              <td>232106</td>
+              <td>IC-223.7571.182</td>
+              <td>partial</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-02-19-46-40.304.html">
+              <td><strong class="On project open"></strong><br>19:46:11 02 Jan</td>
+              <td>28 s 729 ms</td>
+              <td>&lt; 1 ms</td>
+              <td>355 ms</td>
+              <td>360 ms</td>
+              <td>34 ms</td>
+              <td>19:46:40 02 Jan</td>
+              <td>5</td>
+              <td>533</td>
+              <td>0</td>
+              <td>137</td>
+              <td>0</td>
+              <td>136</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h1 class="Scanning to push properties of changed files"></h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Reason</th>
+              <th>Full duration</th>
+              <th>Is cancelled</th>
+              <th>Number</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>15:08:22 01 Sep</td>
+              <td>Push on VFS changes</td>
+              <td>1 ms</td>
+              <td>fully finished</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td>19:56:45 02 Jan</td>
+              <td>Push on VFS changes</td>
+              <td>1 ms</td>
+              <td>fully finished</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>19:55:56 02 Jan</td>
+              <td>Push on VFS changes</td>
+              <td>&lt; 1 ms</td>
+              <td>fully finished</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>19:49:23 02 Jan</td>
+              <td>Push on VFS changes</td>
+              <td>1 ms</td>
+              <td>fully finished</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>19:48:57 02 Jan</td>
+              <td>Push on VFS changes</td>
+              <td>3 ms</td>
+              <td>fully finished</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>19:48:21 02 Jan</td>
+              <td>Push on VFS changes</td>
+              <td>&lt; 1 ms</td>
+              <td>fully finished</td>
+              <td>1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

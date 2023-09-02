@@ -1,0 +1,74 @@
+<module>
+  <component name="DeprecatedModuleOptionManager">
+    <option key="type" value="JAVA_MODULE" />
+  </component>
+  <component name="ExternalSystem" externalSystem="GRADLE" externalSystemModuleGroup="ca.alexgirard" externalSystemModuleType="sourceSet" externalSystemModuleVersion="0.1.4" linkedProjectId="HarpoonIJ:test" linkedProjectPath="$MODULE_DIR$/../.." rootProjectPath="$MODULE_DIR$/../.." />
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_11">
+    <output-test url="file://$MODULE_DIR$/../../build/classes/java/test" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../src/test" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="HarpoonIJ.main" />
+    <orderEntry type="library" name="Gradle: org.jetbrains:annotations:23.0.0" level="project" />
+    <orderEntry type="module-library">
+      <library name="Gradle: unzipped.com.jetbrains.plugins:IdeaVIM:unzipped.com.jetbrains.plugins:2.0.0">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/unzipped.com.jetbrains.plugins/IdeaVIM-2.0.0/IdeaVim/lib/IdeaVIM-2.0.0.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/unzipped.com.jetbrains.plugins/IdeaVIM-2.0.0/IdeaVim/lib/antlr4-runtime-4.10.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/unzipped.com.jetbrains.plugins/IdeaVIM-2.0.0/IdeaVim/lib/searchableOptions-2.0.0.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/unzipped.com.jetbrains.plugins/IdeaVIM-2.0.0/IdeaVim/lib/vim-engine-2.0.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/unzipped.com.jetbrains.plugins/IdeaVIM-2.0.0/IdeaVim/lib/src/IdeaVIM-2.0.0-src.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Gradle: com.jetbrains:ideaIC:2022.3">
+        <ANNOTATIONS>
+          <root url="jar://$MAVEN_REPOSITORY$/com/jetbrains/intellij/idea/ideaIU/2022.3.3/ideaIU-2022.3.3-annotations.zip!/" />
+        </ANNOTATIONS>
+        <CLASSES>
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party-native.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/3rd-party-rt.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/ant/lib/ant.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/app.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/byte-buddy-agent.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/error-prone-annotations.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/external-system-rt.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/externalProcess-rt.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/forms_rt.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/groovy.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/idea_rt.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/intellij-coverage-agent-1.0.682.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/intellij-test-discovery.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/jps-model.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/jsch-agent.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/jsp-base.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/junit4.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/kotlin-script-runtime.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/platform-duplicates-analysis.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/platform-objectSerializer-annotations.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/platform-statistics-devkit.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/platform-structuralSearch.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/protobuf.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/rd.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/stats.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/testFramework.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/tools-testsBootstrap.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/util.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/util_rt.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/xml-dom.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/xml-dom-impl.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/2022.3/875c24291422c3ac792ee0e0a718868080d88310/ideaIC-2022.3-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+  <component name="TestModuleProperties" production-module="HarpoonIJ.main" />
+</module>

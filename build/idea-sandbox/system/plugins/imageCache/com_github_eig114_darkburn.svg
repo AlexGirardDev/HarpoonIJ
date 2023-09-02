@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:cc="http://creativecommons.org/ns#"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:svg="http://www.w3.org/2000/svg"
+        xmlns="http://www.w3.org/2000/svg"
+        id="zenburn"
+        version="1.0"
+        viewBox="0 0 10.583333 10.583334"
+        height="40"
+        width="40">
+    <metadata/>
+    <g id="layer0">
+        <rect
+                x="0.0094826454"
+                y="-6.6576582e-08"
+                width="10.590555"
+                height="10.649021"
+                id="rect4533"
+                style="fill:#3f3f3f;fill-opacity:1;stroke-width:0.23150054"
+        />
+    </g>
+    <g id="layer1">
+        <rect
+                x="0.90014482"
+                y="0.66145819"
+                width="1.984375"
+                height="9.260417"
+                id="rect4542"
+                style="fill:#ca9292;fill-opacity:1;stroke-width:0.31899732"
+        />
+        <rect
+                x="3.1663682"
+                y="0.66145819"
+                width="1.984375"
+                height="9.260417"
+                id="rect4542-7"
+                style="fill:#7c9a7c;fill-opacity:1;stroke-width:0.31899732"
+        />
+        <rect
+                x="5.4325905"
+                y="0.66145819"
+                width="1.984375"
+                height="9.260417"
+                id="rect4542-7-7-9"
+                style="fill:#87d6d5;fill-opacity:1;stroke-width:0.31899732"
+        />
+        <rect
+                x="7.6988134"
+                y="0.66145819"
+                width="1.984375"
+                height="9.260417"
+                id="rect4542-7-7"
+                style="fill:#f0dfaf;fill-opacity:1;stroke-width:0.31899735"
+        />
+    </g>
+</svg>

@@ -1,0 +1,2109 @@
+{
+  "appInfo" : {
+    "build" : "223.7571.182",
+    "buildDate" : "2022-11-29T15:36:01.557Z[UTC]",
+    "productCode" : "IC",
+    "generated" : "2023-09-01T18:33:19.9237707Z",
+    "os" : "Windows 11 10.0",
+    "runtime" : "JetBrains s.r.o. 17.0.5 17.0.5+1-b653.14"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 786432000,
+    "numberOfProcessors" : 24,
+    "maxNumberOfIndexingThreads" : 23,
+    "maxSizeOfFileForIntelliSense" : 2560000,
+    "maxSizeOfFileForContentLoading" : 20971520
+  },
+  "projectIndexingHistory" : {
+    "projectName" : "HarpoonIJ",
+    "times" : {
+      "indexingReason" : "On project open",
+      "scanningType" : "FULL_ON_PROJECT_OPEN",
+      "totalUpdatingTime" : 74435471100,
+      "indexingTime" : 54519801300,
+      "contentLoadingVisibleTime" : 2343215583,
+      "creatingIteratorsTime" : 274109300,
+      "scanFilesTime" : 13742711900,
+      "pushPropertiesTime" : 10515900,
+      "indexExtensionsTime" : 0,
+      "isAppliedAllValuesSeparately" : true,
+      "separateApplyingIndexesVisibleTime" : 30740841351,
+      "updatingStart" : "2023-09-01T18:32:05.4811495Z",
+      "updatingEnd" : "2023-09-01T18:33:19.9162635Z",
+      "totalSuspendedTime" : 5717094200,
+      "wasInterrupted" : false
+    },
+    "fileCount" : {
+      "numberOfFileProviders" : 10,
+      "numberOfScannedFiles" : 241207,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringScan" : 0,
+      "numberOfFilesScheduledForIndexingAfterScan" : 232347,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringIndexingStage" : 0,
+      "numberOfFilesIndexedWithLoadingContent" : 232347
+    },
+    "totalStatsPerFileType" : [ {
+      "fileType" : "JAVA",
+      "partOfTotalProcessingTime" : {
+        "part" : 531330400600,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 41503739500,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 59327,
+      "totalFilesSize" : 461287605,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 461287605,
+        "totalTime" : 531330400600
+      },
+      "biggestContributors" : [ {
+        "providerName" : "JDK openjdk-19 C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.zipfs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.zipfs",
+        "numberOfFiles" : 14862,
+        "totalFilesSize" : 205593089,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 278863805200,
+          "total" : 531330400600
+        }
+      }, {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 44384,
+        "totalFilesSize" : 255026604,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 251778809400,
+          "total" : 531330400600
+        }
+      }, {
+        "providerName" : "Library Gradle: unzipped.com.jetbrains.plugins:IdeaVIM:unzipped.com.jetbrains.plugins:2.0.0 (#4 class roots, #1 source roots)",
+        "numberOfFiles" : 32,
+        "totalFilesSize" : 575829,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 290003300,
+          "total" : 531330400600
+        }
+      }, {
+        "providerName" : "Library Gradle: org.jetbrains:annotations:23.0.0 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 30,
+        "totalFilesSize" : 74147,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 221886300,
+          "total" : 531330400600
+        }
+      }, {
+        "providerName" : "Module 'HarpoonIJ.main' (main)",
+        "numberOfFiles" : 19,
+        "totalFilesSize" : 17936,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 175896400,
+          "total" : 531330400600
+        }
+      } ]
+    }, {
+      "fileType" : "CLASS",
+      "partOfTotalProcessingTime" : {
+        "part" : 394977328300,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 9149533800,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 149828,
+      "totalFilesSize" : 587770206,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 587770206,
+        "totalTime" : 394977328300
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 121061,
+        "totalFilesSize" : 453568333,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 311201138600,
+          "total" : 394977328300
+        }
+      }, {
+        "providerName" : "JDK openjdk-19 C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.zipfs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.zipfs",
+        "numberOfFiles" : 26694,
+        "totalFilesSize" : 125912510,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 75843492000,
+          "total" : 394977328300
+        }
+      }, {
+        "providerName" : "Library Gradle: unzipped.com.jetbrains.plugins:IdeaVIM:unzipped.com.jetbrains.plugins:2.0.0 (#4 class roots, #1 source roots)",
+        "numberOfFiles" : 2015,
+        "totalFilesSize" : 8257334,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 7843633700,
+          "total" : 394977328300
+        }
+      }, {
+        "providerName" : "Library Gradle: org.jetbrains:annotations:23.0.0 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 58,
+        "totalFilesSize" : 32029,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 89064000,
+          "total" : 394977328300
+        }
+      } ]
+    }, {
+      "fileType" : "Kotlin",
+      "partOfTotalProcessingTime" : {
+        "part" : 211584143000,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 1596697200,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 17878,
+      "totalFilesSize" : 74438459,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 74438459,
+        "totalTime" : 211584143000
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 17710,
+        "totalFilesSize" : 73615463,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 203216617800,
+          "total" : 211584143000
+        }
+      }, {
+        "providerName" : "Library Gradle: unzipped.com.jetbrains.plugins:IdeaVIM:unzipped.com.jetbrains.plugins:2.0.0 (#4 class roots, #1 source roots)",
+        "numberOfFiles" : 166,
+        "totalFilesSize" : 821946,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 8342698800,
+          "total" : 211584143000
+        }
+      }, {
+        "providerName" : "Module 'HarpoonIJ' (HarpoonIJ)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 1050,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 24826400,
+          "total" : 211584143000
+        }
+      } ]
+    }, {
+      "fileType" : "SVG",
+      "partOfTotalProcessingTime" : {
+        "part" : 24975488100,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 162151000,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 2827,
+      "totalFilesSize" : 3007559,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 3007559,
+        "totalTime" : 24975488100
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 2817,
+        "totalFilesSize" : 2996960,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 24720749500,
+          "total" : 24975488100
+        }
+      }, {
+        "providerName" : "Library Gradle: unzipped.com.jetbrains.plugins:IdeaVIM:unzipped.com.jetbrains.plugins:2.0.0 (#4 class roots, #1 source roots)",
+        "numberOfFiles" : 7,
+        "totalFilesSize" : 6149,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 217570000,
+          "total" : 24975488100
+        }
+      }, {
+        "providerName" : "JDK openjdk-19 C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.zipfs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.zipfs",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 3472,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 34951300,
+          "total" : 24975488100
+        }
+      }, {
+        "providerName" : "Module 'HarpoonIJ.main' (main)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 978,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2217300,
+          "total" : 24975488100
+        }
+      } ]
+    }, {
+      "fileType" : "PLAIN_TEXT",
+      "partOfTotalProcessingTime" : {
+        "part" : 18372709700,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 37089000,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 588,
+      "totalFilesSize" : 7563601,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 7563601,
+        "totalTime" : 18372709700
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 542,
+        "totalFilesSize" : 7331310,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 17957499300,
+          "total" : 18372709700
+        }
+      }, {
+        "providerName" : "JDK openjdk-19 C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.zipfs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.zipfs",
+        "numberOfFiles" : 45,
+        "totalFilesSize" : 230995,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 408474200,
+          "total" : 18372709700
+        }
+      }, {
+        "providerName" : "Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@61910ed3' (non-project)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 1296,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 6736200,
+          "total" : 18372709700
+        }
+      } ]
+    }, {
+      "fileType" : "JSON",
+      "partOfTotalProcessingTime" : {
+        "part" : 14065625400,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 55585100,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 51,
+      "totalFilesSize" : 10852981,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 10852981,
+        "totalTime" : 14065625400
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 49,
+        "totalFilesSize" : 10562195,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 13745739800,
+          "total" : 14065625400
+        }
+      }, {
+        "providerName" : "Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@61910ed3' (non-project)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 287182,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 317659000,
+          "total" : 14065625400
+        }
+      }, {
+        "providerName" : "Indexable set contributor 'Scratches & Consoles' (non-project)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 3604,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2226600,
+          "total" : 14065625400
+        }
+      } ]
+    }, {
+      "fileType" : "XML",
+      "partOfTotalProcessingTime" : {
+        "part" : 11716943000,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 278002100,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 252,
+      "totalFilesSize" : 5361264,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 5361264,
+        "totalTime" : 11716943000
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 212,
+        "totalFilesSize" : 4100167,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 6488613200,
+          "total" : 11716943000
+        }
+      }, {
+        "providerName" : "Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@61910ed3' (non-project)",
+        "numberOfFiles" : 24,
+        "totalFilesSize" : 1136575,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 3064514900,
+          "total" : 11716943000
+        }
+      }, {
+        "providerName" : "Library Gradle: unzipped.com.jetbrains.plugins:IdeaVIM:unzipped.com.jetbrains.plugins:2.0.0 (#4 class roots, #1 source roots)",
+        "numberOfFiles" : 11,
+        "totalFilesSize" : 70256,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 1656132400,
+          "total" : 11716943000
+        }
+      }, {
+        "providerName" : "JDK openjdk-19 C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.zipfs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.zipfs",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 47910,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 475705700,
+          "total" : 11716943000
+        }
+      }, {
+        "providerName" : "Module 'HarpoonIJ.main' (main)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 5347,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 24969200,
+          "total" : 11716943000
+        }
+      }, {
+        "providerName" : "Module 'HarpoonIJ' (HarpoonIJ)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 1009,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 7007600,
+          "total" : 11716943000
+        }
+      } ]
+    }, {
+      "fileType" : "Properties",
+      "partOfTotalProcessingTime" : {
+        "part" : 11639069200,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 320669800,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 540,
+      "totalFilesSize" : 8096705,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 8096705,
+        "totalTime" : 11639069200
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 427,
+        "totalFilesSize" : 6884253,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 9206758600,
+          "total" : 11639069200
+        }
+      }, {
+        "providerName" : "JDK openjdk-19 C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.zipfs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.zipfs",
+        "numberOfFiles" : 109,
+        "totalFilesSize" : 1205803,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2418398000,
+          "total" : 11639069200
+        }
+      }, {
+        "providerName" : "Library Gradle: unzipped.com.jetbrains.plugins:IdeaVIM:unzipped.com.jetbrains.plugins:2.0.0 (#4 class roots, #1 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 5687,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 9206600,
+          "total" : 11639069200
+        }
+      }, {
+        "providerName" : "Module 'HarpoonIJ.main' (main)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 760,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2584300,
+          "total" : 11639069200
+        }
+      }, {
+        "providerName" : "Module 'HarpoonIJ' (HarpoonIJ)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 202,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2121700,
+          "total" : 11639069200
+        }
+      } ]
+    }, {
+      "fileType" : "HTML",
+      "partOfTotalProcessingTime" : {
+        "part" : 4233629100,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 144549100,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 375,
+      "totalFilesSize" : 919227,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 919227,
+        "totalTime" : 4233629100
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 375,
+        "totalFilesSize" : 919227,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 4233629100,
+          "total" : 4233629100
+        }
+      } ]
+    }, {
+      "fileType" : "Groovy",
+      "partOfTotalProcessingTime" : {
+        "part" : 3373947700,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 10650600,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 80,
+      "totalFilesSize" : 214244,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 214244,
+        "totalTime" : 3373947700
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 80,
+        "totalFilesSize" : 214244,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 3373947700,
+          "total" : 3373947700
+        }
+      } ]
+    }, {
+      "fileType" : "DTD",
+      "partOfTotalProcessingTime" : {
+        "part" : 3124402000,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 53187600,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 128,
+      "totalFilesSize" : 1819573,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 1819573,
+        "totalTime" : 3124402000
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@61910ed3' (non-project)",
+        "numberOfFiles" : 64,
+        "totalFilesSize" : 812613,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2792171500,
+          "total" : 3124402000
+        }
+      }, {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 63,
+        "totalFilesSize" : 1003995,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 313816300,
+          "total" : 3124402000
+        }
+      }, {
+        "providerName" : "JDK openjdk-19 C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.zipfs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.zipfs",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 2965,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 18414200,
+          "total" : 3124402000
+        }
+      } ]
+    }, {
+      "fileType" : "RNG Compact",
+      "partOfTotalProcessingTime" : {
+        "part" : 2874080000,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 78623600,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 125,
+      "totalFilesSize" : 477697,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 477697,
+        "totalTime" : 2874080000
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@61910ed3' (non-project)",
+        "numberOfFiles" : 124,
+        "totalFilesSize" : 473884,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2872594400,
+          "total" : 2874080000
+        }
+      }, {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 3813,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 1485600,
+          "total" : 2874080000
+        }
+      } ]
+    }, {
+      "fileType" : "textmate",
+      "partOfTotalProcessingTime" : {
+        "part" : 587214400,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 1039100,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 25,
+      "totalFilesSize" : 198506,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 198506,
+        "totalTime" : 587214400
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 13,
+        "totalFilesSize" : 160424,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 482879500,
+          "total" : 587214400
+        }
+      }, {
+        "providerName" : "Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@61910ed3' (non-project)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 16013,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 59430500,
+          "total" : 587214400
+        }
+      }, {
+        "providerName" : "JDK openjdk-19 C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.zipfs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.zipfs",
+        "numberOfFiles" : 10,
+        "totalFilesSize" : 19306,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 42716800,
+          "total" : 587214400
+        }
+      }, {
+        "providerName" : "Module 'HarpoonIJ' (HarpoonIJ)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 2763,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2187600,
+          "total" : 587214400
+        }
+      } ]
+    }, {
+      "fileType" : "JavaScript",
+      "partOfTotalProcessingTime" : {
+        "part" : 385006700,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 2142300,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 9,
+      "totalFilesSize" : 531684,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 531684,
+        "totalTime" : 385006700
+      },
+      "biggestContributors" : [ {
+        "providerName" : "JDK openjdk-19 C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.zipfs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.zipfs",
+        "numberOfFiles" : 7,
+        "totalFilesSize" : 529707,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 373281700,
+          "total" : 385006700
+        }
+      }, {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 1977,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 11725000,
+          "total" : 385006700
+        }
+      } ]
+    }, {
+      "fileType" : "SPI",
+      "partOfTotalProcessingTime" : {
+        "part" : 224369600,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 3865300,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 70,
+      "totalFilesSize" : 26741,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 26741,
+        "totalTime" : 224369600
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 69,
+        "totalFilesSize" : 26700,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 223641000,
+          "total" : 224369600
+        }
+      }, {
+        "providerName" : "JDK openjdk-19 C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.zipfs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.zipfs",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 41,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 728600,
+          "total" : 224369600
+        }
+      } ]
+    }, {
+      "fileType" : "Shrinker Config File",
+      "partOfTotalProcessingTime" : {
+        "part" : 163439300,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 510800,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 8,
+      "totalFilesSize" : 8990,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 8990,
+        "totalTime" : 163439300
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 8,
+        "totalFilesSize" : 8990,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 163439300,
+          "total" : 163439300
+        }
+      } ]
+    }, {
+      "fileType" : "kotlin_module",
+      "partOfTotalProcessingTime" : {
+        "part" : 163299600,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 13521500,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 173,
+      "totalFilesSize" : 85895,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 85895,
+        "totalTime" : 163299600
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 171,
+        "totalFilesSize" : 82669,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 117338800,
+          "total" : 163299600
+        }
+      }, {
+        "providerName" : "Library Gradle: unzipped.com.jetbrains.plugins:IdeaVIM:unzipped.com.jetbrains.plugins:2.0.0 (#4 class roots, #1 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 3226,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 45960800,
+          "total" : 163299600
+        }
+      } ]
+    }, {
+      "fileType" : "PATCH",
+      "partOfTotalProcessingTime" : {
+        "part" : 125638800,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 967000,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 8,
+      "totalFilesSize" : 4449,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 4449,
+        "totalTime" : 125638800
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@61910ed3' (non-project)",
+        "numberOfFiles" : 8,
+        "totalFilesSize" : 4449,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 125638800,
+          "total" : 125638800
+        }
+      } ]
+    }, {
+      "fileType" : "CSS",
+      "partOfTotalProcessingTime" : {
+        "part" : 114756000,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 1183900,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 14,
+      "totalFilesSize" : 77545,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 77545,
+        "totalTime" : 114756000
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@61910ed3' (non-project)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 5538,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 41786900,
+          "total" : 114756000
+        }
+      }, {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 8,
+        "totalFilesSize" : 34171,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 36903700,
+          "total" : 114756000
+        }
+      }, {
+        "providerName" : "JDK openjdk-19 C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.zipfs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.zipfs",
+        "numberOfFiles" : 5,
+        "totalFilesSize" : 37836,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 36065400,
+          "total" : 114756000
+        }
+      } ]
+    }, {
+      "fileType" : "kotlin_builtins",
+      "partOfTotalProcessingTime" : {
+        "part" : 108611400,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 384200,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 7,
+      "totalFilesSize" : 24645,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 24645,
+        "totalTime" : 108611400
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 7,
+        "totalFilesSize" : 24645,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 108611400,
+          "total" : 108611400
+        }
+      } ]
+    }, {
+      "fileType" : "Markdown",
+      "partOfTotalProcessingTime" : {
+        "part" : 90256500,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 768000,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 6,
+      "totalFilesSize" : 5454,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 5454,
+        "totalTime" : 90256500
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 5,
+        "totalFilesSize" : 3631,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 73875800,
+          "total" : 90256500
+        }
+      }, {
+        "providerName" : "Module 'HarpoonIJ' (HarpoonIJ)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 1823,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 16380700,
+          "total" : 90256500
+        }
+      } ]
+    }, {
+      "fileType" : "Manifest",
+      "partOfTotalProcessingTime" : {
+        "part" : 77623100,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 1138100,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 16,
+      "totalFilesSize" : 5098,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 5098,
+        "totalTime" : 77623100
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 9,
+        "totalFilesSize" : 2776,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 54475700,
+          "total" : 77623100
+        }
+      }, {
+        "providerName" : "Library Gradle: org.jetbrains:annotations:23.0.0 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 71,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 11587800,
+          "total" : 77623100
+        }
+      }, {
+        "providerName" : "Library Gradle: unzipped.com.jetbrains.plugins:IdeaVIM:unzipped.com.jetbrains.plugins:2.0.0 (#4 class roots, #1 source roots)",
+        "numberOfFiles" : 5,
+        "totalFilesSize" : 2251,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 11559600,
+          "total" : 77623100
+        }
+      } ]
+    }, {
+      "fileType" : "XHTML",
+      "partOfTotalProcessingTime" : {
+        "part" : 42723800,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 467300,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 2908,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 2908,
+        "totalTime" : 42723800
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@61910ed3' (non-project)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 2908,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 42723800,
+          "total" : 42723800
+        }
+      } ]
+    }, {
+      "fileType" : "Dictionary",
+      "partOfTotalProcessingTime" : {
+        "part" : 41175500,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 4811000,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 4,
+      "totalFilesSize" : 1576583,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 1576583,
+        "totalTime" : 41175500
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 3,
+        "totalFilesSize" : 1575522,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 40148000,
+          "total" : 41175500
+        }
+      }, {
+        "providerName" : "Library Gradle: unzipped.com.jetbrains.plugins:IdeaVIM:unzipped.com.jetbrains.plugins:2.0.0 (#4 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 1061,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 1027500,
+          "total" : 41175500
+        }
+      } ]
+    }, {
+      "fileType" : "Shell Script",
+      "partOfTotalProcessingTime" : {
+        "part" : 16877100,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 109300,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 8070,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 8070,
+        "totalTime" : 16877100
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'HarpoonIJ' (HarpoonIJ)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 8070,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 16877100,
+          "total" : 16877100
+        }
+      } ]
+    }, {
+      "fileType" : "AUTO_DETECTED",
+      "partOfTotalProcessingTime" : {
+        "part" : 15492600,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 81300,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 2,
+      "totalFilesSize" : 0,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 0,
+        "totalTime" : 15492600
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 0,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 15492600,
+          "total" : 15492600
+        }
+      } ]
+    }, {
+      "fileType" : "GUI_DESIGNER_FORM",
+      "partOfTotalProcessingTime" : {
+        "part" : 12040800,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 118500,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 8010,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 8010,
+        "totalTime" : 12040800
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 8010,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 12040800,
+          "total" : 12040800
+        }
+      } ]
+    }, {
+      "fileType" : "GitIgnore file",
+      "partOfTotalProcessingTime" : {
+        "part" : 4005700,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 102500,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 551,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 551,
+        "totalTime" : 4005700
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'HarpoonIJ.main' (main)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 551,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 4005700,
+          "total" : 4005700
+        }
+      } ]
+    }, {
+      "fileType" : "DGM",
+      "partOfTotalProcessingTime" : {
+        "part" : 3759500,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 61100,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 179,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 179,
+        "totalTime" : 3759500
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 179,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 3759500,
+          "total" : 3759500
+        }
+      } ]
+    }, {
+      "fileType" : "Perl",
+      "partOfTotalProcessingTime" : {
+        "part" : 2664300,
+        "total" : 1234446720800
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 115200,
+        "total" : 53421864800
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 6523,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 6523,
+        "totalTime" : 2664300
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 6523,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2664300,
+          "total" : 2664300
+        }
+      } ]
+    } ],
+    "totalStatsPerIndexer" : [ {
+      "indexId" : "Stubs",
+      "partOfTotalIndexingTime" : {
+        "part" : 177686568500,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 168986,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 676848319,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 676848319,
+        "totalTime" : 177686568500
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "IdIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 64231731400,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 82325,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 574919174,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 574919174,
+        "totalTime" : 64231731400
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "Trigram.Index",
+      "partOfTotalIndexingTime" : {
+        "part" : 32996578800,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 82339,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 576500206,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 576500206,
+        "totalTime" : 32996578800
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 29626325000,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 167706,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 662208665,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 662208665,
+        "totalTime" : 29626325000
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "bytecodeAnalysis",
+      "partOfTotalIndexingTime" : {
+        "part" : 14818873000,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 149828,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 587770206,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 587770206,
+        "totalTime" : 14818873000
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 13264576600,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 149828,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 587770206,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 587770206,
+        "totalTime" : 13264576600
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 3180413000,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 149828,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 587770206,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 587770206,
+        "totalTime" : 3180413000
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "IdeaPluginRegistrationIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 2269823800,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 252,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 5361264,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 5361264,
+        "totalTime" : 2269823800
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "json.file.root.values",
+      "partOfTotalIndexingTime" : {
+        "part" : 1560310300,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 51,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 10852981,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 10852981,
+        "totalTime" : 1560310300
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "xmlProperties",
+      "partOfTotalIndexingTime" : {
+        "part" : 548553700,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 210,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 3989786,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 3989786,
+        "totalTime" : 548553700
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinPackageSourcesMemberNamesIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 498614100,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 17878,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 74438459,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 74438459,
+        "totalTime" : 498614100
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "XmlNamespaces",
+      "partOfTotalIndexingTime" : {
+        "part" : 478939000,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 29,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 1087165,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 1087165,
+        "totalTime" : 478939000
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "XmlTagNames",
+      "partOfTotalIndexingTime" : {
+        "part" : 368423300,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 11,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 415206,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 415206,
+        "totalTime" : 368423300
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "SchemaTypeInheritance",
+      "partOfTotalIndexingTime" : {
+        "part" : 314206600,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 11,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 415206,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 415206,
+        "totalTime" : 314206600
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "devkit.ExtensionPointIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 184003300,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 252,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 5361264,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 5361264,
+        "totalTime" : 184003300
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "DomFileIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 113606000,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 252,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 5361264,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 5361264,
+        "totalTime" : 113606000
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "devkit.ExtensionPointClassIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 99528300,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 252,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 5361264,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 5361264,
+        "totalTime" : 99528300
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "PluginIdDependenciesIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 94142000,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 252,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 5361264,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 5361264,
+        "totalTime" : 94142000
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinModuleMappingIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 58298600,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 173,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 85895,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 85895,
+        "totalTime" : 58298600
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "PluginIdModuleIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 45951300,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 252,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 5361264,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 5361264,
+        "totalTime" : 45951300
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "java.fun.expression",
+      "partOfTotalIndexingTime" : {
+        "part" : 38495600,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 19,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 17936,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 17936,
+        "totalTime" : 38495600
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "java.binary.plus.expression",
+      "partOfTotalIndexingTime" : {
+        "part" : 24863200,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 19,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 17936,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 17936,
+        "totalTime" : 24863200
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "java.null.method.argument",
+      "partOfTotalIndexingTime" : {
+        "part" : 21745200,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 19,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 17936,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 17936,
+        "totalTime" : 21745200
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinBuiltInsMetadataIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 20990200,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 7,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 24645,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 24645,
+        "totalTime" : 20990200
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinJvmModuleAnnotationsIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 12382500,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 173,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 85895,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 85895,
+        "totalTime" : 12382500
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "fileIncludes",
+      "partOfTotalIndexingTime" : {
+        "part" : 11107500,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 5,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 54266,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 54266,
+        "totalTime" : 11107500
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "com.intellij.uiDesigner.FormClassIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 8949600,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 1,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 8010,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 8010,
+        "totalTime" : 8949600
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "NavXmlIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 8672100,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 210,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 3989786,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 3989786,
+        "totalTime" : 8672100
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "FrameworkDetectionIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 3522000,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 3,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 6356,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 6356,
+        "totalTime" : 3522000
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.versions.KotlinJsMetadataVersionIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 2020000,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 9,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 531684,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 531684,
+        "totalTime" : 2020000
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "XsltSymbolIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 1053400,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 5,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 54266,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 54266,
+        "totalTime" : 1053400
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "java.source.module.name",
+      "partOfTotalIndexingTime" : {
+        "part" : 947200,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 15,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 5042,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 5042,
+        "totalTime" : 947200
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "ant-imports",
+      "partOfTotalIndexingTime" : {
+        "part" : 723100,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 3,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 6356,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 6356,
+        "totalTime" : 723100
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "RelaxSymbolIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 710000,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 5,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 54266,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 54266,
+        "totalTime" : 710000
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinStdlibIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 473200,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 16,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 5098,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 5098,
+        "totalTime" : 473200
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFileIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 186400,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 7,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 24645,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 24645,
+        "totalTime" : 186400
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFilePackageIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 31700,
+        "total" : 342596339500
+      },
+      "totalNumberOfFiles" : 7,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 24645,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 24645,
+        "totalTime" : 31700
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    } ],
+    "scanningStatistics" : [ {
+      "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+      "numberOfScannedFiles" : 196519,
+      "numberOfSkippedFiles" : 2,
+      "numberOfFilesForIndexing" : 188021,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 10961229200,
+      "scanningTime" : 11194224400,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 1798078700,
+      "timeIndexingWithoutContent" : 539023900,
+      "roots" : [ ]
+    }, {
+      "providerName" : "JDK openjdk-19 C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.zipfs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.zipfs",
+      "numberOfScannedFiles" : 42090,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 41738,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 7223974600,
+      "scanningTime" : 7374825700,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 42574900,
+      "timeIndexingWithoutContent" : 236374600,
+      "roots" : [ ]
+    }, {
+      "providerName" : "Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@61910ed3' (non-project)",
+      "numberOfScannedFiles" : 225,
+      "numberOfSkippedFiles" : 4,
+      "numberOfFilesForIndexing" : 225,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 696754000,
+      "scanningTime" : 743098500,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 614000,
+      "timeIndexingWithoutContent" : 5544400,
+      "roots" : [ ]
+    }, {
+      "providerName" : "Library Gradle: unzipped.com.jetbrains.plugins:IdeaVIM:unzipped.com.jetbrains.plugins:2.0.0 (#4 class roots, #1 source roots)",
+      "numberOfScannedFiles" : 2241,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 2241,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 648088600,
+      "scanningTime" : 682803700,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 4760200,
+      "timeIndexingWithoutContent" : 39081200,
+      "roots" : [ ]
+    }, {
+      "providerName" : "Module 'HarpoonIJ' (HarpoonIJ)",
+      "numberOfScannedFiles" : 17,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 7,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 395478200,
+      "scanningTime" : 416383200,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 21816500,
+      "timeIndexingWithoutContent" : 237100,
+      "roots" : [ ]
+    }, {
+      "providerName" : "Library Gradle: org.jetbrains:annotations:23.0.0 (#1 class roots, #1 source roots)",
+      "numberOfScannedFiles" : 90,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 90,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 104104500,
+      "scanningTime" : 132184300,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 419200,
+      "timeIndexingWithoutContent" : 5702400,
+      "roots" : [ ]
+    }, {
+      "providerName" : "Module 'HarpoonIJ.main' (main)",
+      "numberOfScannedFiles" : 24,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 24,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 64793900,
+      "scanningTime" : 79809500,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 206700,
+      "timeIndexingWithoutContent" : 1650800,
+      "roots" : [ ]
+    }, {
+      "providerName" : "Indexable set contributor 'Scratches & Consoles' (non-project)",
+      "numberOfScannedFiles" : 1,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 1,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 6525900,
+      "scanningTime" : 36434300,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 11000,
+      "timeIndexingWithoutContent" : 2309700,
+      "roots" : [ ]
+    }, {
+      "providerName" : "Indexable set contributor 'Scratches & Consoles' (project)",
+      "numberOfScannedFiles" : 0,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 0,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 0,
+      "scanningTime" : 0,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 0,
+      "timeIndexingWithoutContent" : 0,
+      "roots" : [ ]
+    }, {
+      "providerName" : "Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@61910ed3' (project)",
+      "numberOfScannedFiles" : 0,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 0,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 0,
+      "scanningTime" : 0,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 0,
+      "timeIndexingWithoutContent" : 0,
+      "roots" : [ ]
+    } ],
+    "fileProviderStatistics" : [ {
+      "providerName" : "Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 188021,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalIndexingVisibleTime" : 37451864700,
+      "contentLoadingVisibleTime" : 606831316,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ {
+        "fileName" : "Svg.json",
+        "processingTime" : 827637300,
+        "evaluationOfIndexValueChangerTime" : 89912000,
+        "contentLoadingTime" : 2205000
+      }, {
+        "fileName" : "p751.properties",
+        "processingTime" : 1118432400,
+        "evaluationOfIndexValueChangerTime" : 335568700,
+        "contentLoadingTime" : 9303500
+      }, {
+        "fileName" : "Html.json",
+        "processingTime" : 1071161900,
+        "evaluationOfIndexValueChangerTime" : 151743200,
+        "contentLoadingTime" : 3408800
+      }, {
+        "fileName" : "GlobalObjects.json",
+        "processingTime" : 1126355900,
+        "evaluationOfIndexValueChangerTime" : 151602500,
+        "contentLoadingTime" : 4112000
+      }, {
+        "fileName" : "WebApi-r.json",
+        "processingTime" : 1508851700,
+        "evaluationOfIndexValueChangerTime" : 325348800,
+        "contentLoadingTime" : 4200200
+      }, {
+        "fileName" : "WebApi-u.json",
+        "processingTime" : 1744329900,
+        "evaluationOfIndexValueChangerTime" : 513789400,
+        "contentLoadingTime" : 6868000
+      }, {
+        "fileName" : "Css.json",
+        "processingTime" : 1773531100,
+        "evaluationOfIndexValueChangerTime" : 551113800,
+        "contentLoadingTime" : 5977400
+      }, {
+        "fileName" : "WebApi-l.json",
+        "processingTime" : 1790769900,
+        "evaluationOfIndexValueChangerTime" : 550815300,
+        "contentLoadingTime" : 4984800
+      }, {
+        "fileName" : "WebApi-a.json",
+        "processingTime" : 1801438900,
+        "evaluationOfIndexValueChangerTime" : 561960900,
+        "contentLoadingTime" : 7701500
+      }, {
+        "fileName" : "WebApi-e.json",
+        "processingTime" : 1818943800,
+        "evaluationOfIndexValueChangerTime" : 566600000,
+        "contentLoadingTime" : 5960900
+      } ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "isAppliedAllValuesSeparately" : true,
+      "separateApplyingIndexesVisibleTime" : 22242390861
+    }, {
+      "providerName" : "JDK openjdk-19 C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.zipfs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.zipfs",
+      "totalNumberOfIndexedFiles" : 41738,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalIndexingVisibleTime" : 15662897600,
+      "contentLoadingVisibleTime" : 1714512896,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ {
+        "fileName" : "RowSet.java",
+        "processingTime" : 527327800,
+        "evaluationOfIndexValueChangerTime" : 5483100,
+        "contentLoadingTime" : 249722500
+      }, {
+        "fileName" : "SAX2DTM2.java",
+        "processingTime" : 528513500,
+        "evaluationOfIndexValueChangerTime" : 10219900,
+        "contentLoadingTime" : 262430700
+      }, {
+        "fileName" : "ToStream.java",
+        "processingTime" : 700158300,
+        "evaluationOfIndexValueChangerTime" : 11046000,
+        "contentLoadingTime" : 367945300
+      }, {
+        "fileName" : "DTMDocumentImpl.java",
+        "processingTime" : 544074000,
+        "evaluationOfIndexValueChangerTime" : 10876400,
+        "contentLoadingTime" : 260239000
+      }, {
+        "fileName" : "GB18030.java",
+        "processingTime" : 608806400,
+        "evaluationOfIndexValueChangerTime" : 100275600,
+        "contentLoadingTime" : 9275600
+      }, {
+        "fileName" : "ResultSet.java",
+        "processingTime" : 1091336100,
+        "evaluationOfIndexValueChangerTime" : 16290600,
+        "contentLoadingTime" : 528976900
+      }, {
+        "fileName" : "CallableStatement.java",
+        "processingTime" : 732561700,
+        "evaluationOfIndexValueChangerTime" : 12936100,
+        "contentLoadingTime" : 355628800
+      }, {
+        "fileName" : "Const.java",
+        "processingTime" : 575290700,
+        "evaluationOfIndexValueChangerTime" : 11079300,
+        "contentLoadingTime" : 293046700
+      }, {
+        "fileName" : "XPathParser.java",
+        "processingTime" : 761554300,
+        "evaluationOfIndexValueChangerTime" : 8775500,
+        "contentLoadingTime" : 338878600
+      }, {
+        "fileName" : "DatabaseMetaData.java",
+        "processingTime" : 919192600,
+        "evaluationOfIndexValueChangerTime" : 8736300,
+        "contentLoadingTime" : 453258000
+      } ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "isAppliedAllValuesSeparately" : true,
+      "separateApplyingIndexesVisibleTime" : 8230226240
+    }, {
+      "providerName" : "Library Gradle: unzipped.com.jetbrains.plugins:IdeaVIM:unzipped.com.jetbrains.plugins:2.0.0 (#4 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 2241,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalIndexingVisibleTime" : 903195926,
+      "contentLoadingVisibleTime" : 13707954,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ {
+        "fileName" : "RegExp.kt",
+        "processingTime" : 529294200,
+        "evaluationOfIndexValueChangerTime" : 522174100,
+        "contentLoadingTime" : 963000
+      } ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "isAppliedAllValuesSeparately" : true,
+      "separateApplyingIndexesVisibleTime" : 140320525
+    }, {
+      "providerName" : "Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@61910ed3' (non-project)",
+      "totalNumberOfIndexedFiles" : 225,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalIndexingVisibleTime" : 458706600,
+      "contentLoadingVisibleTime" : 6691107,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "isAppliedAllValuesSeparately" : true,
+      "separateApplyingIndexesVisibleTime" : 113333758
+    }, {
+      "providerName" : "Library Gradle: org.jetbrains:annotations:23.0.0 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 90,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalIndexingVisibleTime" : 16654609,
+      "contentLoadingVisibleTime" : 1299685,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "isAppliedAllValuesSeparately" : true,
+      "separateApplyingIndexesVisibleTime" : 9445073
+    }, {
+      "providerName" : "Module 'HarpoonIJ.main' (main)",
+      "totalNumberOfIndexedFiles" : 24,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalIndexingVisibleTime" : 10826690,
+      "contentLoadingVisibleTime" : 112494,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "isAppliedAllValuesSeparately" : true,
+      "separateApplyingIndexesVisibleTime" : 4188043
+    }, {
+      "providerName" : "Module 'HarpoonIJ' (HarpoonIJ)",
+      "totalNumberOfIndexedFiles" : 7,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalIndexingVisibleTime" : 3403382,
+      "contentLoadingVisibleTime" : 52393,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "isAppliedAllValuesSeparately" : true,
+      "separateApplyingIndexesVisibleTime" : 909537
+    }, {
+      "providerName" : "Indexable set contributor 'Scratches & Consoles' (non-project)",
+      "totalNumberOfIndexedFiles" : 1,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalIndexingVisibleTime" : 109190,
+      "contentLoadingVisibleTime" : 7738,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "isAppliedAllValuesSeparately" : true,
+      "separateApplyingIndexesVisibleTime" : 27314
+    } ],
+    "visibleTimeToAllThreadTimeRatio" : 0.04418651738472264
+  }
+}

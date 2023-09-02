@@ -1,0 +1,8 @@
+<project>
+  <component name="ExternalCompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="HarpoonIJ.main" target="11" />
+      <module name="HarpoonIJ.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

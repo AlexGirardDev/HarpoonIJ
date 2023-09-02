@@ -1,0 +1,337 @@
+<html>
+  <head>
+    <title>Indexing diagnostics of 'Launch'</title>
+    <style>body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  width: 80%;
+}
+
+table.two-columns td {
+  width: 50%;
+}
+
+th, td {
+  padding: 3px;
+}
+
+th {
+  background: lightgrey;
+}
+
+td {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+        
+.stats-content {
+  margin-left: 20%;
+}
+
+.aggregate-report-content {
+  margin-left: 10%;
+}
+
+.navigation-bar {
+  width: 15%;
+  background-color: lightgrey;
+  position: fixed;
+  height: 100%;
+}
+
+div.navigation-bar ul {
+  list-style-type: none;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+}
+
+div.navigation-bar ul li a, label {
+  display: block;
+  color: #000;
+  padding: 8px 20px;
+  text-decoration: none;
+}
+
+label input {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+div.navigation-bar ul li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.minor-data {}
+
+.invisible {
+  display: none;
+}
+
+.jetbrains-logo {
+  width: 50%;
+  bottom: 5%;
+  position: absolute;
+  left: 20%;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.linkable-table-row:hover {
+  background: #f2f3ff;
+  outline: none;
+  cursor: pointer;
+}</style>
+    <script>document.addEventListener("DOMContentLoaded", () => {
+  const rows = document.getElementsByClassName("linkable-table-row")
+  for (const row of rows) {
+    const href = row.getAttribute("href")
+    row.addEventListener("click", () => {
+      window.open(href, "_blank");
+    });
+  }
+});</script>
+  </head>
+  <body>
+    <div class="aggregate-report-content">
+      <h1 class="Project name"></h1>
+Launch
+      <div>
+        <h1 class="Indexing history"></h1>
+        <table class="centered-text"><caption style="caption-side: bottom; text-align: right; font-size: 14px">Hover for details</caption>
+          <thead>
+            <tr>
+              <th colspan="7">Time</th>
+              <th colspan="6">Files</th>
+              <th rowspan="2">IDE</th>
+              <th rowspan="2">Type</th>
+            </tr>
+            <tr>
+              <th>Started</th>
+              <th>Total</th>
+              <th>Creating iterators</th>
+              <th>Scanning</th>
+              <th>Indexing</th>
+              <th>Content loading</th>
+              <th>Finished</th>
+              <th>Providers</th>
+              <th>Scanned</th>
+              <th>Shared indexes (w/o content loading)</th>
+              <th>Scheduled for indexing</th>
+              <th>Shared indexes (content loaded)</th>
+              <th>Total indexed (shared indexes included)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-02-19-46-01.987.html">
+              <td><strong class="On project open"></strong><br>19:45:56 02 Jan</td>
+              <td>5 s 187 ms</td>
+              <td>564 ms</td>
+              <td>2 s 396 ms</td>
+              <td>2 s 67 ms</td>
+              <td>377 ms</td>
+              <td>19:46:01 02 Jan</td>
+              <td>5</td>
+              <td>522</td>
+              <td>0</td>
+              <td>330</td>
+              <td>0</td>
+              <td>330</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-02-17-41-19.113.html">
+              <td><strong class="On project open"></strong><br>17:41:14 02 Jan</td>
+              <td>5 s 95 ms</td>
+              <td>480 ms</td>
+              <td>3 s 114 ms</td>
+              <td>1 s 364 ms</td>
+              <td>181 ms</td>
+              <td>17:41:19 02 Jan</td>
+              <td>5</td>
+              <td>522</td>
+              <td>0</td>
+              <td>330</td>
+              <td>0</td>
+              <td>330</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-02-17-15-43.375.html">
+              <td><strong class="Rebuild requested for index IdIndex"></strong><br>17:15:42 02 Jan</td>
+              <td>1 s 196 ms</td>
+              <td>&lt; 1 ms</td>
+              <td>23 ms</td>
+              <td>1 s 57 ms</td>
+              <td>6 ms</td>
+              <td>17:15:43 02 Jan</td>
+              <td>5</td>
+              <td>522</td>
+              <td>0</td>
+              <td>312</td>
+              <td>0</td>
+              <td>312</td>
+              <td>IC-223.7571.182</td>
+              <td>full</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-02-16-59-20.900.html">
+              <td><strong class="On project open"></strong><br>16:59:16 02 Jan</td>
+              <td>4 s 300 ms</td>
+              <td>158 ms</td>
+              <td>1 s 369 ms</td>
+              <td>2 s 504 ms</td>
+              <td>117 ms</td>
+              <td>16:59:20 02 Jan</td>
+              <td>5</td>
+              <td>522</td>
+              <td>0</td>
+              <td>312</td>
+              <td>0</td>
+              <td>312</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-02-16-54-46.395.html">
+              <td><strong class="On project open"></strong><br>16:54:42 02 Jan</td>
+              <td>4 s 77 ms</td>
+              <td>255 ms</td>
+              <td>1 s 461 ms</td>
+              <td>2 s 229 ms</td>
+              <td>495 ms</td>
+              <td>16:54:46 02 Jan</td>
+              <td>5</td>
+              <td>522</td>
+              <td>0</td>
+              <td>312</td>
+              <td>0</td>
+              <td>312</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-02-16-13-20.477.html">
+              <td><strong class="On project open"></strong><br>16:13:16 02 Jan</td>
+              <td>4 s 11 ms</td>
+              <td>176 ms</td>
+              <td>1 s 557 ms</td>
+              <td>1 s 997 ms</td>
+              <td>92 ms</td>
+              <td>16:13:20 02 Jan</td>
+              <td>5</td>
+              <td>522</td>
+              <td>0</td>
+              <td>312</td>
+              <td>0</td>
+              <td>312</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-02-16-11-48.034.html">
+              <td><strong class="Rebuild requested for index IdIndex"></strong><br>16:11:45 02 Jan</td>
+              <td>2 s 81 ms</td>
+              <td>103 ms</td>
+              <td>210 ms</td>
+              <td>1 s 553 ms</td>
+              <td>399 ms</td>
+              <td>16:11:48 02 Jan</td>
+              <td>5</td>
+              <td>522</td>
+              <td>0</td>
+              <td>309</td>
+              <td>0</td>
+              <td>309</td>
+              <td>IC-223.7571.182</td>
+              <td>full</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-02-15-49-01.104.html">
+              <td><strong class="On project open"></strong><br>15:48:57 02 Jan</td>
+              <td>3 s 668 ms</td>
+              <td>151 ms</td>
+              <td>1 s 575 ms</td>
+              <td>1 s 437 ms</td>
+              <td>66 ms</td>
+              <td>15:49:01 02 Jan</td>
+              <td>5</td>
+              <td>522</td>
+              <td>0</td>
+              <td>312</td>
+              <td>0</td>
+              <td>312</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-02-15-44-36.697.html">
+              <td><strong class="On project open"></strong><br>15:44:32 02 Jan</td>
+              <td>3 s 923 ms</td>
+              <td>155 ms</td>
+              <td>1 s 860 ms</td>
+              <td>1 s 755 ms</td>
+              <td>120 ms</td>
+              <td>15:44:36 02 Jan</td>
+              <td>5</td>
+              <td>522</td>
+              <td>0</td>
+              <td>312</td>
+              <td>0</td>
+              <td>312</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+            <tr class="linkable-table-row" href="diagnostic-2023-01-02-15-35-47.032.html">
+              <td><strong class="On project open"></strong><br>15:35:41 02 Jan</td>
+              <td>5 s 74 ms</td>
+              <td>7 ms</td>
+              <td>3 s 4 ms</td>
+              <td>1 s 786 ms</td>
+              <td>288 ms</td>
+              <td>15:35:47 02 Jan</td>
+              <td>5</td>
+              <td>521</td>
+              <td>0</td>
+              <td>320</td>
+              <td>0</td>
+              <td>320</td>
+              <td>IC-223.7571.182</td>
+              <td>full on project open</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h1 class="Scanning to push properties of changed files"></h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Reason</th>
+              <th>Full duration</th>
+              <th>Is cancelled</th>
+              <th>Number</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>15:35:47 02 Jan</td>
+              <td>Push on VFS changes</td>
+              <td>5 ms</td>
+              <td>fully finished</td>
+              <td>1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

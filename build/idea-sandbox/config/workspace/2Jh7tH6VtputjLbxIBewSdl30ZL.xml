@@ -1,0 +1,235 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="Launch" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Launch/StartupWindow.xaml.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1056">
+              <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Launch/Properties/Settings.settings">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="41" selection-start-column="41" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Launch/Hotkeys/HotKeyDispatcher.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Launch/Hotkeys/HotKeyListener.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Launch/Hotkeys/ProcessHelper.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTypeUsageLocalSummary">
+    <fileType name="C#">
+      <summary usageCount="77" lastUsed="1672706758287" />
+    </fileType>
+    <fileType name="PLAIN_TEXT">
+      <summary usageCount="14" lastUsed="1672706758192" />
+    </fileType>
+    <fileType name="WebPreview">
+      <summary usageCount="1" lastUsed="1672697741115" />
+    </fileType>
+  </component>
+  <component name="GitSEFilterConfiguration">{
+}</component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Launch/Hotkeys/HotKeyListener.cs" />
+      <option value="$PROJECT_DIR$/Launch/Properties/Settings.settings" />
+      <option value="$PROJECT_DIR$/Launch/StartupWindow.xaml.cs" />
+      <option value="$PROJECT_DIR$/Launch/Hotkeys/HotKeyDispatcher.cs" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="LanguageUsageStatistics">
+    <language id="TEXT">
+      <summary usageCount="2" lastUsage="1672706758193" />
+    </language>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Launch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Launch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Launch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Launch" type="462c0819:PsiDirectoryNode" />
+              <item name="Launch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Launch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Launch" type="462c0819:PsiDirectoryNode" />
+              <item name="Launch" type="462c0819:PsiDirectoryNode" />
+              <item name="Hotkeys" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Launch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Launch" type="462c0819:PsiDirectoryNode" />
+              <item name="Launch" type="462c0819:PsiDirectoryNode" />
+              <item name="Images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Launch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Launch" type="462c0819:PsiDirectoryNode" />
+              <item name="Launch" type="462c0819:PsiDirectoryNode" />
+              <item name="obj" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="ToolWindowManager">
+    <editor active="true" />
+    <layout>
+      <window_info id="Pull Requests" sideWeight="0.50038695" weight="0.33014446" />
+      <window_info id="Bookmarks" order="0" side_tool="true" weight="0.13412729" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.50038695" visible="true" weight="0.09976572" />
+      <window_info id="Learn" order="2" />
+      <window_info active="true" id="Structure" order="3" sideWeight="0.499613" side_tool="true" visible="true" weight="0.09976572" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="4" weight="0.3301006" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Problems View" order="6" weight="0.3301006" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3301006" />
+      <window_info anchor="bottom" id="Services" order="8" weight="0.3301006" />
+      <window_info anchor="right" id="Notifications" order="0" weight="0.25" />
+    </layout>
+    <recentWindows>
+      <value>Project</value>
+      <value>Pull Requests</value>
+      <value>Problems View</value>
+      <value>Structure</value>
+      <value>Bookmarks</value>
+      <value>TODO</value>
+      <value>Services</value>
+      <value>Terminal</value>
+    </recentWindows>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1060" y="451" key="FileChooserDialogImpl" timestamp="1672706767420">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="1060" y="451" key="FileChooserDialogImpl/0.0.2560.1392/2560.1070.1920.1032/-1920.0.1920.1032/2560.-10.1920.1032/-1920.1080.1920.1032@0.0.2560.1392" timestamp="1672706767420" />
+    <state x="3021" y="1226" key="SettingsEditor" timestamp="1672687655287">
+      <screen x="2560" y="1070" width="1920" height="1032" />
+    </state>
+    <state x="3021" y="1226" key="SettingsEditor/0.0.2560.1392/2560.1070.1920.1032/-1920.0.1920.1032/2560.-10.1920.1032/-1920.1080.1920.1032@2560.1070.1920.1032" timestamp="1672687655287" />
+    <state x="3021" y="146" key="SettingsEditor/2560.1070.1920.1032/-1920.0.1920.1032/2560.-10.1920.1032/0.0.2560.1392/-1920.1080.1920.1032@2560.-10.1920.1032" timestamp="1672636340311" />
+    <state x="3021" y="1226" key="SettingsEditor/2560.1070.1920.1032/-1920.0.1920.1032/2560.-10.1920.1032/0.0.2560.1392/-1920.1080.1920.1032@2560.1070.1920.1032" timestamp="1672640023968" />
+    <state x="3176" y="1313" key="run.anything.popup" timestamp="1672639954621">
+      <screen x="2560" y="1070" width="1920" height="1032" />
+    </state>
+    <state x="3176" y="233" key="run.anything.popup/2560.1070.1920.1032/-1920.0.1920.1032/2560.-10.1920.1032/0.0.2560.1392/-1920.1080.1920.1032@2560.-10.1920.1032" timestamp="1672635434863" />
+    <state x="3176" y="1313" key="run.anything.popup/2560.1070.1920.1032/-1920.0.1920.1032/2560.-10.1920.1032/0.0.2560.1392/-1920.1080.1920.1032@2560.1070.1920.1032" timestamp="1672639954621" />
+    <state x="3267" y="1378" width="672" height="508" key="search.everywhere.popup" timestamp="1672687644884">
+      <screen x="2560" y="1070" width="1920" height="1032" />
+    </state>
+    <state x="943" y="415" width="672" height="685" key="search.everywhere.popup/0.0.2560.1392/2560.1069.1920.1032/-1920.0.1920.1032/2560.-11.1920.1032@0.0.2560.1392" timestamp="1672519495284" />
+    <state x="3267" y="1378" width="672" height="508" key="search.everywhere.popup/0.0.2560.1392/2560.1070.1920.1032/-1920.0.1920.1032/2560.-10.1920.1032/-1920.1080.1920.1032@2560.1070.1920.1032" timestamp="1672687644884" />
+    <state x="3267" y="298" width="672" height="508" key="search.everywhere.popup/2560.1070.1920.1032/-1920.0.1920.1032/2560.-10.1920.1032/0.0.2560.1392/-1920.1080.1920.1032@2560.-10.1920.1032" timestamp="1672636319175" />
+    <state x="3267" y="1378" width="672" height="508" key="search.everywhere.popup/2560.1070.1920.1032/-1920.0.1920.1032/2560.-10.1920.1032/0.0.2560.1392/-1920.1080.1920.1032@2560.1070.1920.1032" timestamp="1672639983422" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Launch/StartupWindow.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1056">
+          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Launch/Properties/Settings.settings">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="41" selection-start-column="41" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Launch/Hotkeys/HotKeyDispatcher.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Launch/Hotkeys/ProcessHelper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Launch/Hotkeys/HotKeyListener.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

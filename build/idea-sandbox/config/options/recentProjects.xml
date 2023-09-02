@@ -1,0 +1,35 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="additionalInfo">
+      <map>
+        <entry key="C:/Git/Launch/Launch">
+          <value>
+            <RecentProjectMetaInfo frameTitle="Launch – HotKeyListener.cs" projectWorkspaceId="2Jh7tH6VtputjLbxIBewSdl30ZL">
+              <option name="activationTimestamp" value="1672706766645" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-223.7571.182" />
+              <option name="buildTimestamp" value="1669736212564" />
+              <frame x="564" y="-23" width="1920" height="1032" extendedState="6" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1672706758554" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="C:/Git/HarpoonIJ">
+          <value>
+            <RecentProjectMetaInfo frameTitle="HarpoonIJ – build.gradle.kts [HarpoonIJ]" opened="true" projectWorkspaceId="2Jh5FzYNw0nP7S6RR68y2vCHvJ9">
+              <option name="activationTimestamp" value="1693595778645" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-223.7571.182" />
+              <option name="buildTimestamp" value="1669736175462" />
+              <frame x="0" y="0" width="2560" height="1392" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1693595782074" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastOpenedProject" value="C:/Git/HarpoonIJ" />
+  </component>
+</application>

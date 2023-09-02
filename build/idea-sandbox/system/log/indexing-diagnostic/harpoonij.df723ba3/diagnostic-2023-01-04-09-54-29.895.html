@@ -1,0 +1,1233 @@
+<html>
+  <head>
+    <title>Indexing diagnostics of 'HarpoonIJ'</title>
+    <style>body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  width: 80%;
+}
+
+table.two-columns td {
+  width: 50%;
+}
+
+th, td {
+  padding: 3px;
+}
+
+th {
+  background: lightgrey;
+}
+
+td {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+        
+.stats-content {
+  margin-left: 20%;
+}
+
+.aggregate-report-content {
+  margin-left: 10%;
+}
+
+.navigation-bar {
+  width: 15%;
+  background-color: lightgrey;
+  position: fixed;
+  height: 100%;
+}
+
+div.navigation-bar ul {
+  list-style-type: none;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+}
+
+div.navigation-bar ul li a, label {
+  display: block;
+  color: #000;
+  padding: 8px 20px;
+  text-decoration: none;
+}
+
+label input {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+div.navigation-bar ul li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.minor-data {}
+
+.invisible {
+  display: none;
+}
+
+.jetbrains-logo {
+  width: 50%;
+  bottom: 5%;
+  position: absolute;
+  left: 20%;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.linkable-table-row:hover {
+  background: #f2f3ff;
+  outline: none;
+  cursor: pointer;
+}</style>
+    <script>function hideElementsHavingClass(className, hideOrShow) {
+  const elements = document.getElementsByClassName(className)
+  const displayType = hideOrShow ? 'none' : 'initial'
+  for (const element of elements) {
+    element.classList.toggle('invisible', hideOrShow)
+  }
+}</script>
+  </head>
+  <body>
+    <div class="navigation-bar">
+      <ul>
+        <li><a href="#id-project-name">Project name</a></li>
+        <li><a href="#id-app-info">Application info</a></li>
+        <li><a href="#id-runtime-info">Runtime</a></li>
+        <li><a href="#id-indexing-info">Indexing info</a></li>
+        <li><a href="#id-slow-files">Slowly indexed files</a></li>
+        <li><a href="#id-stats-per-file-type">Statistics per file type</a></li>
+        <li><a href="#id-stats-per-indexer">Statistics per indexer</a></li>
+        <li><a href="#id-scanning">Scanning</a></li>
+        <li><a href="#id-indexing">Indexing</a></li>
+      </ul>
+      <hr class="solid">
+      <ul>
+        <li><label for="id-hide-minor-data-checkbox">Hide minor data<input checked="checked" id="id-hide-minor-data-checkbox" type="checkbox" onclick="hideElementsHavingClass('minor-data', this.checked)">
+              <style>padding-left: 10px</style>
+            </label></li>
+      </ul>
+      <div class="jetbrains-logo"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120.21407 130.10375">
+  <title>logo-grey</title>
+  <g>
+    <path d="M120.2,68.6a4.99684,4.99684,0,0,0-1.4-3.5L55.191,2.68736a7.86372,7.86372,0,0,0-3.36731-2.261c-.03467-.012-.06812-.02612-.103-.03766-.19336-.06323-.3913-.11511-.591-.16327-.06689-.0163-.13177-.0368-.1994-.05133-.18744-.04-.37909-.06738-.57117-.09363-.0788-.0108-.15527-.0274-.23492-.03589A7.83914,7.83914,0,0,0,49.3,0a7.73961,7.73961,0,0,0-1.21088.10413c-.0235.00391-.04694.00671-.07037.0108a7.62573,7.62573,0,0,0-3.092,1.24969c-.07343.04773-.155.08575-.22668.13538L4.9,28.3c-.08221.08221-.15106.10632-.17773.16437L4.67218,28.5H4.6A11.11647,11.11647,0,0,0,.15875,39.45683l.00854.04449c.05176.28589.11011.56958.18372.84973.03052.119.06964.235.104.35284.054.181.10278.3634.16571.5412A11.15109,11.15109,0,0,0,5.3,47.1a8.82025,8.82025,0,0,0,2,.9c.4.2,45.4,18.8,45.4,18.8a4.291,4.291,0,0,0,4.4-7.3c-.06525,0-16.839-13.21332-28.69928-22.52606l21.105-19.03113,57.91815,49.58282L28.6,110.7a9.82332,9.82332,0,0,0-4.7,4.1,10.0662,10.0662,0,0,0,3.6,13.9,10.28689,10.28689,0,0,0,10.7-.2c.2-.2.5-.3.7-.5L116.9,73.2a18.32,18.32,0,0,0,1.58612-1.2663A4.74573,4.74573,0,0,0,120.2,68.6Z" transform="translate(0.01406 0.00002)" fill="#cdcdcd"/>
+    <g id="_Group_" data-name="&lt;Group&gt;">
+      <rect id="_Path_" data-name="&lt;Path&gt;" x="34.61406" y="37.40002" width="51" height="51"/>
+      <rect id="_Path_2" data-name="&lt;Path&gt;" x="39.01406" y="78.80002" width="19.1" height="3.2" fill="#fff"/>
+      <g id="_Group_2" data-name="&lt;Group&gt;">
+        <path id="_Path_3" data-name="&lt;Path&gt;" d="M38.8,50.8l1.5-1.4a1.70271,1.70271,0,0,0,1.3.8q.9,0,.9-1.2V43.7h2.3V49a2.79543,2.79543,0,0,1-3.1,3.1A3.026,3.026,0,0,1,38.8,50.8Z" transform="translate(0.01406 0.00002)" fill="#fff"/>
+        <path id="_Path_4" data-name="&lt;Path&gt;" d="M45.3,43.8H52v1.9H47.6V47h4v1.8h-4v1.3h4.5v2H45.4Z" transform="translate(0.01406 0.00002)" fill="#fff"/>
+        <path id="_Path_5" data-name="&lt;Path&gt;" d="M55,45.8H52.5v-2h7.3v2H57.3v6.3H55Z" transform="translate(0.01406 0.00002)" fill="#fff"/>
+        <path id="_Compound_Path_" data-name="&lt;Compound Path&gt;" d="M39,54h4.3a3.7023,3.7023,0,0,1,2.3.7,1.97822,1.97822,0,0,1,.5,1.4h0A1.95538,1.95538,0,0,1,44.8,58a1.94762,1.94762,0,0,1,1.6,2h0c0,1.4-1.2,2.3-3.1,2.3H39Zm4.8,2.6c0-.5-.4-.7-1-.7H41.3v1.5h1.4c.7-.1,1.1-.3,1.1-.8ZM43,59H41.2v1.5H43c.7,0,1.1-.3,1.1-.8h0C44.1,59.2,43.7,59,43,59Z" transform="translate(0.01406 0.00002)" fill="#fff"/>
+        <path id="_Compound_Path_2" data-name="&lt;Compound Path&gt;" d="M46.8,54h3.9a3.51463,3.51463,0,0,1,2.7.9,2.48948,2.48948,0,0,1,.7,1.9h0a2.76053,2.76053,0,0,1-1.7,2.6l2,2.9H51.8l-1.7-2.5h-1v2.5H46.8Zm3.8,4c.8,0,1.2-.4,1.2-1h0c0-.7-.5-1-1.2-1H49.1v2Z" transform="translate(0.01406 0.00002)" fill="#fff"/>
+        <path id="_Compound_Path_3" data-name="&lt;Compound Path&gt;" d="M56.8,54H59l3.5,8.4H60l-.6-1.5H56.2l-.6,1.5H53.2Zm2,5-.9-2.3L57,59Z" transform="translate(0.01406 0.00002)" fill="#fff"/>
+        <path id="_Path_6" data-name="&lt;Path&gt;" d="M62.8,54h2.3v8.3H62.8Z" transform="translate(0.01406 0.00002)" fill="#fff"/>
+        <path id="_Path_7" data-name="&lt;Path&gt;" d="M65.7,54h2.1l3.4,4.4V54h2.3v8.3h-2L68,57.8v4.6H65.7Z" transform="translate(0.01406 0.00002)" fill="#fff"/>
+        <path id="_Path_8" data-name="&lt;Path&gt;" d="M73.7,61.1,75,59.6a3.94219,3.94219,0,0,0,2.7,1c.6,0,1-.2,1-.6h0c0-.4-.3-.5-1.4-.8-1.8-.4-3.1-.9-3.1-2.6h0c0-1.5,1.2-2.7,3.2-2.7A5.33072,5.33072,0,0,1,80.8,55l-1.2,1.6a4.55346,4.55346,0,0,0-2.3-.8c-.6,0-.8.2-.8.5h0c0,.4.3.5,1.4.8,1.9.4,3.1,1,3.1,2.6h0c0,1.7-1.3,2.7-3.4,2.7A5.29336,5.29336,0,0,1,73.7,61.1Z" transform="translate(0.01406 0.00002)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg></div>
+    </div>
+    <div class="stats-content">
+      <div id="id-project-name">
+        <h1 class="Project name"></h1>
+HarpoonIJ</div>
+      <div id="id-app-info">
+        <h1 class="Application info"></h1>
+        <table class="two-columns">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Build</td>
+              <td>223.7571.182</td>
+            </tr>
+            <tr>
+              <td>Build date</td>
+              <td>10:36:39 29 Nov</td>
+            </tr>
+            <tr>
+              <td>Product code</td>
+              <td>IC</td>
+            </tr>
+            <tr>
+              <td>Generated</td>
+              <td>09:54:29 04 Jan</td>
+            </tr>
+            <tr>
+              <td>OS</td>
+              <td>Windows 11 10.0</td>
+            </tr>
+            <tr>
+              <td>Runtime</td>
+              <td>JetBrains s.r.o. 17.0.5 17.0.5+1-b653.14</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="id-runtime-info">
+        <h1 class="Runtime"></h1>
+        <table class="two-columns">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Max memory</td>
+              <td>786.43 MB</td>
+            </tr>
+            <tr>
+              <td>Number of processors</td>
+              <td>24</td>
+            </tr>
+            <tr>
+              <td>Max number of indexing threads</td>
+              <td>23</td>
+            </tr>
+            <tr>
+              <td>Max size of file for analysis</td>
+              <td>2.56 MB</td>
+            </tr>
+            <tr>
+              <td>Max size of file for content loading</td>
+              <td>20.97 MB</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="id-indexing-info">
+        <h1 class="Indexing info"></h1>
+        <table class="two-columns">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Data</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Number of file providers</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Number of scanned files</td>
+              <td>241204</td>
+            </tr>
+            <tr>
+              <td>Number of files indexed by shared indexes during the scan (without loading content)</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Number of files scheduled for indexing after scanning</td>
+              <td>172166</td>
+            </tr>
+            <tr>
+              <td>Number of files indexed by shared indexes during the indexing stage (with loading content)</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Number of files indexed during the indexing stage with loading content (including indexed by shared indexes)</td>
+              <td>172166</td>
+            </tr>
+            <tr>
+              <td>Number of too large for indexing files</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Started at</td>
+              <td>09:53:43 04 Jan</td>
+            </tr>
+            <tr>
+              <td>Reason</td>
+              <td>On project open</td>
+            </tr>
+            <tr>
+              <td>Type</td>
+              <td>full on project open</td>
+            </tr>
+            <tr>
+              <td>Finished at</td>
+              <td>09:54:29 04 Jan</td>
+            </tr>
+            <tr>
+              <td>Cancelled?</td>
+              <td>false</td>
+            </tr>
+            <tr>
+              <td>Suspended time</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Total time</td>
+              <td>46 s 552 ms</td>
+            </tr>
+            <tr>
+              <td>Indexing time</td>
+              <td>39 s 456 ms</td>
+            </tr>
+            <tr>
+              <td>Iterators creation time</td>
+              <td>92 ms</td>
+            </tr>
+            <tr>
+              <td>Scanning time</td>
+              <td>6 s 838 ms</td>
+            </tr>
+            <tr>
+              <td>Content loading time</td>
+              <td>631 ms</td>
+            </tr>
+            <tr>
+              <td>Pushing properties time</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Running extensions time</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Index writing time</td>
+              <td>22 s 121 ms</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="id-slow-files">
+        <h1 class="Slowly indexed files (&gt; 500 ms)"></h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Provider name</th>
+              <th>File</th>
+              <th>Content loading time</th>
+              <th>Indexing time</th>
+              <th>Total processing time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)</td>
+              <td>WebApi-a.json</td>
+              <td>15 ms</td>
+              <td>397 ms</td>
+              <td>1 s 785 ms</td>
+            </tr>
+            <tr>
+              <td>^</td>
+              <td>WebApi-e.json</td>
+              <td>10 ms</td>
+              <td>397 ms</td>
+              <td>1 s 769 ms</td>
+            </tr>
+            <tr>
+              <td>^</td>
+              <td>WebApi-l.json</td>
+              <td>9 ms</td>
+              <td>377 ms</td>
+              <td>1 s 711 ms</td>
+            </tr>
+            <tr>
+              <td>^</td>
+              <td>Css.json</td>
+              <td>5 ms</td>
+              <td>402 ms</td>
+              <td>1 s 617 ms</td>
+            </tr>
+            <tr>
+              <td>^</td>
+              <td>WebApi-r.json</td>
+              <td>9 ms</td>
+              <td>371 ms</td>
+              <td>1 s 593 ms</td>
+            </tr>
+            <tr>
+              <td>^</td>
+              <td>ArraysKt.class</td>
+              <td>2 ms</td>
+              <td>1 s 320 ms</td>
+              <td>1 s 404 ms</td>
+            </tr>
+            <tr>
+              <td>^</td>
+              <td>WebApi-u.json</td>
+              <td>7 ms</td>
+              <td>214 ms</td>
+              <td>1 s 403 ms</td>
+            </tr>
+            <tr>
+              <td>^</td>
+              <td>p751.properties</td>
+              <td>6 ms</td>
+              <td>257 ms</td>
+              <td>1 s 395 ms</td>
+            </tr>
+            <tr>
+              <td>^</td>
+              <td>UniCNS-UCS2-H</td>
+              <td>&lt; 1 ms</td>
+              <td>25 ms</td>
+              <td>1 s 153 ms</td>
+            </tr>
+            <tr>
+              <td>^</td>
+              <td>AgentBuilder.class</td>
+              <td>&lt; 1 ms</td>
+              <td>1 s 92 ms</td>
+              <td>1 s 105 ms</td>
+            </tr>
+            <tr>
+              <td>Module 'HarpoonIJ.main' (main)</td>
+              <td>plugin.xml</td>
+              <td>2 ms</td>
+              <td>645 ms</td>
+              <td>731 ms</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="id-stats-per-file-type">
+        <h1 class="Statistics per file type"></h1>
+        <table>
+          <thead>
+            <tr>
+              <th>File type</th>
+              <th>Number of files</th>
+              <th>Total processing time</th>
+              <th>Content loading time</th>
+              <th>Total files size</th>
+              <th>Total processing speed</th>
+              <th>The biggest contributors</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="">
+              <td>CLASS</td>
+              <td>105156</td>
+              <td>15 s 146 ms (38.4%)</td>
+              <td>248 ms (39.3%)</td>
+              <td>396.72 MB</td>
+              <td>1.16 MB/s</td>
+              <td>100.0%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 105098 files of total size 396.68 MB
+&lt; 1%: Library Gradle: org.jetbrains:annotations:23.0.0 (#1 class roots, #1 source roots) 58 files of total size 32.03 kB</td>
+            </tr>
+            <tr class="">
+              <td>JAVA</td>
+              <td>44424</td>
+              <td>11 s 208 ms (28.4%)</td>
+              <td>168 ms (26.6%)</td>
+              <td>255.01 MB</td>
+              <td>1.01 MB/s</td>
+              <td>99.1%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 44378 files of total size 254.92 MB
+&lt; 1%: Module 'HarpoonIJ.main' (main) 16 files of total size 10.5 kB
+&lt; 1%: Library Gradle: org.jetbrains:annotations:23.0.0 (#1 class roots, #1 source roots) 30 files of total size 74.15 kB</td>
+            </tr>
+            <tr class="">
+              <td>Kotlin</td>
+              <td>17695</td>
+              <td>8 s 247 ms (20.9%)</td>
+              <td>68 ms (10.9%)</td>
+              <td>73.54 MB</td>
+              <td>394.76 kB/s</td>
+              <td>100.0%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 17693 files of total size 73.54 MB
+&lt; 1%: Module 'HarpoonIJ' (HarpoonIJ) 2 files of total size 1.07 kB</td>
+            </tr>
+            <tr class="">
+              <td>SVG</td>
+              <td>2813</td>
+              <td>1 s 351 ms (3.4%)</td>
+              <td>24 ms (3.9%)</td>
+              <td>2.96 MB</td>
+              <td>97.07 kB/s</td>
+              <td>99.3%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 2811 files of total size 2.96 MB
+&lt; 1%: Module 'HarpoonIJ.main' (main) 2 files of total size 6.23 kB</td>
+            </tr>
+            <tr class="">
+              <td>PLAIN_TEXT</td>
+              <td>394</td>
+              <td>974 ms (2.5%)</td>
+              <td>24 ms (3.9%)</td>
+              <td>6.8 MB</td>
+              <td>308.96 kB/s</td>
+              <td>100.0%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 393 files of total size 6.8 MB
+&lt; 1%: Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@6edcbdd1' (non-project) 1 files of total size 1.3 kB</td>
+            </tr>
+            <tr class="">
+              <td>Properties</td>
+              <td>425</td>
+              <td>755 ms (1.9%)</td>
+              <td>20 ms (3.2%)</td>
+              <td>6.88 MB</td>
+              <td>403.26 kB/s</td>
+              <td>99.2%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 423 files of total size 6.88 MB
+&lt; 1%: Module 'HarpoonIJ.main' (main) 1 files of total size 760 B
+&lt; 1%: Module 'HarpoonIJ' (HarpoonIJ) 1 files of total size 202 B</td>
+            </tr>
+            <tr class="">
+              <td>XML</td>
+              <td>223</td>
+              <td>613 ms (1.6%)</td>
+              <td>38 ms (6.2%)</td>
+              <td>4.99 MB</td>
+              <td>360.11 kB/s</td>
+              <td>82.4%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 197 files of total size 3.85 MB
+12.3%: Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@6edcbdd1' (non-project) 24 files of total size 1.14 MB
+5.3%: Module 'HarpoonIJ.main' (main) 1 files of total size 4.59 kB
+&lt; 1%: Module 'HarpoonIJ' (HarpoonIJ) 1 files of total size 1.01 kB</td>
+            </tr>
+            <tr class="">
+              <td>JSON</td>
+              <td>48</td>
+              <td>565 ms (1.4%)</td>
+              <td>3 ms (&lt; 1%)</td>
+              <td>10.82 MB</td>
+              <td>847.67 kB/s</td>
+              <td>99.7%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 47 files of total size 10.54 MB
+&lt; 1%: Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@6edcbdd1' (non-project) 1 files of total size 287.18 kB</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>HTML</td>
+              <td>355</td>
+              <td>274 ms (&lt; 1%)</td>
+              <td>30 ms (4.8%)</td>
+              <td>760.03 kB</td>
+              <td>122.74 kB/s</td>
+              <td>100.0%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 355 files of total size 760.03 kB</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>Groovy</td>
+              <td>80</td>
+              <td>104 ms (&lt; 1%)</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>214.24 kB</td>
+              <td>90.53 kB/s</td>
+              <td>100.0%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 80 files of total size 214.24 kB</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>DTD</td>
+              <td>125</td>
+              <td>94 ms (&lt; 1%)</td>
+              <td>1 ms (&lt; 1%)</td>
+              <td>1.81 MB</td>
+              <td>850.36 kB/s</td>
+              <td>78.2%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 61 files of total size 998.36 kB
+21.8%: Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@6edcbdd1' (non-project) 64 files of total size 812.61 kB</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>RNG Compact</td>
+              <td>125</td>
+              <td>52 ms (&lt; 1%)</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>477.7 kB</td>
+              <td>402.9 kB/s</td>
+              <td>99.8%: Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@6edcbdd1' (non-project) 124 files of total size 473.88 kB
+&lt; 1%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 1 files of total size 3.81 kB</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>textmate</td>
+              <td>12</td>
+              <td>22 ms (&lt; 1%)</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>173.97 kB</td>
+              <td>341.3 kB/s</td>
+              <td>98.8%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 10 files of total size 155.19 kB
+&lt; 1%: Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@6edcbdd1' (non-project) 1 files of total size 16.01 kB
+&lt; 1%: Module 'HarpoonIJ' (HarpoonIJ) 1 files of total size 2.76 kB</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>kotlin_module</td>
+              <td>171</td>
+              <td>20 ms (&lt; 1%)</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>82.67 kB</td>
+              <td>175.43 kB/s</td>
+              <td>100.0%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 171 files of total size 82.67 kB</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>Markdown</td>
+              <td>6</td>
+              <td>6 ms (&lt; 1%)</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>5.11 kB</td>
+              <td>34.12 kB/s</td>
+              <td>92.8%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 5 files of total size 3.63 kB
+7.2%: Module 'HarpoonIJ' (HarpoonIJ) 1 files of total size 1.48 kB</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>Shrinker Config File</td>
+              <td>8</td>
+              <td>4 ms (&lt; 1%)</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>8.99 kB</td>
+              <td>89.44 kB/s</td>
+              <td>100.0%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 8 files of total size 8.99 kB</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>SPI</td>
+              <td>69</td>
+              <td>3 ms (&lt; 1%)</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>26.7 kB</td>
+              <td>301.56 kB/s</td>
+              <td>100.0%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 69 files of total size 26.7 kB</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>Dictionary</td>
+              <td>3</td>
+              <td>2 ms (&lt; 1%)</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>1.58 MB</td>
+              <td>29.03 MB/s</td>
+              <td>100.0%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 3 files of total size 1.58 MB</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>CSS</td>
+              <td>7</td>
+              <td>1 ms (&lt; 1%)</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>33.03 kB</td>
+              <td>992.14 kB/s</td>
+              <td>88.0%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 6 files of total size 27.5 kB
+12.0%: Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@6edcbdd1' (non-project) 1 files of total size 5.54 kB</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>Manifest</td>
+              <td>11</td>
+              <td>1 ms (&lt; 1%)</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>2.85 kB</td>
+              <td>110.23 kB/s</td>
+              <td>72.8%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 9 files of total size 2.78 kB
+27.2%: Library Gradle: org.jetbrains:annotations:23.0.0 (#1 class roots, #1 source roots) 2 files of total size 71 B</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>XHTML</td>
+              <td>1</td>
+              <td>1 ms (&lt; 1%)</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>2.91 kB</td>
+              <td>122.12 kB/s</td>
+              <td>100.0%: Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@6edcbdd1' (non-project) 1 files of total size 2.91 kB</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>Perl</td>
+              <td>1</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>6.52 kB</td>
+              <td>584.96 kB/s</td>
+              <td>100.0%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 1 files of total size 6.52 kB</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>Shell Script</td>
+              <td>1</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>8.07 kB</td>
+              <td>759.07 kB/s</td>
+              <td>100.0%: Module 'HarpoonIJ' (HarpoonIJ) 1 files of total size 8.07 kB</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>DGM</td>
+              <td>1</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>179 B</td>
+              <td>20.6 kB/s</td>
+              <td>100.0%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 1 files of total size 179 B</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>GUI_DESIGNER_FORM</td>
+              <td>1</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>8.01 kB</td>
+              <td>1.01 MB/s</td>
+              <td>100.0%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 1 files of total size 8.01 kB</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>PATCH</td>
+              <td>8</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>4.45 kB</td>
+              <td>848.03 kB/s</td>
+              <td>100.0%: Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@6edcbdd1' (non-project) 8 files of total size 4.45 kB</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>JavaScript</td>
+              <td>1</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>876 B</td>
+              <td>180.22 kB/s</td>
+              <td>100.0%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 1 files of total size 876 B</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>AUTO_DETECTED</td>
+              <td>1</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>0 B</td>
+              <td>0 B/s</td>
+              <td>100.0%: Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots) 1 files of total size 0 B</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>GitIgnore file</td>
+              <td>1</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>&lt; 1 ms (&lt; 1%)</td>
+              <td>539 B</td>
+              <td>370.39 kB/s</td>
+              <td>100.0%: Module 'HarpoonIJ' (HarpoonIJ) 1 files of total size 539 B</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="id-stats-per-indexer">
+        <h1 class="Statistics per indexer"></h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Number of files</th>
+              <th>Part of total indexing time</th>
+              <th>Total number of files indexed by shared indexes</th>
+              <th>Total files size</th>
+              <th>Indexing speed</th>
+              <th>Snapshot input mapping statistics</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="">
+              <td>Stubs</td>
+              <td>123957</td>
+              <td>46.7%</td>
+              <td>0</td>
+              <td>483.13 MB</td>
+              <td>3.32 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="">
+              <td>IdIndex</td>
+              <td>66827</td>
+              <td>23.4%</td>
+              <td>0</td>
+              <td>364.55 MB</td>
+              <td>4.99 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="">
+              <td>org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex</td>
+              <td>122851</td>
+              <td>11.2%</td>
+              <td>0</td>
+              <td>470.26 MB</td>
+              <td>13.52 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>bytecodeAnalysis</td>
+              <td>105156</td>
+              <td>5.5%</td>
+              <td>0</td>
+              <td>396.72 MB</td>
+              <td>23.01 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex</td>
+              <td>105156</td>
+              <td>5.3%</td>
+              <td>0</td>
+              <td>396.72 MB</td>
+              <td>23.87 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>Trigram.Index</td>
+              <td>66839</td>
+              <td>3.9%</td>
+              <td>0</td>
+              <td>366.13 MB</td>
+              <td>30.45 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex</td>
+              <td>105156</td>
+              <td>2.1%</td>
+              <td>0</td>
+              <td>396.72 MB</td>
+              <td>61.93 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>IdeaPluginRegistrationIndex</td>
+              <td>223</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>4.99 MB</td>
+              <td>3.5 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>json.file.root.values</td>
+              <td>48</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>10.82 MB</td>
+              <td>10.85 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>XmlNamespaces</td>
+              <td>28</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>1.08 MB</td>
+              <td>1.17 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>xmlProperties</td>
+              <td>182</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>3.63 MB</td>
+              <td>4.68 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>org.jetbrains.kotlin.idea.vfilefinder.KotlinPackageSourcesMemberNamesIndex</td>
+              <td>17695</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>73.54 MB</td>
+              <td>178.21 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>XmlTagNames</td>
+              <td>11</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>415.21 kB</td>
+              <td>1.15 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>org.jetbrains.kotlin.idea.vfilefinder.KotlinJvmModuleAnnotationsIndex</td>
+              <td>171</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>82.67 kB</td>
+              <td>261.39 kB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>SchemaTypeInheritance</td>
+              <td>11</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>415.21 kB</td>
+              <td>2.21 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>java.fun.expression</td>
+              <td>16</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>10.5 kB</td>
+              <td>75.42 kB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>devkit.ExtensionPointIndex</td>
+              <td>223</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>4.99 MB</td>
+              <td>44.14 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>DomFileIndex</td>
+              <td>223</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>4.99 MB</td>
+              <td>55.76 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>devkit.ExtensionPointClassIndex</td>
+              <td>223</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>4.99 MB</td>
+              <td>61.63 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>java.binary.plus.expression</td>
+              <td>16</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>10.5 kB</td>
+              <td>179.78 kB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>PluginIdDependenciesIndex</td>
+              <td>223</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>4.99 MB</td>
+              <td>94.98 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>java.null.method.argument</td>
+              <td>16</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>10.5 kB</td>
+              <td>216.45 kB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>PluginIdModuleIndex</td>
+              <td>223</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>4.99 MB</td>
+              <td>114.25 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>org.jetbrains.kotlin.idea.vfilefinder.KotlinModuleMappingIndex</td>
+              <td>171</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>82.67 kB</td>
+              <td>2.97 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>NavXmlIndex</td>
+              <td>182</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>3.63 MB</td>
+              <td>765 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>com.intellij.uiDesigner.FormClassIndex</td>
+              <td>1</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>8.01 kB</td>
+              <td>1.73 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>fileIncludes</td>
+              <td>2</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>5.6 kB</td>
+              <td>1.69 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>FrameworkDetectionIndex</td>
+              <td>2</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>5.6 kB</td>
+              <td>1.72 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>java.source.module.name</td>
+              <td>10</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>2.79 kB</td>
+              <td>1.96 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>ant-imports</td>
+              <td>2</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>5.6 kB</td>
+              <td>4.65 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>org.jetbrains.kotlin.idea.versions.KotlinJsMetadataVersionIndex</td>
+              <td>1</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>876 B</td>
+              <td>755.43 kB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>RelaxSymbolIndex</td>
+              <td>2</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>5.6 kB</td>
+              <td>7.41 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>org.jetbrains.kotlin.idea.vfilefinder.KotlinStdlibIndex</td>
+              <td>11</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>2.85 kB</td>
+              <td>5.09 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>XsltSymbolIndex</td>
+              <td>2</td>
+              <td>&lt; 1%</td>
+              <td>0</td>
+              <td>5.6 kB</td>
+              <td>17.48 MB/s</td>
+              <td>requests: 0, hits: 0 (100%), misses: 0 (100%)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="id-scanning">
+        <h1 class="Scanning"></h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Provider name</th>
+              <th>Number of scanned files</th>
+              <th>Number of files scheduled for indexing</th>
+              <th>Number of files fully indexed by shared indexes</th>
+              <th>Number of double-scanned skipped files</th>
+              <th>Total time of getting files' statuses (part of scanning)</th>
+              <th>Scanning time</th>
+              <th>Time processing up-to-date files</th>
+              <th>Time updating content-less indexes</th>
+              <th>Time indexing without content</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="">
+              <td>Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)</td>
+              <td>196519</td>
+              <td>171823</td>
+              <td>0</td>
+              <td>2</td>
+              <td>4 s 75 ms</td>
+              <td>4 s 259 ms</td>
+              <td>0</td>
+              <td>84 ms</td>
+              <td>349 ms</td>
+            </tr>
+            <tr class="">
+              <td>JDK openjdk-19 C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.zipfs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1/lib/src.zip!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.base, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.datatransfer, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.instrument, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.logging, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.management.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.naming, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.net.http, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.prefs, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.scripting, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.se, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.security.sasl, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.smartcardio, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.sql.rowset, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.transaction.xa, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml, C:/Users/Alex/.jdks/openjdk-19.0.1!/java.xml.crypto, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.accessibility, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.attach, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.charsets, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.cryptoki, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.ec, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.crypto.mscapi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.dynalink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.editpad, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.hotspot.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.httpserver, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.concurrent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.incubator.vector, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.ed, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.jvmstat, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.le, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.opt, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.ci, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.internal.vm.compiler.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jartool, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.javadoc, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jcmd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jconsole, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdeps, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jdwp.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jlink, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jpackage, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jshell, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jsobject, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.jstatd, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.localedata, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.agent, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.management.jfr, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.dns, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.naming.rmi, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.net, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.nio.mapmode, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.random, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.sctp, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.auth, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.security.jgss, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.unsupported.desktop, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.xml.dom, C:/Users/Alex/.jdks/openjdk-19.0.1!/jdk.zipfs</td>
+              <td>42090</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2 s 283 ms</td>
+              <td>2 s 376 ms</td>
+              <td>0</td>
+              <td>42 ms</td>
+              <td>0</td>
+            </tr>
+            <tr class="">
+              <td>Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@6edcbdd1' (non-project)</td>
+              <td>225</td>
+              <td>225</td>
+              <td>0</td>
+              <td>4</td>
+              <td>439 ms</td>
+              <td>475 ms</td>
+              <td>0</td>
+              <td>&lt; 1 ms</td>
+              <td>6 ms</td>
+            </tr>
+            <tr class="">
+              <td>Library Gradle: unzipped.com.jetbrains.plugins:IdeaVIM:unzipped.com.jetbrains.plugins:2.0.0 (#4 class roots, #1 source roots)</td>
+              <td>2241</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>384 ms</td>
+              <td>417 ms</td>
+              <td>0</td>
+              <td>4 ms</td>
+              <td>0</td>
+            </tr>
+            <tr class="">
+              <td>Module 'HarpoonIJ' (HarpoonIJ)</td>
+              <td>18</td>
+              <td>8</td>
+              <td>0</td>
+              <td>0</td>
+              <td>398 ms</td>
+              <td>412 ms</td>
+              <td>0</td>
+              <td>4 ms</td>
+              <td>&lt; 1 ms</td>
+            </tr>
+            <tr class="">
+              <td>Indexable set contributor 'Scratches &amp; Consoles' (non-project)</td>
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>87 ms</td>
+              <td>120 ms</td>
+              <td>0</td>
+              <td>&lt; 1 ms</td>
+              <td>0</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>Library Gradle: org.jetbrains:annotations:23.0.0 (#1 class roots, #1 source roots)</td>
+              <td>90</td>
+              <td>90</td>
+              <td>0</td>
+              <td>0</td>
+              <td>65 ms</td>
+              <td>88 ms</td>
+              <td>0</td>
+              <td>&lt; 1 ms</td>
+              <td>4 ms</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>Module 'HarpoonIJ.main' (main)</td>
+              <td>20</td>
+              <td>20</td>
+              <td>0</td>
+              <td>0</td>
+              <td>21 ms</td>
+              <td>51 ms</td>
+              <td>0</td>
+              <td>14 ms</td>
+              <td>1 ms</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>Indexable set contributor 'Scratches &amp; Consoles' (project)</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@6edcbdd1' (project)</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="id-indexing">
+        <h1 class="Indexing"></h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Provider name</th>
+              <th>Total processing time</th>
+              <th>Content loading time</th>
+              <th>Number of indexed files</th>
+              <th>Number of files indexed by shared indexes</th>
+              <th>Number of too large for indexing files</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="">
+              <td>Library Gradle: com.jetbrains:ideaIC:2022.3 (#31 class roots, #1 source roots)</td>
+              <td>39 s 27 ms</td>
+              <td>624 ms</td>
+              <td>171823</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr class="">
+              <td>Indexable set contributor 'com.intellij.javaee.ExternalResourcesRootsProvider@6edcbdd1' (non-project)</td>
+              <td>250 ms</td>
+              <td>3 ms</td>
+              <td>225</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr class="">
+              <td>Module 'HarpoonIJ.main' (main)</td>
+              <td>148 ms</td>
+              <td>2 ms</td>
+              <td>20</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>Library Gradle: org.jetbrains:annotations:23.0.0 (#1 class roots, #1 source roots)</td>
+              <td>15 ms</td>
+              <td>1 ms</td>
+              <td>90</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr class="minor-data invisible">
+              <td>Module 'HarpoonIJ' (HarpoonIJ)</td>
+              <td>3 ms</td>
+              <td>&lt; 1 ms</td>
+              <td>8</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

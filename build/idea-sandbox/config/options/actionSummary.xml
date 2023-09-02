@@ -1,0 +1,184 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="$Copy">
+      <i c="1" l="1683395513333" />
+    </e>
+    <e n="$Delete">
+      <i c="1" l="1693592304845" />
+    </e>
+    <e n="$Paste">
+      <i c="1" l="1683395514490" />
+    </e>
+    <e n="$SelectAll">
+      <i c="1" l="1683395455719" />
+    </e>
+    <e n="AddToHarpoon">
+      <i c="9" l="1693591781617" />
+    </e>
+    <e n="ChangeKeymap">
+      <i c="1" d="1" l="1672612916708" k="1672612916708" />
+    </e>
+    <e n="CloseAllEditors">
+      <i c="1" l="1693592504598" />
+    </e>
+    <e n="CodeCompletion">
+      <i c="5" l="1683395533868" />
+    </e>
+    <e n="Debug">
+      <i c="3" l="1693592499511" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="352" l="1693593896721" />
+    </e>
+    <e n="EditorChooseLookupItem">
+      <i c="8" l="1693592330076" />
+    </e>
+    <e n="EditorCopy">
+      <i c="2" l="1693593891411" />
+    </e>
+    <e n="EditorDelete">
+      <i c="17" l="1672529187154" />
+    </e>
+    <e n="EditorDown">
+      <i c="23" l="1693593892702" />
+    </e>
+    <e n="EditorEnter">
+      <i c="24" l="1693593893288" />
+    </e>
+    <e n="EditorEscape">
+      <i c="21" l="1693592146185" />
+    </e>
+    <e n="EditorIncreaseFontSize">
+      <i c="5" l="1672706995970" />
+    </e>
+    <e n="EditorJoinLines">
+      <i c="4" l="1693592155716" />
+    </e>
+    <e n="EditorLeft">
+      <i c="43" l="1693593895958" />
+    </e>
+    <e n="EditorLineEnd">
+      <i c="1" l="1693593893109" />
+    </e>
+    <e n="EditorPaste">
+      <i c="1" l="1693593893541" />
+    </e>
+    <e n="EditorTab">
+      <i c="2" l="1683395510995" />
+    </e>
+    <e n="EditorToggleCase">
+      <i c="1" l="1672636308870" />
+    </e>
+    <e n="EditorUp">
+      <i c="18" l="1693593849463" />
+    </e>
+    <e n="ExpandAllRegions">
+      <i c="7" l="1672706992368" />
+    </e>
+    <e n="FindInPath">
+      <i c="2" l="1683395341961" />
+    </e>
+    <e n="GotoAction">
+      <i c="26" l="1693595792227" />
+    </e>
+    <e n="GotoFile">
+      <i c="4" l="1672706816797" />
+    </e>
+    <e n="GotoSuperMethod">
+      <i c="35" l="1672707876718" />
+    </e>
+    <e n="HideAllWindows">
+      <i c="1" l="1672843992250" />
+    </e>
+    <e n="NewClass">
+      <i c="1" l="1683395442419" />
+    </e>
+    <e n="OpenFile">
+      <i c="1" l="1672706763632" />
+    </e>
+    <e n="RecentFiles">
+      <i c="2" l="1693593831985" />
+    </e>
+    <e n="RunAnything">
+      <i c="6" l="1672639952695" />
+    </e>
+    <e n="SaveAll">
+      <i c="1" l="1672707892196" />
+    </e>
+    <e n="SearchEverywhere">
+      <i c="26" l="1693593839179" />
+    </e>
+    <e n="SelectInProjectView">
+      <i c="1" l="1683394777797" />
+    </e>
+    <e n="ShowHarpoon">
+      <i c="52" d="8" l="1693595800034" k="1693593845879" />
+    </e>
+    <e n="ShowIntentionActions">
+      <i c="5" l="1693592387555" />
+    </e>
+    <e n="ShowSettings">
+      <i c="8" l="1683397871426" />
+    </e>
+    <e n="Tree-selectNext">
+      <i c="1" l="1693592495824" />
+    </e>
+    <e n="Tree-selectPrevious">
+      <i c="1" l="1693592496118" />
+    </e>
+    <e n="WelcomeScreen.OpenProject">
+      <i c="1" l="1672518659972" />
+    </e>
+    <e n="WelcomeScreen.Plugins">
+      <i c="15" d="15" l="1693593801114" k="1693593801114" />
+    </e>
+    <e n="WelcomeScreen.Settings">
+      <i c="4" d="4" l="1693595794136" k="1693595794136" />
+    </e>
+    <e n="ca.alexgirard.harpoonIJ.mainGroup">
+      <i c="2" d="2" l="1683397866894" k="1683397866894" />
+    </e>
+    <e n="com.intellij.ide.plugins.newui.TabbedPaneHeaderComponent$3">
+      <i c="1" l="1683391334754" />
+    </e>
+    <e n="com.intellij.openapi.actionSystem.EmptyAction$MyDelegatingAction">
+      <i c="338" l="1693595800675" />
+    </e>
+    <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
+      <i c="13" l="1693592502634" />
+    </e>
+    <e n="com.intellij.openapi.keymap.impl.ui.KeymapPanel$AddKeyboardShortcutAction">
+      <i c="1" l="1672612970870" />
+    </e>
+    <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
+      <i c="55" l="1693595794122" />
+    </e>
+    <e n="com.intellij.openapi.project.LightEditActionFactory$SimpleLightEditCompatibleAction">
+      <i c="2" l="1693593835815" />
+    </e>
+    <e n="com.intellij.openapi.ui.DialogWrapper$4">
+      <i c="10" l="1693595801456" />
+    </e>
+    <e n="com.intellij.openapi.ui.impl.DialogWrapperPeerImpl$AnCancelAction">
+      <i c="1" l="1683391690343" />
+    </e>
+    <e n="com.intellij.toolWindow.ToolWindowHeader$HideAction">
+      <i c="1" l="1672706773278" />
+    </e>
+    <e n="com.intellij.ui.ScrollingUtil$ListMoveDownAction">
+      <i c="63" l="1693592334001" />
+    </e>
+    <e n="com.intellij.ui.ScrollingUtil$ListMoveUpAction">
+      <i c="6" l="1693592334581" />
+    </e>
+    <e n="com.intellij.ui.components.BasicOptionButtonUI$ActionDelegate">
+      <i c="2" l="1693593807532" />
+    </e>
+    <e n="com.maddyhome.idea.vim.extension.nerdtree.NerdTree$NerdDispatcher">
+      <i c="2" l="1693592496118" />
+    </e>
+    <e n="com.maddyhome.idea.vim.ui.ex.ExShortcutKeyAction">
+      <i c="7" l="1683395358641" />
+    </e>
+  </component>
+</application>
