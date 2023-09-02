@@ -1,7 +1,11 @@
 .gradle
-build/
+**/build/
+**/out/
+**/tmp/
 caches/
 wrapper/
+native/
+daemon/
 .tmp/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
