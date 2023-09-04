@@ -16,16 +16,16 @@
     <description><![CDATA[
     HarpoonIj is a navigation plugin which allows you to bookmark files easily and navigate to specific bookmarks with dedicated hotkeys
 
-    This a plugin inispride by Harpoon for NeoVim created by ThePrimeagen
+    This a plugin inspired by Harpoon for NeoVim created by ThePrimeagen
   ]]></description>
 
     <change-notes>
-        Added Settings to adjust the harpoon dialog's width, height, and font size.
+        Pressing enter in harpoon dialog now navigates to selected file
     </change-notes>
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
-    <depends>IdeaVIM</depends>
+    <depends optional="true"  config-file="HarpoonIj-IdeaVim.xml">IdeaVIM</depends>
 <!--    <depends optional="true" config-file="HarpoonIj-IdeaVim.xml">IdeaVIM</depends>-->
     <!-- Extension points definedby the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
@@ -50,6 +50,10 @@
             <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
         </action>
 
+        <action id="SelectHarpoonItem" class="ca.alexgirard.harpoonIJ.SelectHarpoonItem" 
+                description="Jumps to the selected harpoon item if the harpoon dialog is open">
+            <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
+        </action>
 
         <action id="GotoHarpoon1" class="ca.alexgirard.harpoonIJ.GotoHarpoon1Action"
                 text="Goto Harpoon File 1">

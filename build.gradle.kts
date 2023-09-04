@@ -1,11 +1,11 @@
 plugins {
     id("java")
-    id("org.jetbrains.kotlin.jvm") version "1.6.10"
-    id("org.jetbrains.intellij") version "1.10.1"
+    id("org.jetbrains.kotlin.jvm") version "1.9.0"
+    id("org.jetbrains.intellij") version "1.15.0"
 }
 
 group = "ca.alexgirard"
-version = "0.2.0"
+version = "0.1.5"
 
 repositories {
     mavenCentral()
@@ -19,10 +19,10 @@ dependencies {
 // Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
-    version.set("2022.3.1")
+    version.set("2023.1")
     type.set("IC") // Target IDE Platform
     updateSinceUntilBuild.set(false)
-    plugins.set(listOf("IdeaVIM:2.1.0"))
+    plugins.set(listOf("IdeaVIM:2.2.0"))
 }
 
 tasks {
@@ -31,17 +31,21 @@ tasks {
         sourceCompatibility = "17"
         targetCompatibility = "17"
     }
+    withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+        kotlinOptions.jvmTarget = "17"
+    }
 
     patchPluginXml {
-        sinceBuild.set("223")
+        sinceBuild.set("231")
     }
     buildSearchableOptions {
         enabled = false
     }
 
+    
     signPlugin {
-        certificateChain.set(System.getenv("CERTIFICATE_CHAIN"))
-        privateKey.set(System.getenv("PRIVATE_KEY"))
+        certificateChainFile.set(file("/key/chain.crt"))
+        privateKeyFile.set(file("/key/certificate/private.pem"))
         password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
     }
     

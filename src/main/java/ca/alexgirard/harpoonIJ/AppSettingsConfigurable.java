@@ -13,10 +13,7 @@ import javax.swing.*;
  */
 public class AppSettingsConfigurable implements Configurable {
 
-    private AppSettingsComponent mySettingsComponent;
-
-    // A default constructor with no arguments is required because this implementation
-    // is registered as an applicationConfigurable EP
+    private HarpoonIjSettingsComponent harpoonSettings;
 
     @Nls(capitalization = Nls.Capitalization.Title)
     @Override
@@ -26,47 +23,51 @@ public class AppSettingsConfigurable implements Configurable {
 
     @Override
     public JComponent getPreferredFocusedComponent() {
-        return mySettingsComponent.getPreferredFocusedComponent();
+        return harpoonSettings.getPreferredFocusedComponent();
     }
 
     @Nullable
     @Override
     public JComponent createComponent() {
-        mySettingsComponent = new AppSettingsComponent();
-        return mySettingsComponent.getPanel();
+        harpoonSettings = new HarpoonIjSettingsComponent();
+        return harpoonSettings.getPanel();
     }
 
     @Override
     public boolean isModified() {
         AppSettingsState settings = AppSettingsState.getInstance();
-        boolean modified = mySettingsComponent.getDialogHeight() != settings.dialogHeight;
-        modified |= mySettingsComponent.getDialogWidth() != settings.dialogWidth;
-        modified |= mySettingsComponent.getDialogFontSize() != settings.dialogFontSize;
-        modified |= mySettingsComponent.getForceNormalMode() != settings.dialogForceVimNormalMode;
+        boolean modified = harpoonSettings.getDialogHeight() != settings.dialogHeight;
+        //TODO cleanup in kotlin rewrite
+        modified |= harpoonSettings.getDialogWidth() != settings.dialogWidth;
+        modified |= harpoonSettings.getDialogFontSize() != settings.dialogFontSize;
+        modified |= harpoonSettings.getForceNormalMode() != settings.dialogForceVimNormalMode;
+        modified |= harpoonSettings.getRemapEnter() != settings.enterRemap;
         return modified;
     }
 
     @Override
     public void apply() {
         AppSettingsState settings = AppSettingsState.getInstance();
-        settings.dialogWidth = mySettingsComponent.getDialogWidth();
-        settings.dialogHeight = mySettingsComponent.getDialogHeight();
-        settings.dialogFontSize = mySettingsComponent.getDialogFontSize();
-        settings.dialogForceVimNormalMode = mySettingsComponent.getForceNormalMode();
+        settings.dialogWidth = harpoonSettings.getDialogWidth();
+        settings.dialogHeight = harpoonSettings.getDialogHeight();
+        settings.dialogFontSize = harpoonSettings.getDialogFontSize();
+        settings.dialogForceVimNormalMode = harpoonSettings.getForceNormalMode();
+        settings.enterRemap = harpoonSettings.getRemapEnter();
     }
 
     @Override
     public void reset() {
         AppSettingsState settings = AppSettingsState.getInstance();
-        mySettingsComponent.setDialogWidth(settings.dialogWidth);
-        mySettingsComponent.setDialogHeight(settings.dialogHeight);
-        mySettingsComponent.setDialogFontSize(settings.dialogFontSize);
-        mySettingsComponent.setForceVimNormalMode(settings.dialogForceVimNormalMode);
+        harpoonSettings.setDialogWidth(settings.dialogWidth);
+        harpoonSettings.setDialogHeight(settings.dialogHeight);
+        harpoonSettings.setDialogFontSize(settings.dialogFontSize);
+        harpoonSettings.setForceVimNormalMode(settings.dialogForceVimNormalMode);
+        harpoonSettings.setRemapEnter(settings.enterRemap);
     }
 
     @Override
     public void disposeUIResources() {
-        mySettingsComponent = null;
+        harpoonSettings = null;
     }
 
 }
