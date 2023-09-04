@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "ca.alexgirard"
-version = "0.1.4"
+version = "0.1.5"
 
 repositories {
     mavenCentral()
@@ -42,9 +42,10 @@ tasks {
         enabled = false
     }
 
+    
     signPlugin {
-        certificateChain.set(System.getenv("CERTIFICATE_CHAIN"))
-        privateKey.set(System.getenv("PRIVATE_KEY"))
+        certificateChainFile.set(file("/key/chain.crt"))
+        privateKeyFile.set(file("/key/certificate/private.pem"))
         password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
     }
     

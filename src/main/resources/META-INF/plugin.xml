@@ -20,7 +20,7 @@
   ]]></description>
 
     <change-notes>
-       Harpoon dialog now starts in normal mode instead of insert mode
+        Pressing enter in harpoon dialog now navigates to selected file
     </change-notes>
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
@@ -50,6 +50,10 @@
             <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
         </action>
 
+        <action id="SelectHarpoonItem" class="ca.alexgirard.harpoonIJ.SelectHarpoonItem" 
+                description="Jumps to the selected harpoon item if the harpoon dialog is open">
+            <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
+        </action>
 
         <action id="GotoHarpoon1" class="ca.alexgirard.harpoonIJ.GotoHarpoon1Action"
                 text="Goto Harpoon File 1">

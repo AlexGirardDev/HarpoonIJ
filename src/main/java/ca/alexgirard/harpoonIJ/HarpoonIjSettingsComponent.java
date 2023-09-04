@@ -2,6 +2,8 @@
 
 package ca.alexgirard.harpoonIJ;
 
+import com.intellij.ide.plugins.PluginManagerCore;
+import com.intellij.openapi.extensions.PluginId;
 import com.intellij.ui.JBIntSpinner;
 import com.intellij.ui.components.JBCheckBox;
 import com.intellij.ui.components.JBLabel;
@@ -13,22 +15,30 @@ import javax.swing.*;
 /**
  * Supports creating and managing a {@link JPanel} for the Settings Dialog.
  */
-public class AppSettingsComponent {
+public class HarpoonIjSettingsComponent {
 
     private final JPanel myMainPanel;
     private final JBIntSpinner dialogWidth = new JBIntSpinner(800,1,5000, 10);
     private final JBIntSpinner dialogHeight = new JBIntSpinner(400,1,5000,10);
     private final JBIntSpinner dialogFontSize = new JBIntSpinner(20,1,100);
     private final JBCheckBox cbForceVimNormalMode = new JBCheckBox();
+    private final JBCheckBox  cbEnterItemSelect = new JBCheckBox();
 
-    public AppSettingsComponent() {
+    public HarpoonIjSettingsComponent() {
         myMainPanel = FormBuilder.createFormBuilder()
                 .addLabeledComponent(new JBLabel("Popup width"), dialogWidth, 1, false)
                 .addLabeledComponent(new JBLabel("Popup height"), dialogHeight, 1, false)
                 .addLabeledComponent(new JBLabel("Popup font size"), dialogFontSize, 1, false)
                 .addLabeledComponent(new JBLabel("Force dialog into normal mode"), cbForceVimNormalMode, 1, false)
+                .addLabeledComponent(new JBLabel("Map enter to select item in dialog"), cbEnterItemSelect, 1, false)
                 .addComponentFillVertically(new JPanel(), 0)
                 .getPanel();
+
+        var vimPlugin = PluginManagerCore.getPlugin(PluginId.getId("IdeaVIM"));
+        if (vimPlugin == null || !vimPlugin.isEnabled()) {
+            cbForceVimNormalMode.setEnabled(false);
+            cbEnterItemSelect.setEnabled(false);
+        }
     }
 
     public JPanel getPanel() {
@@ -39,17 +49,14 @@ public class AppSettingsComponent {
         return dialogWidth;
     }
 
-    @NotNull
     public int getDialogWidth() {
         return dialogWidth.getNumber();
     }
 
-    @NotNull
     public int getDialogHeight() {
         return dialogHeight.getNumber();
     }
 
-    @NotNull
     public int getDialogFontSize() {
         return dialogFontSize.getNumber();
     }
@@ -74,6 +81,15 @@ public class AppSettingsComponent {
     
     public void setForceVimNormalMode(boolean value) {
         cbForceVimNormalMode.setSelected(value);
+
+    }
+    
+    public boolean getRemapEnter() {
+        return cbEnterItemSelect.isSelected();
+    }
+
+    public void setRemapEnter(boolean remap) {
+        cbEnterItemSelect.setSelected(remap);
 
     }
 
