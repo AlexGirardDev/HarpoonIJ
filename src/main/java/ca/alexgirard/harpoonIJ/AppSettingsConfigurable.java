@@ -42,6 +42,7 @@ public class AppSettingsConfigurable implements Configurable {
         boolean modified = mySettingsComponent.getDialogHeight() != settings.dialogHeight;
         modified |= mySettingsComponent.getDialogWidth() != settings.dialogWidth;
         modified |= mySettingsComponent.getDialogFontSize() != settings.dialogFontSize;
+        modified |= mySettingsComponent.getForceNormalMode() != settings.dialogForceVimNormalMode;
         return modified;
     }
 
@@ -51,6 +52,7 @@ public class AppSettingsConfigurable implements Configurable {
         settings.dialogWidth = mySettingsComponent.getDialogWidth();
         settings.dialogHeight = mySettingsComponent.getDialogHeight();
         settings.dialogFontSize = mySettingsComponent.getDialogFontSize();
+        settings.dialogForceVimNormalMode = mySettingsComponent.getForceNormalMode();
     }
 
     @Override
@@ -59,6 +61,7 @@ public class AppSettingsConfigurable implements Configurable {
         mySettingsComponent.setDialogWidth(settings.dialogWidth);
         mySettingsComponent.setDialogHeight(settings.dialogHeight);
         mySettingsComponent.setDialogFontSize(settings.dialogFontSize);
+        mySettingsComponent.setForceVimNormalMode(settings.dialogForceVimNormalMode);
     }
 
     @Override

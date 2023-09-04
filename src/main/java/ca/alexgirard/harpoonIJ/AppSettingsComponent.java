@@ -3,6 +3,7 @@
 package ca.alexgirard.harpoonIJ;
 
 import com.intellij.ui.JBIntSpinner;
+import com.intellij.ui.components.JBCheckBox;
 import com.intellij.ui.components.JBLabel;
 import com.intellij.util.ui.FormBuilder;
 import org.jetbrains.annotations.NotNull;
@@ -18,12 +19,14 @@ public class AppSettingsComponent {
     private final JBIntSpinner dialogWidth = new JBIntSpinner(800,1,5000, 10);
     private final JBIntSpinner dialogHeight = new JBIntSpinner(400,1,5000,10);
     private final JBIntSpinner dialogFontSize = new JBIntSpinner(20,1,100);
+    private final JBCheckBox cbForceVimNormalMode = new JBCheckBox();
 
     public AppSettingsComponent() {
         myMainPanel = FormBuilder.createFormBuilder()
                 .addLabeledComponent(new JBLabel("Popup width"), dialogWidth, 1, false)
                 .addLabeledComponent(new JBLabel("Popup height"), dialogHeight, 1, false)
                 .addLabeledComponent(new JBLabel("Popup font size"), dialogFontSize, 1, false)
+                .addLabeledComponent(new JBLabel("Force dialog into normal mode"), cbForceVimNormalMode, 1, false)
                 .addComponentFillVertically(new JPanel(), 0)
                 .getPanel();
     }
@@ -50,6 +53,11 @@ public class AppSettingsComponent {
     public int getDialogFontSize() {
         return dialogFontSize.getNumber();
     }
+    
+    @NotNull
+    public boolean getForceNormalMode() {
+        return cbForceVimNormalMode.isSelected();
+    }
 
     public void setDialogFontSize(int fontSize) {
         dialogFontSize.setNumber(fontSize);
@@ -62,6 +70,11 @@ public class AppSettingsComponent {
     public void setDialogHeight(int height) {
         dialogHeight.setNumber(height);
         
+    }
+    
+    public void setForceVimNormalMode(boolean value) {
+        cbForceVimNormalMode.setSelected(value);
+
     }
 
 }

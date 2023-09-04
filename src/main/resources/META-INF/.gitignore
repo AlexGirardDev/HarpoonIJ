@@ -1,12 +1,5 @@
-.gradle/
-**/build/
-**/out/
-**/tmp/
-caches/
-wrapper/
-native/
-daemon/
-.tmp/
+../../../../.gradle
+build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
