@@ -1,38 +1,45 @@
-<div align="center">
+<div style="text-align: center;">
 
 # HarpoonIJ
-[![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/v/20782-harpoonij.svg)](https://plugins.jetbrains.com/plugin/20782-harpoonij) [![Downloads](https://img.shields.io/jetbrains/plugin/d/20782-harpoonij.svg)](https://plugins.jetbrains.com/plugin/20782-harpoonij)
+[![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/v/20782-harpoonij.svg)](https://plugins.jetbrains.com/plugin/20782-harpoonij)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/20782-harpoonij.svg)](https://plugins.jetbrains.com/plugin/20782-harpoonij)
 
-
-HarpoonIJ is a port of the NeoVim Extension [Harpoon](https://github.com/ThePrimeagen/harpoon) created by [ThePrimeagen](https://twitter.com/ThePrimeagen)
+HarpoonIJ is a port of the NeoVim Extension [Harpoon](https://github.com/ThePrimeagen/harpoon) created by [ThePrimeagen](https://twitter.com/ThePrimeagen).This plugin enhances your coding workflow by allowing quick navigation to frequently-used files through hotkeys and a popup dialog.
 </div>
 
-## Features 
+## Features
 
-Lets you set up to 5 files that you can have direct hotkeys to jump too.
-Has popup dialog to display your current selected files
-Can Directly set file to specific index or just add file to first empty spot
+- **Quick File Access**: Mark up to 5 files for quick navigation via hotkeys.
+- **Popup Dialog**: View and manage your selected files in a convenient popup dialog.
+- **Flexible Indexing**: Assign a file to a specific index or add it to the first available slot.
+- **Enter to Navigate**: Select a file from the popup dialog and press Enter to navigate to it immediately.
 
 ![Navigation Example](images/navigation.gif)
 
+## Commands
 
-### Commands
+- `ShowHarpoon`: Displays the Harpoon dialog.
+- `GotoHarpoon[1-5]`: Navigates to the file saved at the specified index.
+- `SetHarpoon[1-5]`: Assigns the current file to a specific index.
+- `AddToHarpoon`: Adds the current file to the first available empty index.
 
-`ShowHarpoon` Shows the harpoon dialog
+## Configuration
 
-`GotoHarpoon[1-5]` Goes to file saved in specific index
+You can customize HarpoonIJ to better fit your workflow through the following settings:
 
-`SetHarpoon[1-5]` Sets current file to specific index
+- **Popup Width**: Adjust the width of the popup dialog.
+- **Popup Height**: Adjust the height of the popup dialog.
+- **Popup Font Size**: Set the font size for text within the popup dialog.
+- **Force Dialog into Normal Mode**: If you have IdeaVim installed, enabling this option will force the dialog into Vim's Normal mode.
+- **Map Enter to Select Item in Dialog**: If you have IdeaVim installed, enabling this will allow you to select an item in the dialog by pressing Enter.
 
-`AddToHarpoon` Sets the current file to the first available empty index
+To access these settings, navigate to `File > Settings > Tools > HarpoonIJ Settings`.
 
-`ShowHarpoon` Shows harpoon's current file list, this list is editable and will update the indexs if moved around
+## Hotkeys
 
-### Example keybindings
- 
-By default, there are no hotkeys. I built this with the intention of using it alongside IdeaVim, so all my keybinds are done inside a ideavimrc File
+By default, there are no pre-configured hotkeys. The plugin is built with the intention of being used alongside IdeaVim, so all keybindings can be set in an `ideavimrc` file.
 
- ### ideavimrc (`_ideavimrc`)
+### ideavimrc (`_ideavimrc`)
 
 ```vimrc
 nmap <leader><C-h> :action SetHarpoon1<cr>
@@ -47,7 +54,3 @@ nmap <C-s> :action GotoHarpoon4<cr>
 
 nmap <C-e> :action ShowHarpoon<cr>
 nmap <C-a> :action AddToHarpoon<cr>
-```
-
-
-Project icon from [http://game-icons.net](https://game-icons.net)
