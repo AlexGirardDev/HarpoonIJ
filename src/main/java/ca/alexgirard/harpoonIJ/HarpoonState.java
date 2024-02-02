@@ -28,14 +28,16 @@ public class HarpoonState {
             return;
         }
         if (index >= Files.size()) {
-            for (int i = FileStrings.size(); index >= i; i++) { 
+            for (int i = FileStrings.size(); index >= i; i++) {
                 Files.add(null);
                 FileStrings.add("");
             }
         }
         Files.set(index, file);
         var filePath = file == null ? null : file.getPath();
+        if (filePath == null) return;
         FileStrings.set(index, filePath);
+
 
         var propsComp = PropertiesComponent.getInstance(project);
         propsComp.setList(ListPersistenceKey, FileStrings);
