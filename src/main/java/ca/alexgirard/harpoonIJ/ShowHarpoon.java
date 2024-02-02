@@ -36,8 +36,8 @@ public class ShowHarpoon extends AnAction {
         var text = stringBuilder.toString().trim();
         dialog = new HarpoonDialog(text);
         var result = dialog.showAndGet();
+        if (text.equals(dialog.editorTextField.getText().trim())) return;
         String newText = dialog.editorTextField.getText().trim().replace("...", projectPath);
-        if (text.equals(newText)) return;
 
         String[] lines = newText.split("\n");
         var outputList = new ArrayList<String>();

@@ -20,8 +20,9 @@ public abstract class GoToHarpoonActionBase extends AnAction {
 
         if (project == null) return;
         VirtualFile vf = HarpoonState.GetItem(getIndex(), project);
-        if (vf == null)
+        if (vf == null || !vf.isValid() )
             return;
+        
         var fileManager = FileEditorManager.getInstance(project);
         fileManager.openFile(vf, true);
     }

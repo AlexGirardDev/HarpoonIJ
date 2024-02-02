@@ -13,37 +13,28 @@ import java.util.stream.Collectors;
 
 public class HarpoonState {
     private static final Map<String, List<VirtualFile>> FilesMap = new HashMap<>();
-    private static final Map<String, List<String>> FileStringsMap = new HashMap<>();
     private static final String ListPersistenceKey = "HarpoonJumpList";
 
     public static void SetItem(VirtualFile file, int index, Project project) {
-
         FillLists(project);
 
         var Files = FilesMap.getOrDefault(project.getName(), new ArrayList<>());
-        var FileStrings = FileStringsMap.getOrDefault(project.getName(), new ArrayList<>());
         if (index < 0) {
             Files.add(file);
-            FileStrings.add(file.getPath());
             return;
         }
+
         if (index >= Files.size()) {
-            for (int i = FileStrings.size(); index >= i; i++) {
+            for (int i = Files.size(); index >= i; i++) {
                 Files.add(null);
-                FileStrings.add("");
             }
         }
         Files.set(index, file);
-        var filePath = file == null ? null : file.getPath();
-        if (filePath == null) return;
-        FileStrings.set(index, filePath);
-
 
         var propsComp = PropertiesComponent.getInstance(project);
-        propsComp.setList(ListPersistenceKey, FileStrings);
+        var stringLists = Files.stream().filter(virtualFile -> virtualFile != null && virtualFile.isValid()).map(VirtualFile::getPath).toList();
+        propsComp.setList(ListPersistenceKey, stringLists);
         FilesMap.put(project.getName(), Files);
-        FileStringsMap.put(project.getName(), FileStrings);
-
     }
 
     public static VirtualFile GetItem(int index, Project project) {
@@ -57,18 +48,15 @@ public class HarpoonState {
     }
 
     private static void FillLists(Project project) {
-        if (FilesMap.containsKey(project.getName()) && FileStringsMap.containsKey(project.getName()))
+        if (FilesMap.containsKey(project.getName()))//&& FileStringsMap.containsKey(project.getName()))
             return;
-        var Files = FilesMap.getOrDefault(project.getName(), new ArrayList<>());
-        var FileStrings = FileStringsMap.getOrDefault(project.getName(), new ArrayList<>());
+        var files = FilesMap.getOrDefault(project.getName(), new ArrayList<>());
         var propsComp = PropertiesComponent.getInstance(project);
         var list = propsComp.getList(ListPersistenceKey);
         list = (list == null) ? new ArrayList<>() : list;
         var LFS = LocalFileSystem.getInstance();
-        Files = list.stream().map(LFS::findFileByPath).collect(Collectors.toList());
-        FileStrings = list;
-        FilesMap.put(project.getName(), Files);
-        FileStringsMap.put(project.getName(), FileStrings);
+        files = list.stream().map(LFS::findFileByPath).collect(Collectors.toList());
+        FilesMap.put(project.getName(), files);
     }
 
     public static List<VirtualFile> GetFiles(Project project) {
@@ -81,20 +69,22 @@ public class HarpoonState {
         FillLists(project);
         if (FilesMap.containsKey(project.getName()))
             FilesMap.get(project.getName()).clear();
-
-        if (FileStringsMap.containsKey(project.getName()))
-            FileStringsMap.get(project.getName()).clear();
     }
 
     public static void SetFiles(List<String> list, Project project) {
         ClearLists(project);
         var LFS = LocalFileSystem.getInstance();
-        for (int i = 0; i < list.size(); i++) {
-            var s = list.get(i);
+        var index = 0;
+
+        for (String s : list) {
             if (s == null || s.isBlank())
-                SetItem(null, i, project);
-            else
-                SetItem(LFS.findFileByPath(s), i, project);
+                continue;
+            var vf = LFS.findFileByPath(s);
+            if (vf != null) {
+                SetItem(vf, index, project);
+                index += 1;
+            }
         }
     }
 }
+
