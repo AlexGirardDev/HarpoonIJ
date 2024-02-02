@@ -27,7 +27,10 @@ public class HarpoonDialog extends DialogWrapper {
 
     public void Ok() {
 
-        SelectedIndex = editorTextField.getEditor().getCaretModel().getLogicalPosition().line;
+        var editor = editorTextField.getEditor();
+        if (editor != null) {
+            SelectedIndex = editor.getCaretModel().getLogicalPosition().line;
+        }
         doOKAction();
     }
 
@@ -70,7 +73,7 @@ public class HarpoonDialog extends DialogWrapper {
         editorTextField.addSettingsProvider(editor -> {
             editor.setFontSize(appSettings.dialogFontSize);
             editor.setInsertMode(true);
-            editor.getCaretModel().moveToLogicalPosition(new LogicalPosition(0,0));
+            editor.getCaretModel().moveToLogicalPosition(new LogicalPosition(0, 0));
             var settings = editor.getSettings();
             settings.setLineNumbersShown(true);
         });
@@ -83,6 +86,26 @@ public class HarpoonDialog extends DialogWrapper {
                     var editor = editorTextField.getEditor();
                     if (editor == null) return;
                     var context = VimInjectorKt.injector.getExecutionContextManager().onEditor(IjVimEditorKt.getVim(editor), null);
+                    //ok this is a hack ontop of a hack
+                    //there is no way for me to set the vim mode on the editor textbox I created
+                    //So initially I was just doing this where i was sending an esc key to vim handler attached to the editor
+
+                    KeyHandler.getInstance().handleKey(
+                            IjVimEditorKt.getVim(editor),
+                            VimInjectorKt.injector.getParser().parseKeys("<ESC>").get(0),
+                            context
+                    );
+
+                    //but for some reason in ideavim 2.8.x the vim editor just isn't in a vim mode at all
+                    // but you can force it into insert mode by sending it an i
+                    //then we can leave insert and end up in normal mode
+                    // have to do this esc-> i -> esc because in an older versions where it is already in insert mode it would just insert an i lol
+                    KeyHandler.getInstance().handleKey(
+                            IjVimEditorKt.getVim(editor),
+                            VimInjectorKt.injector.getParser().parseKeys("i").get(0),
+                            context
+                    );
+
                     KeyHandler.getInstance().handleKey(
                             IjVimEditorKt.getVim(editor),
                             VimInjectorKt.injector.getParser().parseKeys("<ESC>").get(0),
