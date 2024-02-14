@@ -3,6 +3,7 @@ package ca.alexgirard.harpoonIJ;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.fileEditor.FileEditorManager;
+import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
 import org.jetbrains.annotations.NotNull;
 
@@ -36,7 +37,12 @@ public class ShowHarpoon extends AnAction {
         var text = stringBuilder.toString().trim();
         dialog = new HarpoonDialog(text);
         var result = dialog.showAndGet();
-        if (text.equals(dialog.editorTextField.getText().trim())) return;
+        if (text.equals(dialog.editorTextField.getText().trim())) {
+            if(result) {
+                NavigateToFile(project);
+            }
+            return;
+        }
         String newText = dialog.editorTextField.getText().trim().replace("...", projectPath);
 
         String[] lines = newText.split("\n");
@@ -46,15 +52,18 @@ public class ShowHarpoon extends AnAction {
         }
         HarpoonState.SetFiles(outputList, e.getProject());
         if (result) {
-            //TODO move this opening file logic to some shared handler
-            if (project == null) return;
-            VirtualFile vf = HarpoonState.GetItem(dialog.SelectedIndex, project);
-            if (vf == null)
-                return;
-            var fileManager = FileEditorManager.getInstance(project);
-            fileManager.openFile(vf, true);
+            NavigateToFile(project);
         }
     }
+    private void NavigateToFile(Project project){
+        if (project == null) return;
+        VirtualFile vf = HarpoonState.GetItem(dialog.SelectedIndex, project);
+        if (vf == null)
+            return;
+        var fileManager = FileEditorManager.getInstance(project);
+        fileManager.openFile(vf, true);
+    }
+        
 }
 
 

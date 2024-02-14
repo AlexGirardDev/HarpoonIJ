@@ -48,10 +48,7 @@
             <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
         </action>
 
-        <action id="SelectHarpoonItem" class="ca.alexgirard.harpoonIJ.SelectHarpoonItem" 
-                description="Jumps to the selected harpoon item if the harpoon dialog is open">
-            <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
-        </action>
+        <action id="SelectHarpoonItem" class="ca.alexgirard.harpoonIJ.SelectHarpoonItem"/>
 
         <action id="GotoHarpoon1" class="ca.alexgirard.harpoonIJ.GotoHarpoon1Action"
                 text="Goto Harpoon File 1">
