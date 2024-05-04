@@ -18,7 +18,7 @@
   ]]></description>
 
     <change-notes>
-        Pressing enter in harpoon dialog now navigates to selected file
+     fixed issues with latest version of IDEAVim
     </change-notes>
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->

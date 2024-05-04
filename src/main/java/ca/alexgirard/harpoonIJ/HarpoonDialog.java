@@ -3,6 +3,7 @@ package ca.alexgirard.harpoonIJ;
 import com.intellij.ide.plugins.PluginManagerCore;
 import com.intellij.openapi.editor.LogicalPosition;
 import com.intellij.openapi.extensions.PluginId;
+import com.intellij.openapi.keymap.impl.KeyState;
 import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.ui.EditorTextField;
 import com.maddyhome.idea.vim.KeyHandler;
@@ -79,35 +80,35 @@ public class HarpoonDialog extends DialogWrapper {
         });
 
 
-        if (forceNormalMode) {
-            editorTextField.addFocusListener(new FocusListener() {
-                public void focusGained(FocusEvent e) {
-                    if (normalModeForcedAlready) return;
-                    var editor = editorTextField.getEditor();
-                    if (editor == null) return;
-                    var context = VimInjectorKt.injector.getExecutionContextManager().onEditor(IjVimEditorKt.getVim(editor), null);
-                    var handler = KeyHandler.getInstance();
-                    var parser = VimInjectorKt.injector.getParser();
-                    var vim = IjVimEditorKt.getVim(editor);
-                    //ok this is a hack ontop of a hack
-                    //there is no way for me to set the vim mode on the editor textbox I created
-                    //So initially I was just doing this where i was sending an esc key to vim handler attached to the editor
-
-                    handler.handleKey(vim, parser.parseKeys("<ESC>").get(0), context);
-
-                    //but for some reason in ideavim 2.8.x the vim editor just isn't in a vim mode at all
-                    // but you can force it into insert mode by sending it an i
-                    //then we can leave insert and end up in normal mode
-                    // have to do this esc-> i -> esc because in an older versions where it is already in insert mode it would just insert an i lol
-                    handler.handleKey(vim, parser.parseKeys("i").get(0), context);
-                    handler.handleKey(vim, parser.parseKeys("<ESC>").get(0), context);
-                    normalModeForcedAlready = true;
-                }
-
-                public void focusLost(FocusEvent e) {
-                }
-            });
-        }
+//        if (forceNormalMode) {
+//            editorTextField.addFocusListener(new FocusListener() {
+//                public void focusGained(FocusEvent e) {
+//                    if (normalModeForcedAlready) return;
+////                    var editor = editorTextField.getEditor();
+////                    if (editor == null) return;
+////                    var context = VimInjectorKt.injector.getExecutionContextManager().onEditor(IjVimEditorKt.getVim(editor), null);
+////                    var handler = KeyHandler.getInstance();
+////                    var parser = VimInjectorKt.injector.getParser();
+////                    var vim = IjVimEditorKt.getVim(editor);
+////                    //ok this is a hack ontop of a hack
+////                    //there is no way for me to set the vim mode on the editor textbox I created
+////                    //So initially I was just doing this where i was sending an esc key to vim handler attached to the editor
+////
+////                    handler.handleKey(vim, parser.parseKeys("<ESC>").get(0), context, null);
+////
+////                    //but for some reason in ideavim 2.8.x the vim editor just isn't in a vim mode at all
+////                    // but you can force it into insert mode by sending it an i
+////                    //then we can leave insert and end up in normal mode
+////                    // have to do this esc-> i -> esc because in an older versions where it is already in insert mode it would just insert an i lol
+//////                    handler.handleKey(vim, parser.parseKeys("i").get(0), context, handler.keyHandlerState;
+//////                    handler.handleKey(vim, parser.parseKeys("<ESC>").get(0), context, handler.keyHandlerState());
+////                    normalModeForcedAlready = true;
+//                }
+//
+//                public void focusLost(FocusEvent e) {
+//                }
+//            });
+//        }
         return editorTextField;
     }
 

@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "ca.alexgirard"
-version = "0.1.7"
+version = "0.1.8"
 
 repositories {
     mavenCentral()
@@ -19,10 +19,10 @@ dependencies {
 // Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
-    version.set("2023.1")
+    version.set("2023.3")
     type.set("IC") // Target IDE Platform
     updateSinceUntilBuild.set(false)
-    plugins.set(listOf("IdeaVIM:2.2.0"))
+    plugins.set(listOf("IdeaVIM:2.10.1"))
 }
 
 tasks {
