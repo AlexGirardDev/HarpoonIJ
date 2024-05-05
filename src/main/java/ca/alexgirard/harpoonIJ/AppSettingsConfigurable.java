@@ -40,7 +40,6 @@ public class AppSettingsConfigurable implements Configurable {
         //TODO cleanup in kotlin rewrite
         modified |= harpoonSettings.getDialogWidth() != settings.dialogWidth;
         modified |= harpoonSettings.getDialogFontSize() != settings.dialogFontSize;
-        modified |= harpoonSettings.getForceNormalMode() != settings.dialogForceVimNormalMode;
         modified |= harpoonSettings.getRemapEnter() != settings.enterRemap;
         return modified;
     }
@@ -51,7 +50,6 @@ public class AppSettingsConfigurable implements Configurable {
         settings.dialogWidth = harpoonSettings.getDialogWidth();
         settings.dialogHeight = harpoonSettings.getDialogHeight();
         settings.dialogFontSize = harpoonSettings.getDialogFontSize();
-        settings.dialogForceVimNormalMode = harpoonSettings.getForceNormalMode();
         settings.enterRemap = harpoonSettings.getRemapEnter();
     }
 
@@ -61,7 +59,6 @@ public class AppSettingsConfigurable implements Configurable {
         harpoonSettings.setDialogWidth(settings.dialogWidth);
         harpoonSettings.setDialogHeight(settings.dialogHeight);
         harpoonSettings.setDialogFontSize(settings.dialogFontSize);
-        harpoonSettings.setForceVimNormalMode(settings.dialogForceVimNormalMode);
         harpoonSettings.setRemapEnter(settings.enterRemap);
     }
 

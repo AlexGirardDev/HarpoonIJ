@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "ca.alexgirard"
-version = "0.1.8"
+version = "0.1.9"
 
 repositories {
     mavenCentral()
@@ -51,6 +51,7 @@ tasks {
     
 
     publishPlugin {
+        channels.set(listOf("beta"))
         token.set(System.getenv("PUBLISH_TOKEN"))
     }
 }

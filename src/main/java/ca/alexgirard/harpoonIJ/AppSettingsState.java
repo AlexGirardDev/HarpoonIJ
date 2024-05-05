@@ -23,7 +23,6 @@ public class AppSettingsState implements PersistentStateComponent<AppSettingsSta
     public int dialogHeight = 400;
     public int dialogWidth = 800;
     public int dialogFontSize = 20;
-    public boolean dialogForceVimNormalMode = true;
     public boolean enterRemap = true;
 
     public static AppSettingsState getInstance() {

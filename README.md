@@ -30,7 +30,6 @@ You can customize HarpoonIJ to better fit your workflow through the following se
 - **Popup Width**: Adjust the width of the popup dialog.
 - **Popup Height**: Adjust the height of the popup dialog.
 - **Popup Font Size**: Set the font size for text within the popup dialog.
-- **Force Dialog into Normal Mode**: If you have IdeaVim installed, enabling this option will force the dialog into Vim's Normal mode.
 - **Map Enter to Select Item in Dialog**: If you have IdeaVim installed, enabling this will allow you to select an item in the dialog by pressing Enter.
 
 To access these settings, navigate to `File > Settings > Tools > HarpoonIJ Settings`.

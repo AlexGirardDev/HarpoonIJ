@@ -18,6 +18,7 @@
   ]]></description>
 
     <change-notes>
+        fixing error when seleced file in harpoon
      fixed issues with latest version of IDEAVim
     </change-notes>
     <!-- Product and plugin compatibility requirements.
