@@ -10,7 +10,13 @@ import com.maddyhome.idea.vim.command.MappingMode;
 import com.maddyhome.idea.vim.key.MappingOwner;
 import org.jetbrains.annotations.Nullable;
 
+import com.maddyhome.idea.vim.KeyHandler;
+import com.maddyhome.idea.vim.newapi.IjVimEditorKt;
+
 import javax.swing.*;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
+import java.awt.event.KeyEvent;
 
 public class HarpoonDialog extends DialogWrapper {
 
@@ -18,6 +24,23 @@ public class HarpoonDialog extends DialogWrapper {
     private final String text;
     public int SelectedIndex = -1;
     private static boolean enterRemapped = false;
+    private boolean normalModeForcedAlready = false;
+
+    public void Next() {
+
+        var editor = editorTextField.getEditor();
+        if (editor != null) {
+            editor.getCaretModel().moveCaretRelatively(0, 1, false, false, false);
+        }
+    }
+
+    public void Previous() {
+
+        var editor = editorTextField.getEditor();
+        if (editor != null) {
+            editor.getCaretModel().moveCaretRelatively(0, -1, false, false, false);
+        }
+    }
 
     public void Ok() {
 
@@ -73,6 +96,24 @@ public class HarpoonDialog extends DialogWrapper {
         });
 
 
+        editorTextField.addFocusListener(new FocusListener() {
+            public void focusGained(FocusEvent e) {
+                if (normalModeForcedAlready) return;
+                var editor = editorTextField.getEditor();
+                if (editor == null) return;
+                var vim = IjVimEditorKt.getVim(editor);
+                if (!vim.getInsertMode()) return;
+                var context = VimInjectorKt.injector.getExecutionContextManager().getEditorExecutionContext(vim);
+                KeyHandler.getInstance().handleKey(vim, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), context, KeyHandler.getInstance().getKeyHandlerState());
+                normalModeForcedAlready = true;
+                if (editor != null) {
+                    editor.getCaretModel().moveCaretRelatively(0, 1, false, false, false);
+                }
+            }
+
+            public void focusLost(FocusEvent e) {
+            }
+        });
         return editorTextField;
     }
 

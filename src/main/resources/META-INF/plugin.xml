@@ -50,6 +50,8 @@
         </action>
 
         <action id="SelectHarpoonItem" class="ca.alexgirard.harpoonIJ.SelectHarpoonItem"/>
+        <action id="NextHarpoonItem" class="ca.alexgirard.harpoonIJ.NextHarpoonItem"/>
+        <action id="PreviousHarpoonItem" class="ca.alexgirard.harpoonIJ.PreviousHarpoonItem"/>
 
         <action id="GotoHarpoon1" class="ca.alexgirard.harpoonIJ.GotoHarpoon1Action"
                 text="Goto Harpoon File 1">

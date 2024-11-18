@@ -13,6 +13,16 @@ public class ShowHarpoon extends AnAction {
 
     private static HarpoonDialog dialog;
 
+    public static void NextHarpoonItem() {
+        if (dialog == null || !dialog.isShowing())
+            return;
+        dialog.Next();
+    }
+    public static void PreviousHarpoonItem() {
+        if (dialog == null || !dialog.isShowing())
+            return;
+        dialog.Previous();
+    }
     public static void SelectHarpoonItem() {
         if (dialog == null || !dialog.isShowing())
             return;
