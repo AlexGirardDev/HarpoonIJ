@@ -36,7 +36,7 @@ tasks {
     }
 
     patchPluginXml {
-        sinceBuild.set("231")
+        sinceBuild.set("233")
     }
     buildSearchableOptions {
         enabled = false

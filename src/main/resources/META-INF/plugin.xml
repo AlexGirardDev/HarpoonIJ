@@ -18,8 +18,7 @@
   ]]></description>
 
     <change-notes>
-        fixing error when seleced file in harpoon
-     fixed issues with latest version of IDEAVim
+        Fixing issue with forcing normal mode not working with newer versions of ideavim
     </change-notes>
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
