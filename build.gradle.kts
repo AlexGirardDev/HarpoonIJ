@@ -51,7 +51,6 @@ tasks {
     
 
     publishPlugin {
-        channels.set(listOf("beta"))
         token.set(System.getenv("PUBLISH_TOKEN"))
     }
 }
