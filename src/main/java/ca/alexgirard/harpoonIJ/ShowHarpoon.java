@@ -70,6 +70,7 @@ public class ShowHarpoon extends AnAction {
         VirtualFile vf = HarpoonState.GetItem(dialog.SelectedIndex, project);
         if (vf == null)
             return;
+        HarpoonState.setSelectedIndex(project, dialog.SelectedIndex);
         var fileManager = FileEditorManager.getInstance(project);
         fileManager.openFile(vf, true);
     }

@@ -5,24 +5,18 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.LocalFileSystem;
 import com.intellij.openapi.vfs.VirtualFile;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class HarpoonState {
     private static final Map<String, List<VirtualFile>> FilesMap = new HashMap<>();
+    private static final Map<String, Integer> LastHarpoonIndexMap = new HashMap<>();
     private static final String ListPersistenceKey = "HarpoonJumpList";
 
     public static void SetItem(VirtualFile file, int index, Project project) {
         FillLists(project);
 
         var Files = FilesMap.getOrDefault(project.getName(), new ArrayList<>());
-        if (index < 0) {
-            Files.add(file);
-            return;
-        }
 
         if (index >= Files.size()) {
             for (int i = Files.size(); index >= i; i++) {
@@ -30,6 +24,7 @@ public class HarpoonState {
             }
         }
         Files.set(index, file);
+        LastHarpoonIndexMap.put(project.getName(), index);
 
         var propsComp = PropertiesComponent.getInstance(project);
         var stringLists = Files.stream().filter(virtualFile -> virtualFile != null && virtualFile.isValid()).map(VirtualFile::getPath).toList();
@@ -41,6 +36,7 @@ public class HarpoonState {
         FillLists(project);
         var Files = FilesMap.getOrDefault(project.getName(), new ArrayList<>());
         if (index < Files.size()) {
+            LastHarpoonIndexMap.put(project.getName(), index);
             return Files.get(index);
         }
         return null;
@@ -65,6 +61,15 @@ public class HarpoonState {
 
     }
 
+    public static OptionalInt getFileIndex(Project project, VirtualFile file) {
+        List<VirtualFile> virtualFiles = FilesMap.getOrDefault(project.getName(), List.of());
+        int indexOfFile = virtualFiles.indexOf(file);
+        if(indexOfFile == -1) {
+            return OptionalInt.empty();
+        }
+        return OptionalInt.of(indexOfFile);
+    }
+
     private static void ClearLists(Project project) {
         FillLists(project);
         if (FilesMap.containsKey(project.getName()))
@@ -85,6 +90,15 @@ public class HarpoonState {
                 index += 1;
             }
         }
+    }
+
+    public static void setSelectedIndex(Project project, int selectedIndex) {
+        LastHarpoonIndexMap.put(project.getName(), selectedIndex);
+    }
+
+    public static int getLastSelectedIndex(Project project) {
+        return Optional.ofNullable(LastHarpoonIndexMap.get(project.getName())).orElse(-1);
+
     }
 }
 

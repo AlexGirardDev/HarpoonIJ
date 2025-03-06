@@ -73,6 +73,15 @@
             <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
         </action>
 
+        <action id="GotoNextHarpoon" class="ca.alexgirard.harpoonIJ.GotoNextHarpoonAction"
+                text="Goto Next Harpoon File">
+            <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
+        </action>
+        <action id="GotoPreviousHarpoon" class="ca.alexgirard.harpoonIJ.GotoPreviousHarpoonAction"
+                text="Goto Previous Harpoon File">
+            <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
+        </action>
+
         <action id="SetHarpoon1" class="ca.alexgirard.harpoonIJ.SetHarpoonFileAction1"
                 text="Set Harpoon File 1">
             <add-to-group group-id="ca.alexgirard.harpoonIJ.mainGroup"/>
