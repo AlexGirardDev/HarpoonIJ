@@ -66,8 +66,16 @@ public class ShowHarpoon extends AnAction {
         }
     }
     private void NavigateToFile(Project project){
+        NavigateToIndex(project, dialog.SelectedIndex);
+    }
+
+    /**
+     * Opens the file pinned to {@code index}. Package-private so that what the popup does with the
+     * entry the user selected can be tested without showing a modal dialog.
+     */
+    static void NavigateToIndex(Project project, int index){
         if (project == null) return;
-        VirtualFile vf = HarpoonState.GetItem(dialog.SelectedIndex, project);
+        VirtualFile vf = HarpoonState.GetItem(index, project);
         if (vf == null)
             return;
         var fileManager = FileEditorManager.getInstance(project);

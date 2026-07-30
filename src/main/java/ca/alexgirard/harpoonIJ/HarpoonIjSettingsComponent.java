@@ -2,8 +2,6 @@
 
 package ca.alexgirard.harpoonIJ;
 
-import com.intellij.ide.plugins.PluginManagerCore;
-import com.intellij.openapi.extensions.PluginId;
 import com.intellij.ui.JBIntSpinner;
 import com.intellij.ui.components.JBCheckBox;
 import com.intellij.ui.components.JBLabel;
@@ -31,8 +29,7 @@ public class HarpoonIjSettingsComponent {
                 .addComponentFillVertically(new JPanel(), 0)
                 .getPanel();
 
-        var vimPlugin = PluginManagerCore.getPlugin(PluginId.getId("IdeaVIM"));
-        if (vimPlugin == null || !vimPlugin.isEnabled()) {
+        if (!IdeaVimIntegration.isAvailable()) {
             cbEnterItemSelect.setEnabled(false);
         }
     }

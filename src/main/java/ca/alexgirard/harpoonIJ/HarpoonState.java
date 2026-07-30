@@ -4,6 +4,7 @@ import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.LocalFileSystem;
 import com.intellij.openapi.vfs.VirtualFile;
+import org.jetbrains.annotations.TestOnly;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -69,6 +70,15 @@ public class HarpoonState {
         FillLists(project);
         if (FilesMap.containsKey(project.getName()))
             FilesMap.get(project.getName()).clear();
+    }
+
+    /**
+     * Drops the in-memory cache so the next read comes back from {@link PropertiesComponent}.
+     * Tests need this to observe what was actually persisted; nothing in production does.
+     */
+    @TestOnly
+    static void forgetCachedFiles() {
+        FilesMap.clear();
     }
 
     public static void SetFiles(List<String> list, Project project) {

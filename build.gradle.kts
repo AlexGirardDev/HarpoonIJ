@@ -1,56 +1,85 @@
+import org.jetbrains.intellij.platform.gradle.TestFrameworkType
+
 plugins {
     id("java")
-    id("org.jetbrains.kotlin.jvm") version "1.9.0"
-    id("org.jetbrains.intellij") version "1.15.0"
+    id("org.jetbrains.kotlin.jvm") version "2.4.10"
+    id("org.jetbrains.intellij.platform") version "2.18.1"
 }
 
 group = "ca.alexgirard"
 version = "0.2.0"
 
+val platformVersion = providers.gradleProperty("platformVersion").get()
+val ideaVimVersion = providers.gradleProperty("ideaVimVersion").get()
+val javaVersion = providers.gradleProperty("javaVersion").get().toInt()
+
 repositories {
     mavenCentral()
+    intellijPlatform {
+        defaultRepositories()
+    }
 }
 
 dependencies {
     compileOnly("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+
+    // Read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin.html
+    intellijPlatform {
+        intellijIdea(platformVersion)
+        plugin("IdeaVIM", ideaVimVersion)
+
+        // JUnit 4 based platform fixtures (BasePlatformTestCase and friends).
+        testFramework(TestFrameworkType.Platform)
+    }
+
+    testImplementation("junit:junit:4.13.2")
 }
 
+intellijPlatform {
+    buildSearchableOptions = false
 
-// Configure Gradle IntelliJ Plugin
-// Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
-intellij {
-    version.set("2024.1.1")
-    type.set("IC") // Target IDE Platform
-    updateSinceUntilBuild.set(false)
-    plugins.set(listOf("IdeaVIM:2.16.0"))
+    pluginConfiguration {
+        ideaVersion {
+            sinceBuild = providers.gradleProperty("pluginSinceBuild")
+            // Deliberately open-ended, matching the pre-2.x
+            // `updateSinceUntilBuild = false` behaviour.
+            untilBuild = provider { null }
+        }
+    }
+
+    // Marketplace signing/publishing credentials only exist on the release
+    // machine. Referencing them here is inert: `signPlugin` and `publishPlugin`
+    // are never part of `build`, so a checkout without the key files or env
+    // vars still builds and tests cleanly.
+    signing {
+        certificateChainFile = file("/key/chain.crt")
+        privateKeyFile = file("/key/certificate/private.pem")
+        password = providers.environmentVariable("PRIVATE_KEY_PASSWORD")
+    }
+
+    publishing {
+        token = providers.environmentVariable("PUBLISH_TOKEN")
+    }
+
+    pluginVerification {
+        ides {
+            // Verify against exactly the platform we compile against; it is
+            // already downloaded, so `verifyPlugin` costs nothing extra.
+            current()
+        }
+    }
 }
 
-tasks {
-    // Set the JVM compatibility versions
-    withType<JavaCompile> {
-        sourceCompatibility = "17"
-        targetCompatibility = "17"
-    }
-    withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions.jvmTarget = "17"
-    }
+kotlin {
+    jvmToolchain(javaVersion)
+}
 
-    patchPluginXml {
-        sinceBuild.set("233")
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(javaVersion)
     }
-    buildSearchableOptions {
-        enabled = false
-    }
+}
 
-    
-    signPlugin {
-        certificateChainFile.set(file("/key/chain.crt"))
-        privateKeyFile.set(file("/key/certificate/private.pem"))
-        password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
-    }
-    
-
-    publishPlugin {
-        token.set(System.getenv("PUBLISH_TOKEN"))
-    }
+tasks.test {
+    useJUnit()
 }
