@@ -79,7 +79,8 @@ public class HarpoonDialog extends DialogWrapper {
                 if (editor == null) return;
                 if (!IdeaVimIntegration.forceNormalMode(editor)) return;
                 normalModeForcedAlready = true;
-                editor.getCaretModel().moveCaretRelatively(0, 1, false, false, false);
+                // Forcing normal mode leaves the caret on the line it was already on, so there is
+                // nothing to move it back from; the popup opens on the first entry.
             }
 
             public void focusLost(FocusEvent e) {

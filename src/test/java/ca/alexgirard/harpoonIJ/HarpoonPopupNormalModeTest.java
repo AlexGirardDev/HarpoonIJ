@@ -56,6 +56,25 @@ public class HarpoonPopupNormalModeTest extends BasePlatformTestCase {
                 vim(editor).getMode() instanceof Mode.NORMAL);
     }
 
+    public void testThePopupOpensOnTheFirstEntry() {
+        Editor editor = openPopup("one\ntwo\nthree");
+        enterInsertMode(editor);
+
+        focusPopup(editor);
+
+        assertEquals("the caret must land on the first entry, so <cr> jumps to harpoon slot 1",
+                0, editor.getCaretModel().getLogicalPosition().line);
+    }
+
+    public void testThePopupStillOpensOnTheFirstEntryWithSingleEntryLists() {
+        Editor editor = openPopup("only");
+        enterInsertMode(editor);
+
+        focusPopup(editor);
+
+        assertEquals(0, editor.getCaretModel().getLogicalPosition().line);
+    }
+
     public void testThePopupStaysInNormalModeOnLaterFocusEvents() {
         Editor editor = openPopup("one\ntwo\nthree");
         enterInsertMode(editor);
