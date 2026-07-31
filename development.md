@@ -30,6 +30,13 @@ part of `build`, so a checkout without them builds and tests fine.
 `sinceBuild`, and the JDK the platform requires. Bump `platformVersion` and `ideaVimVersion`
 together, and update `javaVersion` and `pluginSinceBuild` to match the new platform branch — see
 [build number ranges](https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html).
+`java-version` in `.github/workflows/build.yml` is a hand-copy of `javaVersion`; bump it with the
+rest or CI compiles on the wrong JDK.
+
+## CI
+
+`.github/workflows/build.yml` runs `build`, `buildPlugin` and `verifyPlugin` on every push and pull
+request, and uploads the test report.
 
 ## The IdeaVim integration
 
