@@ -15,9 +15,9 @@ release data rather than from memory — the ones you recall are almost certainl
 
 - **IdeaVim is the fragile part.** It is an optional dependency, its internals move between
   releases, and this integration has broken repeatedly (see `git log` for the recurring "forcing
-  normal mode" fixes). All of it is confined to `IdeaVimIntegration`; keep it that way, and never
-  touch that class' methods without checking `IdeaVimIntegration.isAvailable()` first — the IdeaVim
-  classes are simply absent when the plugin is not installed.
+  normal mode" fixes). All of it is confined to `IdeaVimIntegration`; keep it that way, and every
+  method there that reaches into IdeaVim must guard on `IdeaVimIntegration.isAvailable()` itself —
+  the IdeaVim classes are simply absent when the plugin is not installed.
 - **`HarpoonState` is static state keyed by `project.getName()`**, not by project instance. Two
   open projects with the same name share one Harpoon list.
 - **`src/main` is Java on purpose.** `todo.md` wants a Kotlin migration eventually; do not mix that

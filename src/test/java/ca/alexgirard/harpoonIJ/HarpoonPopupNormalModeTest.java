@@ -6,6 +6,7 @@ import com.maddyhome.idea.vim.KeyHandler;
 import com.maddyhome.idea.vim.api.VimEditor;
 import com.maddyhome.idea.vim.api.VimInjectorKt;
 import com.maddyhome.idea.vim.command.MappingMode;
+import com.maddyhome.idea.vim.key.KeySource;
 import com.maddyhome.idea.vim.key.MappingOwner;
 import com.maddyhome.idea.vim.newapi.IjVimEditorKt;
 import com.maddyhome.idea.vim.state.mode.Mode;
@@ -117,8 +118,8 @@ public class HarpoonPopupNormalModeTest extends BasePlatformTestCase {
     private void enterInsertMode(Editor editor) {
         VimEditor vim = vim(editor);
         var context = VimInjectorKt.injector.getExecutionContextManager().getEditorExecutionContext(vim);
-        KeyHandler.getInstance().handleKey(vim, KeyStroke.getKeyStroke('i'), context,
-                KeyHandler.getInstance().getKeyHandlerState());
+        KeyHandler.getInstance().handleKey(vim, KeyStroke.getKeyStroke('i'), KeySource.TYPED,
+                context, KeyHandler.getInstance().getKeyHandlerState());
         assertTrue(vim.getMode() instanceof Mode.INSERT);
     }
 

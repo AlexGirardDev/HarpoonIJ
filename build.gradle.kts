@@ -2,7 +2,6 @@ import org.jetbrains.intellij.platform.gradle.TestFrameworkType
 
 plugins {
     id("java")
-    id("org.jetbrains.kotlin.jvm") version "2.4.10"
     id("org.jetbrains.intellij.platform") version "2.18.1"
 }
 
@@ -21,8 +20,6 @@ repositories {
 }
 
 dependencies {
-    compileOnly("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-
     // Read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin.html
     intellijPlatform {
         intellijIdea(platformVersion)
@@ -68,10 +65,6 @@ intellijPlatform {
             current()
         }
     }
-}
-
-kotlin {
-    jvmToolchain(javaVersion)
 }
 
 java {

@@ -19,8 +19,9 @@ import java.awt.event.KeyEvent;
  * place that has to be re-checked when either version is bumped. Keeping it out of the Swing
  * plumbing also means the behaviour can be tested against a real editor without building a dialog.
  * <p>
- * Nothing in this class may be touched unless {@link #isAvailable()} returned {@code true}:
- * without the IdeaVim plugin installed its classes are not on the classpath at all.
+ * Without the IdeaVim plugin installed its classes are not on the classpath at all, so every
+ * method here that reaches into IdeaVim checks {@link #isAvailable()} first and does nothing when
+ * IdeaVim is absent. Callers may therefore call them unconditionally.
  */
 public final class IdeaVimIntegration {
 
@@ -58,10 +59,11 @@ public final class IdeaVimIntegration {
 
     /**
      * Maps {@code <cr>} to the {@code SelectHarpoonItem} action so that pressing enter in the
-     * Harpoon popup jumps to the file under the caret. Registered once per IDE session.
+     * Harpoon popup jumps to the file under the caret. Registered once per IDE session, and a
+     * no-op when IdeaVim is not installed.
      */
     public static void remapEnterToSelectHarpoonItem() {
-        if (enterRemapped) return;
+        if (enterRemapped || !isAvailable()) return;
         var parser = VimInjectorKt.injector.getParser();
         VimInjectorKt.injector.getKeyGroup().putKeyMapping(
                 MappingMode.NVO,
@@ -80,10 +82,11 @@ public final class IdeaVimIntegration {
      * editor's insert-versus-overwrite typing flag and not the Vim mode, so it is true for an
      * ordinary editor. Sending escape to an editor that is already in normal mode is harmless.
      *
-     * @return {@code true} if the escape was sent, {@code false} if the editor reported that it
-     * was not in insert mode and was left alone.
+     * @return {@code true} if the escape was sent, {@code false} if IdeaVim is not installed or
+     * the editor reported that it was not in insert mode and was left alone.
      */
     public static boolean forceNormalMode(Editor editor) {
+        if (!isAvailable()) return false;
         var vim = IjVimEditorKt.getVim(editor);
         if (!vim.getInsertMode()) return false;
         var context = VimInjectorKt.injector.getExecutionContextManager().getEditorExecutionContext(vim);

@@ -38,8 +38,9 @@ plugin that has broken most often. Every call into it goes through `IdeaVimInteg
 else in `src/main` touches a `com.maddyhome.idea.vim` class. When you bump `ideaVimVersion`, that
 class and `IdeaVimIntegrationTest` are what to check first.
 
-Its classes are only on the classpath when the IdeaVim plugin is installed, so nothing in
-`IdeaVimIntegration` may be touched unless `IdeaVimIntegration.isAvailable()` returned true.
+Its classes are only on the classpath when the IdeaVim plugin is installed, so every method of
+`IdeaVimIntegration` that reaches into IdeaVim checks `IdeaVimIntegration.isAvailable()` itself and
+does nothing when IdeaVim is absent. Any new method there has to do the same.
 
 ## Tests
 
