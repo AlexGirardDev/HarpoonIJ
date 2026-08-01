@@ -23,7 +23,8 @@
           IntelliJ Platform Gradle Plugin 2.x instead of the retired Gradle IntelliJ Plugin 1.x.</li>
       <li>Updated the optional IdeaVim integration to IdeaVim 2.45.1, so forcing normal mode in the
           Harpoon popup works with current IdeaVim releases.</li>
-      <li>The Harpoon popup now opens with the first entry selected instead of no entry selected.</li>
+      <li>The Harpoon popup now opens on the first entry instead of the second, so pressing enter
+          straight away jumps to harpoon slot 1 rather than slot 2.</li>
     </ul>
   ]]></change-notes>
     <!-- Product and plugin compatibility requirements.
