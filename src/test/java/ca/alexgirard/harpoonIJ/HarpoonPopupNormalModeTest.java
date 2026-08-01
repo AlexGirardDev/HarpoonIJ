@@ -1,6 +1,7 @@
 package ca.alexgirard.harpoonIJ;
 
 import com.intellij.openapi.editor.Editor;
+import com.intellij.testFramework.EditorTestUtil;
 import com.intellij.testFramework.fixtures.BasePlatformTestCase;
 import com.maddyhome.idea.vim.KeyHandler;
 import com.maddyhome.idea.vim.api.VimEditor;
@@ -18,11 +19,20 @@ import java.awt.event.FocusListener;
 /**
  * The popup itself, driven the way the IDE drives it.
  * <p>
- * The dialog only forces normal mode once its text field receives focus, so these tests dispatch a
- * real focus event to the editor's content component - the same event the platform delivers when
- * the popup opens - and then assert what IdeaVim reports. That keeps the assertion on the outcome
- * a user sees while still covering the wiring between the dialog and
- * {@link IdeaVimIntegration}.
+ * These tests assert what <em>keys do</em> in the popup, not what mode IdeaVim reports for it. That
+ * distinction is the whole point of this class. {@code VimEditor.mode} reads one application-global
+ * value, so it answers {@code NORMAL} for an editor IdeaVim is not driving at all - which is
+ * exactly the state a popup built over an in-memory document is in. An earlier version of this
+ * suite asserted that global and passed for two years while the popup was unusable, because the
+ * value it read was identical in the broken and the working case.
+ * <p>
+ * So: {@link #testIdeaVimDrivesThePopupsEditor()} is the tripwire for IdeaVim silently detaching,
+ * and the typing tests are the behaviour a user actually sees.
+ * <p>
+ * One thing these cannot cover headlessly: Escape closing the dialog. That depends on Swing's
+ * {@code WHEN_IN_FOCUSED_WINDOW} binding on a real, focused, mapped window, which a light fixture
+ * cannot produce. When IdeaVim is attached and the popup is in normal mode, Escape correctly falls
+ * through to the dialog's cancel action; verifying that end to end needs a UI test.
  */
 public class HarpoonPopupNormalModeTest extends BasePlatformTestCase {
 
@@ -34,6 +44,7 @@ public class HarpoonPopupNormalModeTest extends BasePlatformTestCase {
         super.setUp();
         originalEnterRemap = AppSettingsState.getInstance().enterRemap;
         forgetHarpoonMappings();
+        resetVimMode();
     }
 
     @Override
@@ -41,49 +52,92 @@ public class HarpoonPopupNormalModeTest extends BasePlatformTestCase {
         try {
             AppSettingsState.getInstance().enterRemap = originalEnterRemap;
             forgetHarpoonMappings();
+            resetVimMode();
             if (dialog != null) dialog.disposeIfNeeded();
         } finally {
             super.tearDown();
         }
     }
 
-    public void testThePopupEndsUpInNormalModeWhenItGetsFocus() {
+    /**
+     * The Vim mode is application-global, so a test that leaves it in insert mode changes what the
+     * next test's first keystroke means. Reset it so these run in any order.
+     */
+    private static void resetVimMode() {
+        VimInjectorKt.injector.getVimState().reset();
+    }
+
+    public void testIdeaVimDrivesThePopupsEditor() {
         Editor editor = openPopup("one\ntwo\nthree");
-        enterInsertMode(editor);
 
-        focusPopup(editor);
+        assertTrue("IdeaVim must be handling keys in the popup's editor. If it is not, every "
+                        + "assertion about the popup's mode is meaningless, because the mode is "
+                        + "application-global and reads NORMAL either way.",
+                IdeaVimIntegration.isAttachedTo(editor));
+    }
 
-        assertTrue("the popup must be in normal mode once it is focused, so hjkl navigates",
-                vim(editor).getMode() instanceof Mode.NORMAL);
+    public void testTypingALetterNavigatesInsteadOfInsertingIt() {
+        Editor editor = focusedPopup("one\ntwo\nthree");
+
+        EditorTestUtil.performTypingAction(editor, 'j');
+
+        assertEquals("j is a motion in the popup, not text to insert",
+                "one\ntwo\nthree", editor.getDocument().getText());
+        assertEquals("j must move down one entry", 1, caretLine(editor));
+    }
+
+    public void testTypingWalksBackUpTheList() {
+        Editor editor = focusedPopup("one\ntwo\nthree");
+
+        EditorTestUtil.performTypingAction(editor, 'j');
+        EditorTestUtil.performTypingAction(editor, 'j');
+        EditorTestUtil.performTypingAction(editor, 'k');
+
+        assertEquals("one\ntwo\nthree", editor.getDocument().getText());
+        assertEquals(1, caretLine(editor));
+    }
+
+    public void testTheEditingCommandsStillWork() {
+        Editor editor = focusedPopup("one\ntwo\nthree");
+
+        // dd on the first entry: the popup is an editable list, so this has to keep working.
+        EditorTestUtil.performTypingAction(editor, 'd');
+        EditorTestUtil.performTypingAction(editor, 'd');
+
+        assertEquals("two\nthree", editor.getDocument().getText());
     }
 
     public void testThePopupOpensOnTheFirstEntry() {
-        Editor editor = openPopup("one\ntwo\nthree");
-        enterInsertMode(editor);
-
-        focusPopup(editor);
+        Editor editor = focusedPopup("one\ntwo\nthree");
 
         assertEquals("the caret must land on the first entry, so <cr> jumps to harpoon slot 1",
-                0, editor.getCaretModel().getLogicalPosition().line);
+                0, caretLine(editor));
     }
 
     public void testThePopupStillOpensOnTheFirstEntryWithSingleEntryLists() {
-        Editor editor = openPopup("only");
-        enterInsertMode(editor);
+        Editor editor = focusedPopup("only");
 
-        focusPopup(editor);
-
-        assertEquals(0, editor.getCaretModel().getLogicalPosition().line);
+        assertEquals(0, caretLine(editor));
     }
 
-    public void testThePopupStaysInNormalModeOnLaterFocusEvents() {
-        Editor editor = openPopup("one\ntwo\nthree");
-        enterInsertMode(editor);
-        focusPopup(editor);
+    public void testThePopupKeepsNavigatingOnLaterFocusEvents() {
+        Editor editor = focusedPopup("one\ntwo\nthree");
 
         focusPopup(editor);
+        EditorTestUtil.performTypingAction(editor, 'j');
 
-        assertTrue(vim(editor).getMode() instanceof Mode.NORMAL);
+        assertEquals("one\ntwo\nthree", editor.getDocument().getText());
+        assertEquals(1, caretLine(editor));
+    }
+
+    public void testThePopupsTextSurvivesDisposal() {
+        openPopup("one\ntwo\nthree");
+
+        dialog.disposeIfNeeded();
+
+        assertEquals("ShowHarpoon reads the edited list back after the dialog closes, which is "
+                        + "after the popup's backing file has been deleted",
+                "one\ntwo\nthree", dialog.getListText());
     }
 
     public void testOpeningThePopupMapsEnterToTheSelectAction() {
@@ -107,6 +161,15 @@ public class HarpoonPopupNormalModeTest extends BasePlatformTestCase {
                 VimInjectorKt.injector.getKeyGroup().getKeyMapping(MappingMode.NORMAL).get(enter));
     }
 
+    /** A popup that has been opened and focused, i.e. the state the user first sees. */
+    private Editor focusedPopup(String text) {
+        Editor editor = openPopup(text);
+        // Start from insert mode so the test fails if focusing the popup stops leaving it.
+        enterInsertMode(editor);
+        focusPopup(editor);
+        return editor;
+    }
+
     private Editor openPopup(String text) {
         dialog = new HarpoonDialog(text);
         dialog.editorTextField.setDisposedWith(getTestRootDisposable());
@@ -116,7 +179,7 @@ public class HarpoonPopupNormalModeTest extends BasePlatformTestCase {
     }
 
     private void enterInsertMode(Editor editor) {
-        VimEditor vim = vim(editor);
+        VimEditor vim = IjVimEditorKt.getVim(editor);
         var context = VimInjectorKt.injector.getExecutionContextManager().getEditorExecutionContext(vim);
         KeyHandler.getInstance().handleKey(vim, KeyStroke.getKeyStroke('i'), KeySource.TYPED,
                 context, KeyHandler.getInstance().getKeyHandlerState());
@@ -132,8 +195,8 @@ public class HarpoonPopupNormalModeTest extends BasePlatformTestCase {
         }
     }
 
-    private static VimEditor vim(Editor editor) {
-        return IjVimEditorKt.getVim(editor);
+    private static int caretLine(Editor editor) {
+        return editor.getCaretModel().getLogicalPosition().line;
     }
 
     private static void forgetHarpoonMappings() {

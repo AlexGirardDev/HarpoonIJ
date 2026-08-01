@@ -1,7 +1,9 @@
 package ca.alexgirard.harpoonIJ;
 
 import com.intellij.openapi.editor.Editor;
+import com.intellij.testFramework.EditorTestUtil;
 import com.intellij.testFramework.fixtures.BasePlatformTestCase;
+import com.intellij.ui.EditorTextField;
 import com.maddyhome.idea.vim.KeyHandler;
 import com.maddyhome.idea.vim.api.VimEditor;
 import com.maddyhome.idea.vim.api.VimInjectorKt;
@@ -18,10 +20,13 @@ import javax.swing.KeyStroke;
  * The IdeaVim integration, which is the part of this plugin that keeps breaking when IdeaVim
  * refactors its internals.
  * <p>
- * Everything here asserts an outcome IdeaVim itself reports - the mode the editor ends up in, and
- * the mapping IdeaVim has registered for {@code <cr>} - rather than which calls got us there. A
- * rewrite of IdeaVim's key handling should leave these tests passing as long as the behaviour a
- * user sees is unchanged.
+ * The mode-related cases assert what keys <em>do</em> rather than what mode IdeaVim reports.
+ * {@code VimEditor.mode} is one application-global value, so asserting on it says nothing about any
+ * particular editor: it reads {@code NORMAL} just as happily for an editor IdeaVim has not attached
+ * to at all. Asserting on it is what let the popup ship unusable.
+ * <p>
+ * The {@code <cr>} cases do assert what IdeaVim reports, but there the reported thing - the mapping
+ * registry - is real per-mapping state this plugin writes, not a global that something else set.
  */
 public class IdeaVimIntegrationTest extends BasePlatformTestCase {
 
@@ -29,15 +34,25 @@ public class IdeaVimIntegrationTest extends BasePlatformTestCase {
     protected void setUp() throws Exception {
         super.setUp();
         forgetHarpoonMappings();
+        resetVimMode();
     }
 
     @Override
     protected void tearDown() throws Exception {
         try {
             forgetHarpoonMappings();
+            resetVimMode();
         } finally {
             super.tearDown();
         }
+    }
+
+    /**
+     * The Vim mode is application-global, so a test that leaves it in insert mode changes what the
+     * next test's first keystroke means. Reset it so these run in any order.
+     */
+    private static void resetVimMode() {
+        VimInjectorKt.injector.getVimState().reset();
     }
 
     public void testIdeaVimIsActiveInTheTestIde() {
@@ -45,13 +60,15 @@ public class IdeaVimIntegrationTest extends BasePlatformTestCase {
                 IdeaVimIntegration.isAvailable());
     }
 
-    public void testForcingNormalModeTakesTheEditorOutOfInsertMode() {
+    public void testForcingNormalModeMakesTypingNavigateRatherThanInsert() {
         Editor editor = editorInInsertMode();
 
         IdeaVimIntegration.forceNormalMode(editor);
+        EditorTestUtil.performTypingAction(editor, 'j');
 
-        assertTrue("the popup must open in normal mode, not insert mode",
-                vim(editor).getMode() instanceof Mode.NORMAL);
+        assertEquals("j must be a motion afterwards, not text", "one\ntwo\nthree\n",
+                editor.getDocument().getText());
+        assertEquals(1, editor.getCaretModel().getLogicalPosition().line);
     }
 
     public void testForcingNormalModeReportsThatItActed() {
@@ -65,8 +82,25 @@ public class IdeaVimIntegrationTest extends BasePlatformTestCase {
 
         IdeaVimIntegration.forceNormalMode(editor);
         IdeaVimIntegration.forceNormalMode(editor);
+        EditorTestUtil.performTypingAction(editor, 'j');
 
-        assertTrue(vim(editor).getMode() instanceof Mode.NORMAL);
+        assertEquals("one\ntwo\nthree\n", editor.getDocument().getText());
+    }
+
+    public void testIdeaVimDrivesAFileBackedEditor() {
+        assertTrue(IdeaVimIntegration.isAttachedTo(editorInInsertMode()));
+    }
+
+    public void testIdeaVimDoesNotDriveAnInMemoryEditor() {
+        assertFalse("IdeaVim only attaches to editors backed by a real file. This is the whole "
+                        + "reason the Harpoon popup has to be backed by one.",
+                IdeaVimIntegration.isAttachedTo(inMemoryEditor()));
+    }
+
+    public void testForcingNormalModeRefusesAnEditorIdeaVimIsNotDriving() {
+        assertFalse("forcing normal mode on an unattached editor would change the global Vim mode "
+                        + "of the editor behind the dialog while doing nothing for the popup",
+                IdeaVimIntegration.forceNormalMode(inMemoryEditor()));
     }
 
     public void testEnterIsMappedToTheSelectHarpoonItemAction() {
@@ -109,6 +143,15 @@ public class IdeaVimIntegrationTest extends BasePlatformTestCase {
 
     public void testEnterIsNotMappedBeforeTheDialogAsksForIt() {
         assertNull(enterMapping(MappingMode.NORMAL));
+    }
+
+    /** An editor over a plain in-memory document, i.e. what the popup used to be built over. */
+    private Editor inMemoryEditor() {
+        EditorTextField field = new EditorTextField("one\ntwo\nthree\n");
+        field.setDisposedWith(getTestRootDisposable());
+        Editor editor = field.getEditor(true);
+        assertNotNull(editor);
+        return editor;
     }
 
     private Editor editorInInsertMode() {

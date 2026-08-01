@@ -47,13 +47,16 @@ public class ShowHarpoon extends AnAction {
         var text = stringBuilder.toString().trim();
         dialog = new HarpoonDialog(text);
         var result = dialog.showAndGet();
-        if (text.equals(dialog.editorTextField.getText().trim())) {
+        // Read through the dialog: it holds on to the text past dispose, which is when the popup's
+        // backing file goes away.
+        String editedText = dialog.getListText().trim();
+        if (text.equals(editedText)) {
             if(result) {
                 NavigateToFile(project);
             }
             return;
         }
-        String newText = dialog.editorTextField.getText().trim().replace("...", projectPath);
+        String newText = editedText.replace("...", projectPath);
 
         String[] lines = newText.split("\n");
         var outputList = new ArrayList<String>();

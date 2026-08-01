@@ -21,8 +21,11 @@
     <ul>
       <li>Updated to the IntelliJ Platform 2026.2 (IDEA 2026.2.0.1, since-build 262), building with the
           IntelliJ Platform Gradle Plugin 2.x instead of the retired Gradle IntelliJ Plugin 1.x.</li>
-      <li>Updated the optional IdeaVim integration to IdeaVim 2.45.1, so forcing normal mode in the
-          Harpoon popup works with current IdeaVim releases.</li>
+      <li>Updated the optional IdeaVim integration to IdeaVim 2.45.1.</li>
+      <li>Fixed the Harpoon popup opening in insert mode, with escape closing it instead of
+          returning to normal mode. Since IdeaVim 2.25.0 IdeaVim only drives editors backed by a
+          real file, so it was not handling keys in the popup at all; the popup is now backed by
+          one.</li>
       <li>The Harpoon popup now opens on the first entry instead of the second, so pressing enter
           straight away jumps to harpoon slot 1 rather than slot 2.</li>
     </ul>
