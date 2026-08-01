@@ -9,12 +9,25 @@ HarpoonIJ is a port of the NeoVim Extension [Harpoon](https://github.com/ThePrim
 
 ## Features
 
-- **Quick File Access**: Mark up to 5 files for quick navigation via hotkeys.
-- **Popup Dialog**: View and manage your selected files in a convenient popup dialog.
-- **Flexible Indexing**: Assign a file to a specific index or add it to the first available slot.
-- **Enter to Navigate**: Select a file from the popup dialog and press Enter to navigate to it immediately.
+- **Quick File Access**: Pin files to numbered slots and jump straight to the first five by hotkey.
+- **Popup Dialog**: View and manage your pinned files in a popup. It is an ordinary editor, so you
+  edit the list in place — reorder lines, delete them — and the list is saved when the popup closes.
+  Note that saving the popup re-packs the list: blank lines are dropped and the remaining entries
+  move up, so removing the second of five entries makes the third one slot 2.
+- **Flexible Indexing**: Assign a file to a specific slot, or add it to the first empty one. The list
+  itself is not capped at five; only the direct-jump hotkeys are.
+- **Enter to Navigate**: With IdeaVim installed, press Enter on an entry to open it immediately.
 
 ![Navigation Example](images/navigation.gif)
+
+## Using it with IdeaVim
+
+IdeaVim is optional but is what this plugin is built for. With it installed, the popup is a real Vim
+buffer: it opens in normal mode on the first entry, `j`/`k` walk the list, the usual editing commands
+(`dd`, `p`, …) work on it, Enter opens the entry under the caret, and Escape closes the popup.
+
+Without IdeaVim the popup is a plain text editor and the Enter mapping is unavailable; everything
+else works, driven from the `Tools > Harpoon` menu or from IDE keymap bindings.
 
 ## Commands
 
@@ -22,6 +35,11 @@ HarpoonIJ is a port of the NeoVim Extension [Harpoon](https://github.com/ThePrim
 - `GotoHarpoon[1-5]`: Navigates to the file saved at the specified index.
 - `SetHarpoon[1-5]`: Assigns the current file to a specific index.
 - `AddToHarpoon`: Adds the current file to the first available empty index.
+- `NextHarpoonItem` / `PreviousHarpoonItem`: Move the selection down/up while the dialog is open.
+- `SelectHarpoonItem`: Opens the entry currently selected in the dialog.
+
+The last three only do anything while the dialog is on screen. All of these are also on the
+`Tools > Harpoon` menu, except the three dialog-only ones.
 
 ## Configuration
 
@@ -30,7 +48,7 @@ You can customize HarpoonIJ to better fit your workflow through the following se
 - **Popup Width**: Adjust the width of the popup dialog.
 - **Popup Height**: Adjust the height of the popup dialog.
 - **Popup Font Size**: Set the font size for text within the popup dialog.
-- **Map Enter to Select Item in Dialog**: If you have IdeaVim installed, enabling this will allow you to select an item in the dialog by pressing Enter.
+- **Map Enter to Select Item in Dialog**: If you have IdeaVim installed, enabling this will allow you to select an item in the dialog by pressing Enter. Turn it off to leave `<cr>` to your own mapping.
 
 To access these settings, navigate to `File > Settings > Tools > HarpoonIJ Settings`.
 
@@ -53,3 +71,10 @@ nmap <C-s> :action GotoHarpoon4<cr>
 
 nmap <C-e> :action ShowHarpoon<cr>
 nmap <C-a> :action AddToHarpoon<cr>
+```
+
+## Contributing
+
+See [development.md](development.md) for how to build, test and run the plugin, and
+[AGENTS.md](AGENTS.md) for how it is put together and the sharp edges worth knowing before you
+change anything.
