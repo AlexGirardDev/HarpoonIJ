@@ -1,0 +1,86 @@
+# Early warning for the failure mode that has broken this plugin most often:
+# IdeaVim changing behaviour in a release we have not pinned yet.
+#
+# IdeaVim 2.25.0 stopped installing key handling in editors not backed by a real
+# file, which broke the Harpoon popup for over a year. This job runs the existing
+# suite against whatever IdeaVim is newest, so the next such change surfaces here
+# rather than in a user's bug report.
+#
+# It needs no build-file change: `ideaVimVersion` is read with
+# providers.gradleProperty(...), which -P overrides.
+#
+# Worth being clear about what this can and cannot do. It only warns if a test
+# actually fails when IdeaVim changes behaviour. This suite once had sixteen
+# tests covering popup normal-mode behaviour that all passed while the feature
+# was completely broken, because they asserted an application-global Vim mode.
+# The value here comes from the attach tripwire in HarpoonPopupNormalModeTest,
+# which asserts observable editor behaviour. Keep that test honest and this job
+# is useful; weaken it and this job goes quiet again.
+#
+# If this goes red: reproduce in a real IDE first. Do not relax the tripwire.
+
+name: IdeaVim canary
+
+on:
+  schedule:
+    # Mondays, 06:00 UTC. Weekly on purpose -- IdeaVim ships roughly monthly, and
+    # a daily run would be noise that trains everyone to ignore it.
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  canary:
+    name: Test against latest IdeaVim
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      # Must match `javaVersion` in gradle.properties.
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 25
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-read-only: true
+
+      # Plugin 164 is IdeaVim. The first entry is the newest update.
+      - name: Resolve latest IdeaVim version
+        id: ideavim
+        run: |
+          set -euo pipefail
+          latest=$(curl -sS --fail --max-time 60 \
+            "https://plugins.jetbrains.com/api/plugins/164/updates" | jq -r '.[0].version')
+          case "$latest" in
+            [0-9]*) ;;
+            *) echo "::error::unexpected IdeaVim version from Marketplace API: '$latest'"; exit 1 ;;
+          esac
+          pinned=$(sed -n 's/^ideaVimVersion *= *//p' gradle.properties | tr -d '[:space:]')
+          echo "latest=$latest" >> "$GITHUB_OUTPUT"
+          echo "Pinned in gradle.properties: $pinned"
+          echo "Latest on Marketplace:      $latest"
+          if [ "$latest" = "$pinned" ]; then
+            echo "::notice::IdeaVim $latest matches the pinned version; this run is a no-op tripwire."
+          else
+            echo "::notice::Testing against IdeaVim $latest, ahead of the pinned $pinned."
+          fi
+
+      - name: Run tests against latest IdeaVim
+        run: ./gradlew test -PideaVimVersion=${{ steps.ideavim.outputs.latest }} --stacktrace
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: canary-test-results-ideavim-${{ steps.ideavim.outputs.latest }}
+          path: build/reports/tests/test
+          if-no-files-found: ignore

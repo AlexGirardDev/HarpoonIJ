@@ -12,7 +12,7 @@ touch it, see `AGENTS.md`. This file covers getting it to build, test and run.
 ./gradlew build          # compiles the plugin and runs the test suite
 ./gradlew test           # tests only
 ./gradlew buildPlugin    # produces build/distributions/HarpoonIJ-<version>.zip, the marketplace artifact
-./gradlew verifyPlugin   # runs the JetBrains Plugin Verifier against the platform we compile against
+./gradlew verifyPlugin   # runs the JetBrains Plugin Verifier against the recommended IDE releases
 ./gradlew runIde         # launches a sandbox IDE with the plugin and IdeaVim installed
 ```
 
@@ -25,9 +25,17 @@ You do not need a matching JDK installed. `settings.gradle.kts` applies the fooj
 resolver, so Gradle downloads the JDK named by `javaVersion` in `gradle.properties` if it is
 missing. Gradle itself needs to run on JDK 17 or newer.
 
-`signPlugin` and `publishPlugin` point at key files under `/key` and at the `PRIVATE_KEY_PASSWORD`
-and `PUBLISH_TOKEN` environment variables. Those only exist on the release machine. Neither task is
-part of `build`, so a checkout without them builds and tests fine.
+`build.gradle.kts` deliberately configures neither signing nor publishing. The IntelliJ Platform
+Gradle Plugin already reads `PUBLISH_TOKEN`, `CERTIFICATE_CHAIN`, `PRIVATE_KEY` and
+`PRIVATE_KEY_PASSWORD` from the environment by convention, and that convention applies *only* while
+`signing.privateKeyFile` / `certificateChainFile` are unset. Declaring those file properties — as
+this project used to, pointing at `/key` paths that existed nowhere — suppresses the environment
+path, and because `signPlugin`'s `onlyIf` treats a non-existent file as unspecified, the task is
+skipped even when every credential is present. `publishPlugin` then uploads the **unsigned** archive
+without warning. Do not reintroduce those properties; see the comment in `build.gradle.kts`.
+
+Neither task is part of `build`, so a checkout without credentials builds and tests fine —
+`signPlugin` simply reports `SKIPPED`.
 
 Do not launch the `.run/Run Plugin.run.xml` run configuration to try the plugin locally — despite
 the name it runs `publishPlugin`. Use `./gradlew runIde`.
@@ -55,10 +63,13 @@ where `IdeaVimIntegration`'s warnings about not being attached to the popup show
 
 ## Versions
 
-`gradle.properties` holds the target IntelliJ Platform version, the IdeaVim version, the plugin's
-`sinceBuild`, and the JDK the platform requires — not `build.gradle.kts`. Verify any version against
-the JetBrains plugin repository or the platform release data rather than from memory; recalled ones
-are almost certainly stale.
+`gradle.properties` holds the plugin's own version, the target IntelliJ Platform version, the IdeaVim
+version, the plugin's `sinceBuild`, and the JDK the platform requires — not `build.gradle.kts`.
+Verify any version against the JetBrains plugin repository or the platform release data rather than
+from memory; recalled ones are almost certainly stale.
+
+`pluginVersion` is the one to bump when cutting a release. The Marketplace rejects a duplicate
+version, and `0.2.0` is already published there, so a release must move past it.
 
 Bump `platformVersion` and `ideaVimVersion` together, and update `javaVersion` and
 `pluginSinceBuild` to match the new platform branch — see
@@ -69,10 +80,31 @@ rest or CI compiles on the wrong JDK.
 An `ideaVimVersion` bump is the risky half. `IdeaVimIntegration` and `IdeaVimIntegrationTest` are
 what to check first; `AGENTS.md` lists the specific IdeaVim internals it depends on.
 
+## Change notes
+
+`CHANGELOG.md` is the source of truth. The `org.jetbrains.changelog` plugin renders the section
+matching `pluginVersion` — or `[Unreleased]` when there is no such section — into `plugin.xml`'s
+`<change-notes>` at build time. **Do not hand-write `<change-notes>` in `plugin.xml`; it is
+overwritten silently.** Write entries under `[Unreleased]` as you work; `./gradlew patchChangelog`
+promotes them to a version section when a release is cut.
+
+The Gradle plugin needs no `changelog { }` block — the IntelliJ Platform Gradle Plugin wires the two
+together as soon as the changelog plugin is applied.
+
 ## CI
 
 `.github/workflows/build.yml` runs `build`, `buildPlugin` and `verifyPlugin` on every push and pull
-request, and uploads the test report.
+request. It uploads three artifacts: `plugin-distribution` (the installable zip),
+`test-results`, and `pluginVerifier-result`. Grab `plugin-distribution` for the real-IDE check below
+rather than rebuilding locally.
+
+`.github/workflows/ideavim-canary.yml` runs the test suite weekly against whatever IdeaVim is newest
+on the Marketplace, via `./gradlew test -PideaVimVersion=<latest>`. It is early warning for the
+failure mode that has broken this plugin most often. It only helps to the extent the popup tests
+assert observable behaviour — read "The testing bar" in `AGENTS.md` before touching them. If it goes
+red, reproduce in a real IDE before changing any test.
+
+There is no release or publishing workflow; releases are still manual.
 
 ## Tests
 
