@@ -1,56 +1,81 @@
+import org.jetbrains.intellij.platform.gradle.TestFrameworkType
+
 plugins {
     id("java")
-    id("org.jetbrains.kotlin.jvm") version "1.9.0"
-    id("org.jetbrains.intellij") version "1.15.0"
+    id("org.jetbrains.intellij.platform") version "2.18.1"
+    // Renders CHANGELOG.md into the plugin's change-notes. The IntelliJ Platform
+    // Gradle Plugin wires this up on its own as soon as the plugin is applied,
+    // so there is deliberately no `changelog { }` block here.
+    id("org.jetbrains.changelog") version "2.5.0"
 }
 
 group = "ca.alexgirard"
-version = "0.2.0"
+version = providers.gradleProperty("pluginVersion").get()
+
+val platformVersion = providers.gradleProperty("platformVersion").get()
+val ideaVimVersion = providers.gradleProperty("ideaVimVersion").get()
+val javaVersion = providers.gradleProperty("javaVersion").get().toInt()
 
 repositories {
     mavenCentral()
+    intellijPlatform {
+        defaultRepositories()
+    }
 }
 
 dependencies {
-    compileOnly("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    // Read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin.html
+    intellijPlatform {
+        intellijIdea(platformVersion)
+        plugin("IdeaVIM", ideaVimVersion)
+
+        // JUnit 4 based platform fixtures (BasePlatformTestCase and friends).
+        testFramework(TestFrameworkType.Platform)
+    }
+
+    testImplementation("junit:junit:4.13.2")
 }
 
+intellijPlatform {
+    buildSearchableOptions = false
 
-// Configure Gradle IntelliJ Plugin
-// Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
-intellij {
-    version.set("2024.1.1")
-    type.set("IC") // Target IDE Platform
-    updateSinceUntilBuild.set(false)
-    plugins.set(listOf("IdeaVIM:2.16.0"))
+    pluginConfiguration {
+        ideaVersion {
+            sinceBuild = providers.gradleProperty("pluginSinceBuild")
+            // Deliberately open-ended, matching the pre-2.x
+            // `updateSinceUntilBuild = false` behaviour.
+            untilBuild = provider { null }
+        }
+    }
+
+    // There is deliberately no `signing { }` or `publishing { }` block.
+    //
+    // Setting `signing.privateKeyFile` / `certificateChainFile` does not merely
+    // fail to work without those files -- it suppresses the environment-variable
+    // path entirely. The plugin's conventions read PRIVATE_KEY / CERTIFICATE_CHAIN
+    // only when the corresponding *File property is unset, and signPlugin's
+    // `onlyIf` treats a file that does not exist as unspecified. With both
+    // declared, signPlugin is skipped even when every credential is present, and
+    // publishPlugin then falls back to the *unsigned* archive without warning.
+    //
+    // Leaving these unset is what makes the documented CI path work: export
+    // PUBLISH_TOKEN, CERTIFICATE_CHAIN, PRIVATE_KEY and PRIVATE_KEY_PASSWORD and
+    // the conventions pick them up. A checkout without them still builds and
+    // tests cleanly; signPlugin simply reports SKIPPED.
+
+    // There is also deliberately no `pluginVerification { ides { ... } }` block.
+    // When none is configured the plugin applies `recommended()`, which tracks
+    // the IDE releases matching this plugin's since/until range. Pinning
+    // `current()` here was *narrower* than that default, and would never pick up
+    // a new platform branch.
 }
 
-tasks {
-    // Set the JVM compatibility versions
-    withType<JavaCompile> {
-        sourceCompatibility = "17"
-        targetCompatibility = "17"
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(javaVersion)
     }
-    withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions.jvmTarget = "17"
-    }
+}
 
-    patchPluginXml {
-        sinceBuild.set("233")
-    }
-    buildSearchableOptions {
-        enabled = false
-    }
-
-    
-    signPlugin {
-        certificateChainFile.set(file("/key/chain.crt"))
-        privateKeyFile.set(file("/key/certificate/private.pem"))
-        password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
-    }
-    
-
-    publishPlugin {
-        token.set(System.getenv("PUBLISH_TOKEN"))
-    }
+tasks.test {
+    useJUnit()
 }

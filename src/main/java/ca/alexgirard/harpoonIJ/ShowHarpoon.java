@@ -47,13 +47,16 @@ public class ShowHarpoon extends AnAction {
         var text = stringBuilder.toString().trim();
         dialog = new HarpoonDialog(text);
         var result = dialog.showAndGet();
-        if (text.equals(dialog.editorTextField.getText().trim())) {
+        // Read through the dialog: it holds on to the text past dispose, which is when the popup's
+        // backing file goes away.
+        String editedText = dialog.getListText().trim();
+        if (text.equals(editedText)) {
             if(result) {
                 NavigateToFile(project);
             }
             return;
         }
-        String newText = dialog.editorTextField.getText().trim().replace("...", projectPath);
+        String newText = editedText.replace("...", projectPath);
 
         String[] lines = newText.split("\n");
         var outputList = new ArrayList<String>();
@@ -66,8 +69,16 @@ public class ShowHarpoon extends AnAction {
         }
     }
     private void NavigateToFile(Project project){
+        NavigateToIndex(project, dialog.SelectedIndex);
+    }
+
+    /**
+     * Opens the file pinned to {@code index}. Package-private so that what the popup does with the
+     * entry the user selected can be tested without showing a modal dialog.
+     */
+    static void NavigateToIndex(Project project, int index){
         if (project == null) return;
-        VirtualFile vf = HarpoonState.GetItem(dialog.SelectedIndex, project);
+        VirtualFile vf = HarpoonState.GetItem(index, project);
         if (vf == null)
             return;
         var fileManager = FileEditorManager.getInstance(project);

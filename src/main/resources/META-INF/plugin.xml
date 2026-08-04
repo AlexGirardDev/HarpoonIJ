@@ -17,9 +17,10 @@
     HarpoonIJ simplifies code navigation by allowing you to mark up to 5 frequently-used files and access them via hotkeys. Modeled after the NeoVim Extension Harpoon by ThePrimeagen, this plugin enhances your coding efficiency with a popup dialog for easy file management.
   ]]></description>
 
-    <change-notes>
-        Fixing issue with forcing normal mode not working with newer versions of ideavim
-    </change-notes>
+    <!-- No <change-notes> here on purpose: CHANGELOG.md is the source of truth, and the
+         org.jetbrains.changelog Gradle plugin patches the rendered notes in at build time.
+         Anything written here would be silently overwritten. -->
+
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
