@@ -147,9 +147,8 @@ existing users through the IDE's normal update path. Revoke and regenerate it fr
    does not run it.
 3. Wait for `build.yml` to go green, then **download the `plugin-distribution` artifact from that
    run and install it in a real IDE** (*Settings → Plugins → ⚙ → Install Plugin from Disk…*).
-   Open a project, pin a few files, open the popup, and check that it comes up in normal mode on
-   the first entry, that `j`/`k` move the caret without inserting text, that `dd` edits the list,
-   that `<cr>` opens the entry under the caret, and that Escape closes the popup.
+   Open a project, pin a few files, open the popup, and walk the popup checks listed under
+   "Verifying a real IDE behaviour change" above.
 
    **This step is required, not a recommendation, and it is required for every release** — not only
    for releases that touched popup code. This project once shipped with sixteen green tests
