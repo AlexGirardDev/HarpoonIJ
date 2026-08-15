@@ -74,8 +74,8 @@ version, and `0.2.0` is already published there, so a release must move past it.
 Bump `platformVersion` and `ideaVimVersion` together, and update `javaVersion` and
 `pluginSinceBuild` to match the new platform branch — see
 [build number ranges](https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html).
-`java-version` in `.github/workflows/build.yml` is a hand-copy of `javaVersion`; bump it with the
-rest or CI compiles on the wrong JDK.
+`java-version` in each of the three workflows under `.github/workflows/` is a hand-copy of
+`javaVersion`; bump all of them with the rest or CI compiles on the wrong JDK.
 
 An `ideaVimVersion` bump is the risky half. `IdeaVimIntegration` and `IdeaVimIntegrationTest` are
 what to check first; `AGENTS.md` lists the specific IdeaVim internals it depends on.
@@ -104,7 +104,83 @@ failure mode that has broken this plugin most often. It only helps to the extent
 assert observable behaviour — read "The testing bar" in `AGENTS.md` before touching them. If it goes
 red, reproduce in a real IDE before changing any test.
 
-There is no release or publishing workflow; releases are still manual.
+`.github/workflows/release.yml` publishes to the JetBrains Marketplace. It runs **only** on a
+published GitHub Release — never on a merge — so nothing that lands on `master` can reach users on
+its own. See "Releasing" below.
+
+## Releasing
+
+Publishing is automated, the decision to publish is not. `release.yml` fires on a **published
+GitHub Release** and nothing else; creating that release is the approval gate. Until the four
+secrets below exist the workflow is inert — it refuses to publish and fails on the
+`Require signing material` step.
+
+### One-time setup: the four repository secrets
+
+Add all four under **Settings → Secrets and variables → Actions → Repository secrets**. The names
+must match exactly: they are the environment variables the IntelliJ Platform Gradle Plugin reads by
+convention, which is why `build.gradle.kts` configures no `signing { }` or `publishing { }` block.
+
+| Secret | What it is | How to create it |
+|---|---|---|
+| `PUBLISH_TOKEN` | Marketplace permanent token; authorises uploading plugin updates. | JetBrains Marketplace profile → **My Tokens** → name it → **Generate Token**. Shown once — copy it immediately. |
+| `PRIVATE_KEY` | The signing private key, as PEM **text** (not a path). | `openssl genpkey -aes-256-cbc -algorithm RSA -out private_encrypted.pem -pkeyopt rsa_keygen_bits:4096`, then `openssl rsa -in private_encrypted.pem -out private.pem`. Paste the contents of `private.pem`. |
+| `PRIVATE_KEY_PASSWORD` | The passphrase chosen during `genpkey`. | You choose it at key generation. |
+| `CERTIFICATE_CHAIN` | The self-signed certificate, as PEM **text**. | `openssl req -key private.pem -new -x509 -days 3650 -out chain.crt`. Paste the contents of `chain.crt`. |
+
+Use **`-days 3650`**, not the `365` in the JetBrains
+[plugin signing](https://plugins.jetbrains.com/docs/intellij/plugin-signing.html) docs. This plugin
+releases roughly once a year, so a one-year certificate expires almost exactly between releases and
+breaks a release for a reason nobody will remember.
+
+Paste each PEM **including** its `-----BEGIN…` / `-----END…` lines and the trailing newline; GitHub
+secrets preserve multi-line values. Keep an offline backup of `private.pem` and the passphrase —
+losing them means generating a new key. `PUBLISH_TOKEN` is the dangerous one if it leaks: it is
+account-level, so it can push an update to any plugin the account owns, and that update reaches
+existing users through the IDE's normal update path. Revoke and regenerate it from **My Tokens**.
+
+### The release ritual
+
+1. Write bullets under `## [Unreleased]` in `CHANGELOG.md` as you work.
+2. Bump `pluginVersion` in `gradle.properties`, run `./gradlew patchChangelog` to promote
+   `[Unreleased]` into a version section, commit, push. `patchChangelog` is a **local** step; CI
+   does not run it.
+3. Wait for `build.yml` to go green, then **download the `plugin-distribution` artifact from that
+   run and install it in a real IDE** (*Settings → Plugins → ⚙ → Install Plugin from Disk…*).
+   Open a project, pin a few files, open the popup, and check that it comes up in normal mode on
+   the first entry, that `j`/`k` move the caret without inserting text, that `dd` edits the list,
+   that `<cr>` opens the entry under the caret, and that Escape closes the popup.
+
+   **This step is required, not a recommendation, and it is required for every release** — not only
+   for releases that touched popup code. This project once shipped with sixteen green tests
+   covering the popup's Vim normal-mode behaviour while that behaviour was completely broken in a
+   real IDE: the tests asserted an application-global state machine, so they were true and
+   meaningless. The feature stayed broken for over a year. No automated gate in this repository
+   catches that class of defect; installing the artifact and pressing the keys does.
+4. Create the GitHub Release. `gh` tags the pushed commit for you, so make sure step 2 is on
+   `master` first. Put the new `CHANGELOG.md` section in a file and pass it as the notes:
+
+   ```bash
+   gh release create v0.3.0 --title v0.3.0 --notes-file release-notes.md
+   ```
+
+   Tag as `vMAJOR.MINOR.PATCH`. Existing tags are inconsistent (`v0.1.7`, `0.2`, one named
+   `release`); `v0.3.0` is the convention going forward. The workflow accepts `0.3.0` too, but
+   rejects anything that is not exactly `pluginVersion` — so `0.3` or `release` would fail.
+5. `release.yml` checks out the tag, asserts the tag matches `pluginVersion`, asserts all four
+   secrets are present, runs `verifyPlugin`, then signs and publishes in a single Gradle
+   invocation, and attaches the signed zip to the GitHub Release.
+6. A successful publish is **not** immediate availability. JetBrains reviews every update against
+   their approval criteria before it goes live, normally within two business days. That review is
+   about policy compliance, not about whether the popup works — it is not a substitute for step 3.
+
+Marking the GitHub Release as a **pre-release** deliberately does nothing: the job is skipped. This
+plugin publishes to the default (Stable) channel only, so a pre-release has no separate channel to
+go to and must not be pushed to every existing user. A pre-release is a GitHub-only artifact. Do
+not add a Marketplace release channel to work around this — a non-default channel requires users to
+add a custom plugin repository URL, so its audience is effectively nobody. This project carried a
+`beta` channel from 2024-05 to 2024-11, shipped nothing through it, and deleted it the day 0.2.0
+went out to Stable.
 
 ## Tests
 

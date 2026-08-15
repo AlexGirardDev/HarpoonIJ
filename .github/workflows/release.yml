@@ -1,0 +1,132 @@
+name: Release
+
+# Publishing fires only on a published GitHub Release, never on a merge. The
+# human act of creating the release is the approval gate; nothing that lands on
+# master can reach the ~12,700 Marketplace users on its own.
+#
+# `published` rather than `released` because a release published from a draft
+# does not reliably fire the narrower activity types. Stable-only is enforced
+# by the job's `if:` below instead of by the trigger.
+on:
+  release:
+    types: [published]
+
+# One publish at a time per tag, and never cancel one in flight: interrupting
+# `publishPlugin` mid-upload is worse than waiting.
+concurrency:
+  group: release-${{ github.event.release.tag_name }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Publish to JetBrains Marketplace
+    runs-on: ubuntu-latest
+
+    # This plugin publishes to the default (Stable) channel only, and
+    # `build.gradle.kts` deliberately configures no channel. Marking a GitHub
+    # release as a pre-release must therefore *not* publish -- without a
+    # channel switch it would go straight to every existing user. The job is
+    # skipped instead, so a pre-release is a GitHub-only artifact.
+    if: ${{ !github.event.release.prerelease }}
+
+    # `contents: write` is for attaching the signed zip to the release below;
+    # naming it here drops every other scope to none.
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out the released tag
+        uses: actions/checkout@v7
+        with:
+          # Publish exactly what was tagged, not whatever master has moved on to.
+          ref: ${{ github.event.release.tag_name }}
+
+      # Must match `javaVersion` in gradle.properties, same as build.yml.
+      - name: Set up JDK
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 25
+
+      # Read-only: releases are rare and run off a tag, so this job should
+      # consume the cache build.yml populates on master, never rewrite it.
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v6
+        with:
+          cache-read-only: true
+
+      # Guard: the tag must be the version being published. Catches the
+      # "forgot to bump pluginVersion" case, which the Marketplace would
+      # otherwise reject as a duplicate after the release already exists.
+      # Both `v0.3.0` and `0.3.0` are accepted; `v0.3.0` is the convention.
+      - name: Check the tag matches the project version
+        # `shell: bash` for `-o pipefail`, so a failing Gradle invocation is an
+        # error rather than an empty version that fails the comparison instead.
+        shell: bash
+        env:
+          TAG: ${{ github.event.release.tag_name }}
+        run: |
+          VERSION=$(./gradlew properties --property version --quiet --console=plain | sed -n 's/^version: //p' | tail -n 1)
+          if [ "v$VERSION" != "$TAG" ] && [ "$VERSION" != "$TAG" ]; then
+            echo "::error::tag $TAG does not match project version $VERSION"
+            exit 1
+          fi
+          echo "Publishing $VERSION as $TAG"
+
+      # Guard: never publish unsigned. `publishPlugin` uploads the signed
+      # archive only when `signPlugin` did work, and falls back to the
+      # *unsigned* one otherwise without warning -- see the comment in
+      # build.gradle.kts. Fail here, before the expensive steps, rather than
+      # shipping an unsigned build.
+      - name: Require signing material
+        shell: bash
+        env:
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          PRIVATE_KEY_PASSWORD: ${{ secrets.PRIVATE_KEY_PASSWORD }}
+          CERTIFICATE_CHAIN: ${{ secrets.CERTIFICATE_CHAIN }}
+          PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+        run: |
+          missing=""
+          for name in PRIVATE_KEY PRIVATE_KEY_PASSWORD CERTIFICATE_CHAIN PUBLISH_TOKEN; do
+            [ -n "${!name-}" ] || missing="$missing $name"
+          done
+          if [ -n "$missing" ]; then
+            echo "::error::missing repository secret(s):$missing - refusing to publish"
+            exit 1
+          fi
+
+      # Guard: verification must pass before anything reaches users. This
+      # plugin calls IdeaVim internals on purpose, so compatibility and
+      # internal-API findings are exactly the failures worth blocking on.
+      - name: Verify plugin
+        run: ./gradlew verifyPlugin --stacktrace
+
+      # Signs and uploads in a single Gradle invocation on purpose: splitting
+      # `signPlugin` into its own step would leave it UP-TO-DATE for the second
+      # invocation, and `publishPlugin` reads `signPlugin.didWork` to decide
+      # between the signed and the unsigned archive.
+      - name: Publish plugin
+        env:
+          PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+          CERTIFICATE_CHAIN: ${{ secrets.CERTIFICATE_CHAIN }}
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          PRIVATE_KEY_PASSWORD: ${{ secrets.PRIVATE_KEY_PASSWORD }}
+        run: ./gradlew publishPlugin --stacktrace
+
+      # `signPlugin` writes `<name>-<version>-signed.zip` next to the unsigned
+      # `<name>-<version>.zip`, so a `*.zip` glob here would attach both and
+      # hand people the unsigned one. Matching only the signed archive also
+      # doubles as a tripwire: if signing was silently skipped, this fails.
+      - name: Attach the signed distribution to the release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ github.event.release.tag_name }}
+        run: |
+          shopt -s nullglob
+          signed=(build/distributions/*-signed.zip)
+          if [ "${#signed[@]}" -ne 1 ]; then
+            echo "::error::expected exactly one signed archive in build/distributions, found ${#signed[@]}"
+            exit 1
+          fi
+          gh release upload "$TAG" "${signed[0]}" --clobber
