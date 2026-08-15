@@ -35,6 +35,30 @@ jobs:
       contents: write
 
     steps:
+      # Guard: never publish unsigned. `publishPlugin` uploads the signed
+      # archive only when `signPlugin` did work, and falls back to the
+      # *unsigned* one otherwise without warning -- see the comment in
+      # build.gradle.kts. This is a pure shell test on the environment and
+      # needs nothing from the repository, so it runs first: while the secrets
+      # are absent it fails in seconds instead of after checkout, JDK and
+      # Gradle setup and a full Gradle configuration.
+      - name: Require signing material
+        shell: bash
+        env:
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          PRIVATE_KEY_PASSWORD: ${{ secrets.PRIVATE_KEY_PASSWORD }}
+          CERTIFICATE_CHAIN: ${{ secrets.CERTIFICATE_CHAIN }}
+          PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+        run: |
+          missing=""
+          for name in PRIVATE_KEY PRIVATE_KEY_PASSWORD CERTIFICATE_CHAIN PUBLISH_TOKEN; do
+            [ -n "${!name-}" ] || missing="$missing $name"
+          done
+          if [ -n "$missing" ]; then
+            echo "::error::missing repository secret(s):$missing - refusing to publish"
+            exit 1
+          fi
+
       - name: Check out the released tag
         uses: actions/checkout@v7
         with:
@@ -73,27 +97,12 @@ jobs:
           fi
           echo "Publishing $VERSION as $TAG"
 
-      # Guard: never publish unsigned. `publishPlugin` uploads the signed
-      # archive only when `signPlugin` did work, and falls back to the
-      # *unsigned* one otherwise without warning -- see the comment in
-      # build.gradle.kts. Fail here, before the expensive steps, rather than
-      # shipping an unsigned build.
-      - name: Require signing material
-        shell: bash
-        env:
-          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-          PRIVATE_KEY_PASSWORD: ${{ secrets.PRIVATE_KEY_PASSWORD }}
-          CERTIFICATE_CHAIN: ${{ secrets.CERTIFICATE_CHAIN }}
-          PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
-        run: |
-          missing=""
-          for name in PRIVATE_KEY PRIVATE_KEY_PASSWORD CERTIFICATE_CHAIN PUBLISH_TOKEN; do
-            [ -n "${!name-}" ] || missing="$missing $name"
-          done
-          if [ -n "$missing" ]; then
-            echo "::error::missing repository secret(s):$missing - refusing to publish"
-            exit 1
-          fi
+      # The published tag must be proven green on its own commit, not merely by
+      # the ritual's convention that build.yml went green on master first. A
+      # release cut with `gh release create --target <other-commit>` would
+      # otherwise sign and publish code the suite never ran against.
+      - name: Test
+        run: ./gradlew test --stacktrace
 
       # Guard: verification must pass before anything reaches users. This
       # plugin calls IdeaVim internals on purpose, so compatibility and

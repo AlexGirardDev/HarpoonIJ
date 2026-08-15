@@ -167,9 +167,9 @@ existing users through the IDE's normal update path. Revoke and regenerate it fr
    Tag as `vMAJOR.MINOR.PATCH`. Existing tags are inconsistent (`v0.1.7`, `0.2`, one named
    `release`); `v0.3.0` is the convention going forward. The workflow accepts `0.3.0` too, but
    rejects anything that is not exactly `pluginVersion` — so `0.3` or `release` would fail.
-5. `release.yml` checks out the tag, asserts the tag matches `pluginVersion`, asserts all four
-   secrets are present, runs `verifyPlugin`, then signs and publishes in a single Gradle
-   invocation, and attaches the signed zip to the GitHub Release.
+5. `release.yml` asserts all four secrets are present, checks out the tag, asserts the tag matches
+   `pluginVersion`, runs `test` and `verifyPlugin` on that exact commit, then signs and publishes
+   in a single Gradle invocation, and attaches the signed zip to the GitHub Release.
 6. A successful publish is **not** immediate availability. JetBrains reviews every update against
    their approval criteria before it goes live, normally within two business days. That review is
    about policy compliance, not about whether the popup works — it is not a substitute for step 3.
