@@ -145,6 +145,10 @@ integration needs a real-IDE check as well; see "Verifying a real IDE behaviour 
   projects with the same name share one Harpoon list.
 - **`.run/Run Plugin.run.xml` runs `publishPlugin`**, despite the name. Do not launch it to try the
   plugin locally; use `./gradlew runIde`.
+- **Publishing is gated on a published GitHub Release, not on a merge.** `.github/workflows/`
+  holds `release.yml`; nothing that lands on `master` reaches the Marketplace on its own. The
+  release ritual, the signing secrets and the mandatory real-IDE check live in `development.md`
+  under "Releasing" — never document or change release mechanics in two places.
 - **`HarpoonJumpList` is an on-disk contract.** Changing that key silently drops every existing
   user's list. Same for the action IDs in `plugin.xml`.
 
